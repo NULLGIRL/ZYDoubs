@@ -1,0 +1,14 @@
+
+platform :ios,’8.0’
+
+target 'ZYDoubs' do
+    
+pod 'SDAutoLayout'
+pod 'MJRefresh', '~> 3.1.0'
+pod 'IQKeyboardManager', '~> 3.3.7’
+pod 'Masonry', '~> 0.6.4'
+pod 'SVProgressHUD', '~> 2.0.3'
+pod 'FMDB', '~> 2.6.2'
+
+end
+
