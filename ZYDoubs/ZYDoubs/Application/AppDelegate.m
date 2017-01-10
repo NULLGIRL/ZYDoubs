@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "ZYMainNavViewController.h"
+#import "ZYMainTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ZYMainTabBarViewController * tab = [[ZYMainTabBarViewController alloc] init];
+    ZYMainNavViewController * nav = [[ZYMainNavViewController alloc]initWithRootViewController:tab];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -45,6 +53,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(UIWindow *)window{
+    if (_window == nil) {
+        //窗体
+        CGRect frame = [[UIScreen mainScreen]bounds];
+        _window= [[UIWindow alloc]initWithFrame:frame];
+        
+    }
+    return _window;
 }
 
 
