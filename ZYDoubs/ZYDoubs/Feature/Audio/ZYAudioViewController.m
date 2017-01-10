@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tabBarController.navigationItem.title = @"语音通话";
 }
 
 - (void)didReceiveMemoryWarning {

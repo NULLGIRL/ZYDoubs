@@ -1,4 +1,12 @@
 PODS:
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -9,6 +17,7 @@ PODS:
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - CocoaLumberjack (~> 2.3.0)
   - FMDB (~> 2.6.2)
   - IQKeyboardManager (~> 3.3.7)
   - Masonry (~> 0.6.4)
@@ -17,6 +26,7 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.0.3)
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
@@ -24,6 +34,6 @@ SPEC CHECKSUMS:
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 1c0855995e03894f5e63e7b90dbcfd36aded76a3
+PODFILE CHECKSUM: e217a55214ac6817812aad628875f8fe01c6d1bc
 
 COCOAPODS: 1.1.1

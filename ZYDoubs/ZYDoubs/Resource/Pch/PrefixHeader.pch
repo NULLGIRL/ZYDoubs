@@ -9,7 +9,25 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "Routable.h"
+
+
 #import "ZYTools.h"
+#import "ZYLog.h"
+#import "ZYConst.h"
+
+#import "ZYAppDelegate.h"
+
+#define FIRST_VIEWCONTROLLER                @"first/:id"
+#define TABLEBARCONTROLLER                  @"tabBarController/:id"
+
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+static const DDLogLevel ddLogLevel = LOG_LEVEL_OFF;
+#endif
 
 // ************************ 屏幕宽高 *****************************
 /**

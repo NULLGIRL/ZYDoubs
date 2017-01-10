@@ -27,6 +27,22 @@
 
 @implementation ZYMainTabBarViewController
 
+#pragma mark - 使用Routable必须实现该方法
+
+- (id)initWithRouterParams:(NSDictionary *)params {
+    if ((self = [self initWithNibName:nil bundle:nil])) {
+        NSString *string = [params objectForKey:@"id"];
+
+//        if ([string isEqualToString:@"me"]) {
+//            [self setSelectedIndex:2];
+//        } else if ([string isEqualToString:@"find"]) {
+//            [self setSelectedIndex:0];
+//        }
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

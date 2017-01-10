@@ -9,6 +9,7 @@ pod 'IQKeyboardManager', '~> 3.3.7’
 pod 'Masonry', '~> 0.6.4'
 pod 'SVProgressHUD', '~> 2.0.3'
 pod 'FMDB', '~> 2.6.2'
+pod 'CocoaLumberjack', '~> 2.3.0'
 
 end
 
