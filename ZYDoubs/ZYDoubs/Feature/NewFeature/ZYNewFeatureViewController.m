@@ -65,6 +65,43 @@ NSString *const NewFeatureVersionKey = @"NewFeatureVersionKey";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self createSubview];
+}
+
+
+-(void)createSubview{
+    
+    UILabel * lab_Thanks = [[UILabel alloc] init];
+    lab_Thanks.text = @"感谢你们来看我儿子！";
+    [self.view addSubview:lab_Thanks];
+    
+    [lab_Thanks mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.height.equalTo(@40);
+    }];
+    
+    UIButton * btn_enter = [[UIButton alloc]init];
+    [btn_enter addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    btn_enter.titleLabel.font = MiddleFont;
+    btn_enter.layer.cornerRadius = 8;
+    [btn_enter setTitle:@"进去看看" forState:UIControlStateNormal];
+    btn_enter.backgroundColor = MainColor;
+    [self.view addSubview:btn_enter];
+    
+    [btn_enter mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(lab_Thanks.mas_bottom).with.offset(15);
+        make.width.equalTo(@100);
+        make.height.equalTo(@30);
+    }];
+}
+
+-(void)btnClick{
+    
+    if (self.lastOnePlayFinished) {
+        self.lastOnePlayFinished();
+    }
 }
 
 - (void)didReceiveMemoryWarning {

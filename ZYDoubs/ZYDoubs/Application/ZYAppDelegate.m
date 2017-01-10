@@ -41,14 +41,14 @@
 //    [self.window makeKeyAndVisible];
     
     //判断是否需要显示新特性界面
-//    ZYNewFeatureViewController *newFeaVC = [self setupDefaultContoller];
-//    if (newFeaVC) {
-//        self.window.rootViewController = newFeaVC;
-//    } else {
-//        self.window.rootViewController = [self setupRoutable];
-//    }
+    ZYNewFeatureViewController *newFeaVC = [self setupDefaultContoller];
+    if (newFeaVC) {
+        self.window.rootViewController = newFeaVC;
+    } else {
+        self.window.rootViewController = [self setupRoutable];
+    }
     
-    self.window.rootViewController = [self setupRoutable];
+//    self.window.rootViewController = [self setupRoutable];
     [self.window makeKeyAndVisible];
     
     return YES;
