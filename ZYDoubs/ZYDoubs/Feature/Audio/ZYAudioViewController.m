@@ -44,7 +44,7 @@
     for (int i = 0; i < titleArr.count; i ++) {
         ZYButton * btn = [[ZYButton alloc]initWithTitle:titleArr[i]];
         btn.block = ^(NSString * reMark){
-            NSLog(@"点击了 %@",reMark);
+//            NSLog(@"点击了 %@",reMark);
             [self btnClickBtn:reMark];
         };
         [self.view addSubview:btn];

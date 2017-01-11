@@ -71,6 +71,7 @@
 		FAFD3D7C1E26228A001992B9 /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7B1E26228A001992B9 /* ZYVideoViewController.m */; };
 		FAFD3D801E2622D1001992B9 /* ZYContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */; };
 		FAFD3D831E2624A5001992B9 /* ZYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D821E2624A5001992B9 /* ZYButton.m */; };
+		FAFD3D861E26306F001992B9 /* ZYCallViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D851E26306F001992B9 /* ZYCallViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,8 @@
 		FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYContactViewController.m; sourceTree = "<group>"; };
 		FAFD3D811E2624A5001992B9 /* ZYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYButton.h; sourceTree = "<group>"; };
 		FAFD3D821E2624A5001992B9 /* ZYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYButton.m; sourceTree = "<group>"; };
+		FAFD3D841E26306F001992B9 /* ZYCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYCallViewController.h; sourceTree = "<group>"; };
+		FAFD3D851E26306F001992B9 /* ZYCallViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZYCallViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,9 +442,9 @@
 		FA7718441E24770A00AD8F5F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				FA7718BA1E2482EB00AD8F5F /* Main(主要框架) */,
 				FAFD3D7D1E2622AD001992B9 /* contact(联系人) */,
 				FA7719031E24B25700AD8F5F /* NewFeature(新特性) */,
-				FA7718BA1E2482EB00AD8F5F /* Main(主要框架) */,
 				FA7718451E24770A00AD8F5F /* Audio(语音视频) */,
 				FA7718461E24770A00AD8F5F /* Message(信息) */,
 				FA7718471E24770A00AD8F5F /* Mine(我的) */,
@@ -452,6 +455,8 @@
 		FA7718451E24770A00AD8F5F /* Audio(语音视频) */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD3D841E26306F001992B9 /* ZYCallViewController.h */,
+				FAFD3D851E26306F001992B9 /* ZYCallViewController.mm */,
 				FA7718AE1E24821200AD8F5F /* ZYAudioViewController.h */,
 				FA7718AF1E24821200AD8F5F /* ZYAudioViewController.m */,
 				FAFD3D7A1E26228A001992B9 /* ZYVideoViewController.h */,
@@ -929,6 +934,7 @@
 				FAFD3D7C1E26228A001992B9 /* ZYVideoViewController.m in Sources */,
 				FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */,
 				FA7718D61E2487B300AD8F5F /* ZYMainTabBarViewController.m in Sources */,
+				FAFD3D861E26306F001992B9 /* ZYCallViewController.mm in Sources */,
 				FA7719021E24B12900AD8F5F /* Routable.m in Sources */,
 				FA7718DC1E2488BE00AD8F5F /* ZYTools.m in Sources */,
 				FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */,
