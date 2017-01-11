@@ -49,7 +49,6 @@
 		FA7718AB1E247D9300AD8F5F /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718AA1E247D9300AD8F5F /* libresolv.tbd */; };
 		FA7718AD1E247F9500AD8F5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718AC1E247F9500AD8F5F /* Foundation.framework */; };
 		FA7718B01E24821200AD8F5F /* ZYAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718AF1E24821200AD8F5F /* ZYAudioViewController.m */; };
-		FA7718B31E24823100AD8F5F /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718B21E24823100AD8F5F /* ZYVideoViewController.m */; };
 		FA7718B61E24823D00AD8F5F /* ZYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718B51E24823D00AD8F5F /* ZYMessageViewController.m */; };
 		FA7718B91E24825700AD8F5F /* ZYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718B81E24825700AD8F5F /* ZYMineViewController.m */; };
 		FA7718D31E2487B300AD8F5F /* ZYBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718CB1E2487B300AD8F5F /* ZYBaseTableViewController.m */; };
@@ -69,6 +68,9 @@
 		FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77191E1E24B95900AD8F5F /* ZYConst.m */; };
 		FAFD3D741E25DDB1001992B9 /* ZYSipTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */; };
 		FAFD3D781E26049D001992B9 /* ZYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D771E26049D001992B9 /* ZYUserManager.m */; };
+		FAFD3D7C1E26228A001992B9 /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7B1E26228A001992B9 /* ZYVideoViewController.m */; };
+		FAFD3D801E2622D1001992B9 /* ZYContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */; };
+		FAFD3D831E2624A5001992B9 /* ZYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D821E2624A5001992B9 /* ZYButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,8 +220,6 @@
 		FA7718AC1E247F9500AD8F5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA7718AE1E24821200AD8F5F /* ZYAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAudioViewController.h; sourceTree = "<group>"; };
 		FA7718AF1E24821200AD8F5F /* ZYAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAudioViewController.m; sourceTree = "<group>"; };
-		FA7718B11E24823100AD8F5F /* ZYVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYVideoViewController.h; sourceTree = "<group>"; };
-		FA7718B21E24823100AD8F5F /* ZYVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYVideoViewController.m; sourceTree = "<group>"; };
 		FA7718B41E24823D00AD8F5F /* ZYMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMessageViewController.h; sourceTree = "<group>"; };
 		FA7718B51E24823D00AD8F5F /* ZYMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMessageViewController.m; sourceTree = "<group>"; };
 		FA7718B71E24825700AD8F5F /* ZYMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMineViewController.h; sourceTree = "<group>"; };
@@ -260,6 +260,12 @@
 		FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSipTools.m; sourceTree = "<group>"; };
 		FAFD3D761E26049D001992B9 /* ZYUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserManager.h; sourceTree = "<group>"; };
 		FAFD3D771E26049D001992B9 /* ZYUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserManager.m; sourceTree = "<group>"; };
+		FAFD3D7A1E26228A001992B9 /* ZYVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYVideoViewController.h; sourceTree = "<group>"; };
+		FAFD3D7B1E26228A001992B9 /* ZYVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYVideoViewController.m; sourceTree = "<group>"; };
+		FAFD3D7E1E2622D1001992B9 /* ZYContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYContactViewController.h; sourceTree = "<group>"; };
+		FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYContactViewController.m; sourceTree = "<group>"; };
+		FAFD3D811E2624A5001992B9 /* ZYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYButton.h; sourceTree = "<group>"; };
+		FAFD3D821E2624A5001992B9 /* ZYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +430,8 @@
 		FA7718431E24770A00AD8F5F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD3D811E2624A5001992B9 /* ZYButton.h */,
+				FAFD3D821E2624A5001992B9 /* ZYButton.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -431,23 +439,25 @@
 		FA7718441E24770A00AD8F5F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD3D7D1E2622AD001992B9 /* contact(联系人) */,
 				FA7719031E24B25700AD8F5F /* NewFeature(新特性) */,
 				FA7718BA1E2482EB00AD8F5F /* Main(主要框架) */,
-				FA7718451E24770A00AD8F5F /* Audio(语音) */,
-				FA7718481E24770A00AD8F5F /* Video(视频) */,
+				FA7718451E24770A00AD8F5F /* Audio(语音视频) */,
 				FA7718461E24770A00AD8F5F /* Message(信息) */,
 				FA7718471E24770A00AD8F5F /* Mine(我的) */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		FA7718451E24770A00AD8F5F /* Audio(语音) */ = {
+		FA7718451E24770A00AD8F5F /* Audio(语音视频) */ = {
 			isa = PBXGroup;
 			children = (
 				FA7718AE1E24821200AD8F5F /* ZYAudioViewController.h */,
 				FA7718AF1E24821200AD8F5F /* ZYAudioViewController.m */,
+				FAFD3D7A1E26228A001992B9 /* ZYVideoViewController.h */,
+				FAFD3D7B1E26228A001992B9 /* ZYVideoViewController.m */,
 			);
-			name = "Audio(语音)";
+			name = "Audio(语音视频)";
 			path = Audio;
 			sourceTree = "<group>";
 		};
@@ -469,16 +479,6 @@
 			);
 			name = "Mine(我的)";
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		FA7718481E24770A00AD8F5F /* Video(视频) */ = {
-			isa = PBXGroup;
-			children = (
-				FA7718B11E24823100AD8F5F /* ZYVideoViewController.h */,
-				FA7718B21E24823100AD8F5F /* ZYVideoViewController.m */,
-			);
-			name = "Video(视频)";
-			path = Video;
 			sourceTree = "<group>";
 		};
 		FA7718491E24770A00AD8F5F /* Resource(资源) */ = {
@@ -652,6 +652,16 @@
 				FAFD3D771E26049D001992B9 /* ZYUserManager.m */,
 			);
 			path = UserManage;
+			sourceTree = "<group>";
+		};
+		FAFD3D7D1E2622AD001992B9 /* contact(联系人) */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD3D7E1E2622D1001992B9 /* ZYContactViewController.h */,
+				FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */,
+			);
+			name = "contact(联系人)";
+			path = contact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -905,16 +915,18 @@
 				FA7718B61E24823D00AD8F5F /* ZYMessageViewController.m in Sources */,
 				FA7718FA1E24A9BF00AD8F5F /* ZYAppDelegate+EnterBackground.m in Sources */,
 				FA7719061E24B27900AD8F5F /* ZYNewFeatureViewController.m in Sources */,
+				FAFD3D801E2622D1001992B9 /* ZYContactViewController.m in Sources */,
 				FA7718E61E24A99400AD8F5F /* ZYAppDelegate+SipCallback.m in Sources */,
-				FA7718B31E24823100AD8F5F /* ZYVideoViewController.m in Sources */,
 				FA7718E21E24941700AD8F5F /* ZYAppDelegate+Private.m in Sources */,
 				FA7718DF1E24936E00AD8F5F /* ZYAppDelegate.m in Sources */,
 				FA7718D31E2487B300AD8F5F /* ZYBaseTableViewController.m in Sources */,
 				FA7718D51E2487B300AD8F5F /* ZYMainNavViewController.m in Sources */,
+				FAFD3D831E2624A5001992B9 /* ZYButton.m in Sources */,
 				FA77185B1E24770A00AD8F5F /* main.m in Sources */,
 				FA7718B01E24821200AD8F5F /* ZYAudioViewController.m in Sources */,
 				FA7718FD1E24A9D600AD8F5F /* ZYAppDelegate+Notification.m in Sources */,
 				FA7718D41E2487B300AD8F5F /* ZYBaseViewController.m in Sources */,
+				FAFD3D7C1E26228A001992B9 /* ZYVideoViewController.m in Sources */,
 				FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */,
 				FA7718D61E2487B300AD8F5F /* ZYMainTabBarViewController.m in Sources */,
 				FA7719021E24B12900AD8F5F /* Routable.m in Sources */,

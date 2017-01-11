@@ -9,7 +9,7 @@
 #import "ZYMainTabBarViewController.h"
 
 #import "ZYAudioViewController.h"
-#import "ZYVideoViewController.h"
+#import "ZYContactViewController.h"
 #import "ZYMessageViewController.h"
 #import "ZYMineViewController.h"
 #import "ZYBarButton.h"
@@ -55,19 +55,19 @@
 {
     ZYAudioViewController * audioVC = [[ZYAudioViewController alloc]init];
     
-    ZYVideoViewController * videoVC = [[ZYVideoViewController alloc]init];
-    
     ZYMessageViewController * messageVC = [[ZYMessageViewController alloc]init];
+    
+    ZYContactViewController * contactVC = [[ZYContactViewController alloc]init];
     
     ZYMineViewController * myVC = [[ZYMineViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    self.viewControllers = @[audioVC,videoVC,messageVC,myVC];
+    self.viewControllers = @[audioVC,messageVC,contactVC,myVC];
     
 }
 
 -(void)setTabBar
 {
-    NSArray * barButtonTitleArray = @[@"语音",@"视频",@"信息",@"设置"];
+    NSArray * barButtonTitleArray = @[@"拨号",@"信息",@"联系人",@"设置"];
     self.btnImage = @[@"home",@"order",@"my",@"my"];
     self.btnSelectImage = @[@"selectedhome",@"selectedOrder",@"selectedMy",@"my"];
     

@@ -1,33 +1,28 @@
 //
-//  ZYVideoViewController.m
+//  ZYContactViewController.m
 //  ZYDoubs
 //
-//  Created by Momo on 17/1/10.
+//  Created by Momo on 17/1/11.
 //  Copyright © 2017年 Momo. All rights reserved.
 //
 
-#import "ZYVideoViewController.h"
+#import "ZYContactViewController.h"
 
-@interface ZYVideoViewController ()
+@interface ZYContactViewController ()
 
 @end
 
-@implementation ZYVideoViewController
+@implementation ZYContactViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor cyanColor];
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"视频通话";
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.tabBarController.navigationItem.title = @"联系人";
 }
 
 /*
