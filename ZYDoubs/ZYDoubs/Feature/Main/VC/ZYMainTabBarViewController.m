@@ -59,7 +59,7 @@
     
     ZYMessageViewController * messageVC = [[ZYMessageViewController alloc]init];
     
-    ZYMineViewController * myVC = [[ZYMineViewController alloc]init];
+    ZYMineViewController * myVC = [[ZYMineViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
     self.viewControllers = @[audioVC,videoVC,messageVC,myVC];
     

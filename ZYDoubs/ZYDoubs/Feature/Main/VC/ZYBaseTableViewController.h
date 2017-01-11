@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZYBaseTableViewController : UIViewController
+@interface ZYBaseTableViewController : UITableViewController
 
 @end

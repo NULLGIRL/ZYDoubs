@@ -10,6 +10,11 @@
 
 @interface ZYMineViewController ()
 
+
+@property (nonatomic,strong) NSArray * cellTitleArr;
+
+@property (nonatomic,strong) UIView * headView;
+
 @end
 
 @implementation ZYMineViewController
@@ -19,6 +24,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor greenColor];
     
+    self.cellTitleArr = @[@"sip账号",@"消息设置",@"技术支持"];
+    self.tableView.tableHeaderView = self.headView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -26,19 +33,41 @@
     self.tabBarController.navigationItem.title = @"设置";
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.cellTitleArr.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString * identify = @"ZYMineTableviewCell";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    cell.textLabel.text = self.cellTitleArr[indexPath.row];
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DDLogInfo(@"选中");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - 懒加载
+-(UIView *)headView{
+    if (!_headView) {
+        _headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 200)];
+        _headView.backgroundColor = BGColor;
+        
+    }
+    return _headView;
 }
-*/
 
 @end

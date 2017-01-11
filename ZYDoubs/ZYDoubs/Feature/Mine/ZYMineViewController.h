@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Momo. All rights reserved.
 //
 
-#import "ZYBaseViewController.h"
+#import "ZYBaseTableViewController.h"
 
-@interface ZYMineViewController : ZYBaseViewController
+@interface ZYMineViewController : ZYBaseTableViewController
 
 @end

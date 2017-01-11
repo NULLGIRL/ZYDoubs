@@ -10,4 +10,9 @@
 
 @interface ZYAppDelegate (Private)
 
+-(void) networkAlert:(NSString*)message;
+-(void) newMessageAlert:(NSString*)message;
+-(BOOL) queryConfigurationAndRegister;
+-(void) setAudioInterrupt: (BOOL)interrupt;
+
 @end
