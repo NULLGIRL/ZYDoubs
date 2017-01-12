@@ -52,6 +52,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     DDLogInfo(@"选中");
+    
+    if (indexPath.row == 0) {
+        NSLog(@"设置sip账号");
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

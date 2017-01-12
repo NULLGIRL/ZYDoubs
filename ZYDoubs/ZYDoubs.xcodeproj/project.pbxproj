@@ -66,6 +66,7 @@
 		FA7719061E24B27900AD8F5F /* ZYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719051E24B27900AD8F5F /* ZYNewFeatureViewController.m */; };
 		FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719091E24B6AC00AD8F5F /* ZYLog.m */; };
 		FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77191E1E24B95900AD8F5F /* ZYConst.m */; };
+		FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */; };
 		FAFD3D741E25DDB1001992B9 /* ZYSipTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */; };
 		FAFD3D781E26049D001992B9 /* ZYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D771E26049D001992B9 /* ZYUserManager.m */; };
 		FAFD3D7C1E26228A001992B9 /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7B1E26228A001992B9 /* ZYVideoViewController.m */; };
@@ -256,6 +257,8 @@
 		FA7719091E24B6AC00AD8F5F /* ZYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLog.m; sourceTree = "<group>"; };
 		FA77191D1E24B95900AD8F5F /* ZYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYConst.h; sourceTree = "<group>"; };
 		FA77191E1E24B95900AD8F5F /* ZYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConst.m; sourceTree = "<group>"; };
+		FADDD8C51E27770400F0A226 /* ZYSipSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSipSettingViewController.h; sourceTree = "<group>"; };
+		FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSipSettingViewController.m; sourceTree = "<group>"; };
 		FAFD3D601E25DC74001992B9 /* ZYDoubangoMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDoubangoMacros.h; sourceTree = "<group>"; };
 		FAFD3D721E25DDB1001992B9 /* ZYSipTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSipTools.h; sourceTree = "<group>"; };
 		FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSipTools.m; sourceTree = "<group>"; };
@@ -481,6 +484,8 @@
 			children = (
 				FA7718B71E24825700AD8F5F /* ZYMineViewController.h */,
 				FA7718B81E24825700AD8F5F /* ZYMineViewController.m */,
+				FADDD8C51E27770400F0A226 /* ZYSipSettingViewController.h */,
+				FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */,
 			);
 			name = "Mine(我的)";
 			path = Mine;
@@ -939,6 +944,7 @@
 				FA7718DC1E2488BE00AD8F5F /* ZYTools.m in Sources */,
 				FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */,
 				FA7718B91E24825700AD8F5F /* ZYMineViewController.m in Sources */,
+				FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
