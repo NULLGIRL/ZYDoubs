@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self createSubviews];
+    
+}
+
+- (void) createSubviews{
+    
+    
     
 }
 

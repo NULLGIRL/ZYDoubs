@@ -21,6 +21,7 @@
 #import "ZYLog.h"
 #import "ZYConst.h"
 #import "ZYButton.h"
+#import "ZYTextField.h"
 
 #import "ZYAppDelegate.h"
 
