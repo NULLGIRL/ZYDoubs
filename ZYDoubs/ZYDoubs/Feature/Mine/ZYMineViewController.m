@@ -55,7 +55,7 @@
     
     if (indexPath.row == 0) {
         NSLog(@"设置sip账号");
-        
+        [[Routable sharedRouter] open:ZYSIPSETTING_VIEWCONTROLLER];
     }
 }
 

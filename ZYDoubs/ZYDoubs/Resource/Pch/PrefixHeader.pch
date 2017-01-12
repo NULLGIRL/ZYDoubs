@@ -27,6 +27,7 @@
 
 #define FIRST_VIEWCONTROLLER                @"first/:id"
 #define TABLEBARCONTROLLER                  @"tabBarController/:id"
+#define ZYSIPSETTING_VIEWCONTROLLER          @"sipSettingViewController/:id"
 
 #ifdef DEBUG
 static const DDLogLevel ddLogLevel = LOG_LEVEL_VERBOSE;

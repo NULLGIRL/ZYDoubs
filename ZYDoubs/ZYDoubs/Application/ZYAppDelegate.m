@@ -11,6 +11,8 @@
 #import "ZYMainNavViewController.h"
 #import "ZYMainTabBarViewController.h"
 
+#import "ZYSipSettingViewController.h"  // 设置页面
+
 #import "ZYAppDelegate+Private.h"
 #import "ZYAppDelegate+SipCallback.h"
 #import "ZYAppDelegate+EnterBackground.h"
@@ -110,6 +112,9 @@
 - (void)setupRouter {
     
     [[Routable sharedRouter] map:TABLEBARCONTROLLER toController:[ZYMainTabBarViewController class]];
+    
+    [[Routable sharedRouter] map:ZYSIPSETTING_VIEWCONTROLLER toController:[ZYSipSettingViewController class]];
+    
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
