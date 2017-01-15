@@ -15,4 +15,6 @@
 -(BOOL) queryConfigurationAndRegister;
 -(void) setAudioInterrupt: (BOOL)interrupt;
 
+
+-(void)MyNetReachability;
 @end

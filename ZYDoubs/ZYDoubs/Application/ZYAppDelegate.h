@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "iOSNgnStack.h"
 
-@interface ZYAppDelegate : UIResponder <UIApplicationDelegate>
+#import "MediaContent.h"
+#import "MediaSessionMgr.h"
+#import "tsk_base64.h"
+
+@interface ZYAppDelegate : UIResponder <UIApplicationDelegate>{
+
+    BOOL scheduleRegistration;
+    BOOL nativeABChangedWhileInBackground;
+    BOOL multitaskingSupported;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

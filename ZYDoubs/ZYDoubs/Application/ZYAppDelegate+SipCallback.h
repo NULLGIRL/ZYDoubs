@@ -10,4 +10,11 @@
 
 @interface ZYAppDelegate (SipCallback)
 
+-(void) onNetworkEvent:(NSNotification*)notification;
+-(void) onNativeContactEvent:(NSNotification*)notification;
+-(void) onStackEvent:(NSNotification*)notification;
+-(void) onRegistrationEvent:(NSNotification*)notification;
+-(void) onMessagingEvent:(NSNotification*)notification;
+-(void) onInviteEvent:(NSNotification*)notification;
+
 @end

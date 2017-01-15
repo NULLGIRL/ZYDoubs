@@ -10,4 +10,7 @@
 
 @interface ZYAppDelegate (Notification)
 
+- (void)registerRemoteNotification;
+
+
 @end

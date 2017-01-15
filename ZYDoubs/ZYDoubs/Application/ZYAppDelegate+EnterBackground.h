@@ -10,4 +10,19 @@
 
 @interface ZYAppDelegate (EnterBackground)
 
+
+-(void)registNotification;
+
+/** didFinishLaunchingWithOptions*/
+-(void)didFinishLaunchingWithOptions;
+
+/** applicationDidReceiveMemoryWarning*/
+-(void)applicationDidReceiveMemoryWarning;
+
+/** applicationDidEnterBackground*/
+-(void)applicationDidEnterBackground;
+
+/** applicationWillEnterForeground*/
+-(void)applicationWillEnterForeground;
+
 @end

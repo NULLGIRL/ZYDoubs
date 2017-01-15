@@ -8,6 +8,7 @@
 
 #import "ZYAppDelegate.h"
 
+
 #import "ZYMainNavViewController.h"
 #import "ZYMainTabBarViewController.h"
 
@@ -35,12 +36,16 @@
     
     // 初始化一些变量
     _isLogout = [[NSUserDefaults standardUserDefaults] boolForKey:ZYUserLogout];
-    
 
-//    ZYMainTabBarViewController * tab = [[ZYMainTabBarViewController alloc] init];
-//    ZYMainNavViewController * nav = [[ZYMainNavViewController alloc]initWithRootViewController:tab];
-//    self.window.rootViewController = nav;
-//    [self.window makeKeyAndVisible];
+    //开启网络状况的监听
+    [self MyNetReachability];
+    
+    // idoubs 注册通知
+    [self registNotification];
+    
+    // idoubs 后台运行
+    [self didFinishLaunchingWithOptions];
+    
     
     //判断是否需要显示新特性界面
     ZYNewFeatureViewController *newFeaVC = [self setupDefaultContoller];

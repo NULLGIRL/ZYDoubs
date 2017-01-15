@@ -8,6 +8,8 @@
 
 #import "ZYAppDelegate+Private.h"
 
+#import "Reachability.h"  //网络监听
+
 @implementation ZYAppDelegate (Private)
 
 #pragma mark
@@ -63,6 +65,47 @@
         [avSession setAudioInterrupt:interrupt];
     }
 }
+
+
+
+#pragma mark - 开启网络监听
+-(void)MyNetReachability{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name: kReachabilityChangedNotification
+                                               object: nil];
+    Reachability *hostReach =[Reachability reachabilityWithHostName:@"www.google.com"];//可以以多种形式初始化
+    [hostReach startNotifier]; //开始监听,会启动一个run loop
+    [self updateInterfaceWithReachability: hostReach];
+}
+
+- (void)reachabilityChanged: (NSNotification*)note
+{
+    Reachability*curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+
+
+//处理连接改变后的情况
+- (void)updateInterfaceWithReachability: (Reachability*)curReach
+{
+    //对连接改变做出响应的处理动作。
+    
+    NetworkStatus status=[curReach currentReachabilityStatus];
+    
+    if(status != NotReachable)
+    {
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Reachable" object:nil];
+    } else if (status== NotReachable) {
+        
+        //停止刷新等
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NotReachable" object:nil];
+    }
+}
+
+
 
 
 
