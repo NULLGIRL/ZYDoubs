@@ -117,24 +117,27 @@
         return;
     }
     
-    NSString * kPublicIdentity = [NSString stringWithFormat:@"sip:%@@%@",self.sipnumTextField.text,self.realmTextField.text];
     
-    [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_IMPI andValue:self.sipnumTextField.text];
-    [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_IMPU andValue:kPublicIdentity];
-    [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_DISPLAY_NAME andValue:@"昵称"];
-    [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_PASSWORD andValue:self.passwordField.text];
-    [[NgnEngine sharedInstance].configurationService setStringWithKey:NETWORK_REALM andValue:self.realmTextField.text];
-    [[NgnEngine sharedInstance].configurationService setStringWithKey:NETWORK_PCSCF_HOST andValue:self.realmTextField.text];
-    
-    int intPort = [self.portTextField.text intValue];
-    [[NgnEngine sharedInstance].configurationService setIntWithKey:NETWORK_PCSCF_PORT andValue:intPort];
-    [[NgnEngine sharedInstance].configurationService setBoolWithKey:NETWORK_USE_EARLY_IMS andValue:YES];
-    [[NgnEngine sharedInstance].configurationService setBoolWithKey:NETWORK_USE_3G andValue:YES];
-    
-    [[NgnEngine sharedInstance].historyService load];
-    [[NgnEngine sharedInstance].sipService registerIdentity];
-    
-    SYLog(@" 配置   %@ \n%@\n %@\n",self.sipnumTextField.text,self.passwordField.text,kPublicIdentity);
+    if ([[NgnEngine sharedInstance] start]) {
+        NSString * kPublicIdentity = [NSString stringWithFormat:@"sip:%@@%@",self.sipnumTextField.text,self.realmTextField.text];
+        
+        [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_IMPI andValue:self.sipnumTextField.text];
+        [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_IMPU andValue:kPublicIdentity];
+        [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_DISPLAY_NAME andValue:@"昵称"];
+        [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_PASSWORD andValue:self.passwordField.text];
+        [[NgnEngine sharedInstance].configurationService setStringWithKey:NETWORK_REALM andValue:self.realmTextField.text];
+        [[NgnEngine sharedInstance].configurationService setStringWithKey:NETWORK_PCSCF_HOST andValue:self.realmTextField.text];
+        
+        int intPort = [self.portTextField.text intValue];
+        [[NgnEngine sharedInstance].configurationService setIntWithKey:NETWORK_PCSCF_PORT andValue:intPort];
+        [[NgnEngine sharedInstance].configurationService setBoolWithKey:NETWORK_USE_EARLY_IMS andValue:YES];
+        [[NgnEngine sharedInstance].configurationService setBoolWithKey:NETWORK_USE_3G andValue:YES];
+        
+        [[NgnEngine sharedInstance].historyService load];
+        [[NgnEngine sharedInstance].sipService registerIdentity];
+        
+        SYLog(@" 配置   %@ \n%@\n %@\n",self.sipnumTextField.text,self.passwordField.text,kPublicIdentity);
+    }
 
 }
 
