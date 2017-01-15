@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^ZYTextFieldBlock)(NSInteger tag);
+typedef void(^ZYTextFieldBlock)(NSInteger tag,NSString * text);
 @interface ZYTextField : UITextField
 
 

@@ -30,6 +30,7 @@
             self.placeholder = placeText;
         }
         
+        self.text = @"";
         
         if (fieldFont) {
             self.font = fieldFont;
@@ -44,7 +45,7 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     
     if (self.block) {
-        self.block(self.tag);
+        self.block(self.tag,textField.text);
     }
 }
 

@@ -12,6 +12,7 @@ PODS:
   - FMDB/standard (2.6.2)
   - IQKeyboardManager (3.3.7)
   - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.12)
   - SDAutoLayout (2.1.7)
   - SVProgressHUD (2.0.3)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - FMDB (~> 2.6.2)
   - IQKeyboardManager (~> 3.3.7)
   - Masonry (~> 0.6.4)
+  - MBProgressHUD (~> 0.8)
   - MJRefresh (~> 3.1.0)
   - SDAutoLayout
   - SVProgressHUD (~> 2.0.3)
@@ -30,10 +32,11 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: e217a55214ac6817812aad628875f8fe01c6d1bc
+PODFILE CHECKSUM: f26bb2204b1c9102a94cc7a61842d9cf84a6aa60
 
 COCOAPODS: 1.1.1

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7600C6AD74D4C6650B5D0C22 /* libPods-ZYDoubs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */; };
+		FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF081E2B269900F9498D /* CNUIHelper.m */; };
+		FA0EDF0C1E2B269900F9498D /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */; };
 		FA77185B1E24770A00AD8F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718421E24770A00AD8F5F /* main.m */; };
 		FA77185C1E24770A00AD8F5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA77184D1E24770A00AD8F5F /* Info.plist */; };
 		FA77185E1E24770A00AD8F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7718511E24770A00AD8F5F /* LaunchScreen.storyboard */; };
@@ -195,6 +197,10 @@
 		1F83DB3C08E8FF214A1929A7 /* Pods-ZYDoubs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYDoubs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYDoubs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9E7FECFABA1CFBAA6F5C63 /* Pods-ZYDoubs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYDoubs.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs.release.xcconfig"; sourceTree = "<group>"; };
+		FA0EDF071E2B269900F9498D /* CNUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNUIHelper.h; sourceTree = "<group>"; };
+		FA0EDF081E2B269900F9498D /* CNUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNUIHelper.m; sourceTree = "<group>"; };
+		FA0EDF091E2B269900F9498D /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		FA10F14E1E233CFD00BAFDA5 /* ZYDoubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYDoubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA77180B1E246EED00AD8F5F /* ios-ngn-stack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ios-ngn-stack.xcodeproj"; path = "../ios-ngn-stack/ios-ngn-stack.xcodeproj"; sourceTree = "<group>"; };
 		FA7718421E24770A00AD8F5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -360,6 +366,17 @@
 				CC9E7FECFABA1CFBAA6F5C63 /* Pods-ZYDoubs.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA0EDF061E2B269900F9498D /* CNUIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				FA0EDF071E2B269900F9498D /* CNUIHelper.h */,
+				FA0EDF081E2B269900F9498D /* CNUIHelper.m */,
+				FA0EDF091E2B269900F9498D /* Toast+UIView.h */,
+				FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */,
+			);
+			path = CNUIHelper;
 			sourceTree = "<group>";
 		};
 		FA10F1451E233CFD00BAFDA5 = {
@@ -625,6 +642,7 @@
 		FA7718FE1E24B12900AD8F5F /* Vender(第三方框架) */ = {
 			isa = PBXGroup;
 			children = (
+				FA0EDF061E2B269900F9498D /* CNUIHelper */,
 				FA7718FF1E24B12900AD8F5F /* Routable(路由跳转) */,
 			);
 			name = "Vender(第三方框架)";
@@ -924,6 +942,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0EDF0C1E2B269900F9498D /* Toast+UIView.m in Sources */,
 				FA7718D91E2487CE00AD8F5F /* ZYBarButton.m in Sources */,
 				FAFD3D781E26049D001992B9 /* ZYUserManager.m in Sources */,
 				FAFD3D741E25DDB1001992B9 /* ZYSipTools.m in Sources */,
@@ -942,6 +961,7 @@
 				FA7718FD1E24A9D600AD8F5F /* ZYAppDelegate+Notification.m in Sources */,
 				FA7718D41E2487B300AD8F5F /* ZYBaseViewController.m in Sources */,
 				FAFD3D7C1E26228A001992B9 /* ZYVideoViewController.m in Sources */,
+				FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */,
 				FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */,
 				FA7718D61E2487B300AD8F5F /* ZYMainTabBarViewController.m in Sources */,
 				FAFD3D861E26306F001992B9 /* ZYCallViewController.mm in Sources */,
