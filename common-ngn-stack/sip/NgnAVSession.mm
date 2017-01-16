@@ -579,6 +579,7 @@
                                                          andMediaType: media
                                                              andState: INVITE_STATE_INCOMING] autorelease];
         if(avSession){
+            avSession.isInComing = YES;
             if (sipMessage){
                 char* _fHeaderValue = const_cast<SipMessage*>(sipMessage)->getSipHeaderValue("f");
                 [avSession setRemotePartyUri: [NgnStringUtils toNSString: _fHeaderValue]];
@@ -596,6 +597,7 @@
     @synchronized (kSessions){
         avSession = [[[NgnAVSession alloc] internalInit:sipStack andCallSession:tsk_null andMediaType:media andState:INVITE_STATE_INPROGRESS] autorelease];
         if(avSession){
+            avSession.isInComing = NO;
             [kSessions setObject:avSession forKey:[avSession getIdAsNumber]];
         }
     }

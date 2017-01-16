@@ -74,6 +74,11 @@ class QoS;
 #endif
 }
 
+
+// add star
+@property (nonatomic,assign) BOOL isInComing;  // 是否是来电显示
+// end by zy
+
 -(BOOL) makeCall: (NSString*) validUri;
 -(BOOL) makeVideoSharingCall: (NSString*) validUri;
 -(BOOL) updateSession: (NgnMediaType_t)mediaType;

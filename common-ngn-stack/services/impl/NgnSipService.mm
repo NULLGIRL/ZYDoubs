@@ -201,10 +201,10 @@ public:
                     [ngnSipSession setConnectionState:CONN_STATE_CONNECTED];
                     [((NgnInviteSession*)ngnSipSession) setState:INVITE_STATE_INCALL];
                     
-                    
+                    NgnAVSession * avSession = [NgnAVSession getSessionWithId: _sessionId];
                     //  ---------  拨打电话给对方做判断
-                    NSLog(@"输入几次");
-                    if (!isInComing) {
+                    NSLog(@"拨打电话 或 来电");
+                    if (!avSession.isInComing) {
                         NSLog(@"拨出");
                         bool otherIsOnLine = true;
                         bool otherNotAnswer = false;
@@ -303,7 +303,7 @@ public:
                              andSipPhrase:phrase];
                     [ngnSipSession setConnectionState:CONN_STATE_TERMINATING];
                     [((NgnInviteSession*)ngnSipSession) setState:INVITE_STATE_TERMINATING];
-                    isInComing = false;
+//                    isInComing = false;
                     [NgnNotificationCenter postNotificationOnMainThreadWithName:kNgnInviteEventArgs_Name object:eargs];
                 }
                 // Messaging (PagerMode IM)
@@ -378,7 +378,7 @@ public:
                     [ngnSipSession setConnectionState:CONN_STATE_TERMINATED];
                     [((NgnInviteSession*)ngnSipSession) setState:INVITE_STATE_TERMINATED];
                     NSLog(@"挂断输入几次");
-                    isInComing = false;
+//                    isInComing = false;
                     if (inCallTimeStart!=0) {
                         inCallTimeEnd = [[NSDate date] timeIntervalSince1970];
                         NSLog(@"结束时间 %ld",inCallTimeEnd);
@@ -565,7 +565,7 @@ public:
                             delete _session;
                         }
                         if(ngnAVSession){
-                            isInComing = true;
+//                            isInComing = true;
                             eargs = [[NgnInviteEventArgs alloc] initWithSessionId:ngnAVSession.id
                                                                       andEvenType:INVITE_EVENT_INCOMING
                                                                      andMediaType:ngnAVSession.mediaType
@@ -1043,7 +1043,7 @@ private:
     long timeEnd;
     
     
-    bool isInComing = false;
+//    bool isInComing = false;
     long inCallTimeStart = 0;
     long inCallTimeEnd = 0;
 };
