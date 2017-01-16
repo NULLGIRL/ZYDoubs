@@ -8,6 +8,9 @@
 
 #import "ZYCallViewController.h"
 
+#import "ZYAudioViewController.h"
+#import "ZYVideoViewController.h"
+
 @interface ZYCallViewController ()
 
 @end
@@ -20,31 +23,41 @@
     
     if(session){
     
+        // 获取当前控制器
+        UIViewController * currentVC = [UIViewController currentViewController];
+        if ([NSStringFromClass([ZYAudioViewController class]) isEqualToString:NSStringFromClass([currentVC class])]) {
+            NSLog(@"当前页面是 ZYAudioViewController");
+            return NO;
+        }
+        
+        if ([NSStringFromClass([ZYVideoViewController class]) isEqualToString:NSStringFromClass([currentVC class])]) {
+            NSLog(@"当前页面是 ZYVideoViewController");
+            return NO;
+        }
+
+        
         if(isVideoType(session.mediaType)){
             
             
-//            VideoCallViewController * videoCallController = [[VideoCallViewController alloc] init];
-//            
-//            videoCallController.sessionId = session.id;
-//            videoCallController.workname = name;
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [rootVC presentViewController:videoCallController animated:YES completion:nil];
-//            });
+            ZYVideoViewController * videoCallController = [[ZYVideoViewController alloc] init];
+            videoCallController.videoSession = session;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [currentVC presentViewController:videoCallController animated:YES completion:nil];
+            });
+            
             
             
             return YES;
         }
         else if(isAudioType(session.mediaType)){
+
+            ZYAudioViewController * audioCallController = [[ZYAudioViewController alloc] init];
+            audioCallController.audioSession = session;
             
-//            AudioCallViewController * audioCallController = [[AudioCallViewController alloc] init];
-//            audioCallController.sessionId = session.id;
-//            audioCallController.workname = name;
-//            
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [rootVC presentViewController:audioCallController animated:YES completion:nil];
-//            });
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [currentVC presentViewController:audioCallController animated:YES completion:nil];
+            });
             
             return YES;
         }
@@ -67,18 +80,16 @@
     
     if(audioSession){
         
-//        AudioCallViewController * audioCallController = [[AudioCallViewController alloc] init];
-//        audioCallController.sessionId = audioSession.id;
-//        audioCallController.workname = name;
-//        audioCallController.buttonAccept.hidden = YES;
-//        
-//        //获取当前的控制器
-//        MyRootViewController * rootVC = (MyRootViewController *)[AppDelegate sharedInstance].window.rootViewController;
-//        UIViewController * modalViewController = rootVC;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [modalViewController presentViewController:audioCallController animated:YES completion:nil];
-//            [audioSession release];
-//        });
+        // 获取当前控制器
+        UIViewController * currentVC = [UIViewController currentViewController];
+        
+        ZYAudioViewController * audioCallController = [[ZYAudioViewController alloc] init];
+        audioCallController.audioSession = audioSession;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [currentVC presentViewController:audioCallController animated:YES completion:nil];
+            [audioSession release];
+        });
         
         return YES;
     }
@@ -96,18 +107,16 @@
                                                                       andSipStack: [[NgnEngine sharedInstance].sipService getSipStack]] retain];
     if(videoSession){
         
-//        VideoCallViewController * videoCallController = [[VideoCallViewController alloc]init];
-//        videoCallController.sessionId = videoSession.id;
-//        videoCallController.workname = name;
-//        videoCallController.buttonAccept.hidden = YES;
-//        
-//        //获取当前的控制器
-//        MyRootViewController * rootVC = (MyRootViewController *)[AppDelegate sharedInstance].window.rootViewController;
-//        UIViewController * modalViewController = rootVC;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [modalViewController presentViewController:videoCallController animated:YES completion:nil];
-//            [videoSession release];
-//        });
+        // 获取当前控制器
+        UIViewController * currentVC = [UIViewController currentViewController];
+        
+        ZYVideoViewController * videoCallController = [[ZYVideoViewController alloc] init];
+        videoCallController.videoSession = videoSession;
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [currentVC presentViewController:videoCallController animated:YES completion:nil];
+            [videoSession release];
+        });
         
         return YES;
     }

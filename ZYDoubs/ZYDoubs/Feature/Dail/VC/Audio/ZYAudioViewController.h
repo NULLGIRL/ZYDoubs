@@ -9,5 +9,10 @@
 #import "ZYBaseViewController.h"
 
 @interface ZYAudioViewController : ZYBaseViewController
+{
+    NgnAVSession* audioSession;
+}
+
+@property (nonatomic,strong) NgnAVSession* audioSession;
 
 @end
