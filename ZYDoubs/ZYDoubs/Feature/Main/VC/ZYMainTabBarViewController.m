@@ -8,10 +8,10 @@
 
 #import "ZYMainTabBarViewController.h"
 
-#import "ZYAudioViewController.h"
-#import "ZYContactViewController.h"
-#import "ZYMessageViewController.h"
-#import "ZYMineViewController.h"
+#import "ZYDailNumViewController.h"  //拨号界面
+#import "ZYContactViewController.h"  //联系人界面
+#import "ZYMessageViewController.h"  //发信息界面
+#import "ZYMineViewController.h"    //设置界面
 #import "ZYBarButton.h"
 
 @interface ZYMainTabBarViewController ()
@@ -53,7 +53,7 @@
 
 -(void)createSubviews
 {
-    ZYAudioViewController * audioVC = [[ZYAudioViewController alloc]init];
+    ZYDailNumViewController * audioVC = [[ZYDailNumViewController alloc]init];
     
     ZYMessageViewController * messageVC = [[ZYMessageViewController alloc]init];
     
