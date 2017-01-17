@@ -113,25 +113,35 @@
         make.height.equalTo(@30);
     }];
     
-    //    _handsFreeBtn = [[ZYButton alloc]initWithFrame:CGRectMake(15, ScreenHeight - 60, 45, 30)];
     [_handsFreeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
+        make.left.equalTo(_bgImageView).with.offset(15);
+        make.width.equalTo(@45);
+        make.top.equalTo(_bgImageView.mas_bottom).with.offset(-60);
+        make.height.equalTo(@30);
+        
     }];
     
-    //    _muteBtn = [[UIButton alloc]initWithFrame:CGRectMake(ScreenWidth - 15 - 45, ScreenHeight - 60, 45, 30)];
     [_muteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
+        make.right.equalTo(_bgImageView).with.offset(-15);
+        make.width.equalTo(@45);
+        make.top.equalTo(_handsFreeBtn);
+        make.height.equalTo(@30);
     }];
     
-    //    CGFloat frameX = CGRectGetMaxX(_handsFreeBtn.frame) + 20;
-    //    _buttonHangup.frame = CGRectMake(frameX,ScreenHeight - 60,CGRectGetMinX(_muteBtn.frame) - 20 - frameX,30);
     [_buttonHangup mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.left.equalTo(_handsFreeBtn).with.offset(20);
+        make.right.equalTo(_muteBtn.mas_left).with.offset(-20);
+        make.top.equalTo(_handsFreeBtn);
+        make.height.equalTo(@30);
     }];
     
-    //    _buttonAccept.frame = CGRectMake(frameX,ScreenHeight - 100,CGRectGetMinX(_muteBtn.frame) - 20 - frameX,30);
     [_buttonAccept mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.left.equalTo(_buttonHangup);
+        make.right.equalTo(_buttonHangup);
+        make.top.equalTo(_buttonHangup.mas_bottom).with.offset(10);
+        make.height.equalTo(_buttonHangup);
     }];
     
 }

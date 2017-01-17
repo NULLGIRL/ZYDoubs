@@ -579,12 +579,50 @@
                                                          andMediaType: media
                                                              andState: INVITE_STATE_INCOMING] autorelease];
         if(avSession){
+            // add star 来电
             avSession.isInComing = YES;
+            // end by zy
+            
             if (sipMessage){
                 char* _fHeaderValue = const_cast<SipMessage*>(sipMessage)->getSipHeaderValue("f");
                 [avSession setRemotePartyUri: [NgnStringUtils toNSString: _fHeaderValue]];
                 TSK_FREE(_fHeaderValue);
+                
+                // add star 增加来电名称转码
+                char * _remote = const_cast<SipMessage*>(sipMessage)->getSipHeaderValue("Remote-Party-ID");
+                NSLog(@"来电：_remote  ====  %s",_remote);
+                
+                NSString * displayName = @"";
+                NSMutableString * mStr = [[NSMutableString alloc] initWithString:@""];
+                NSString * remoteStr = [NSString stringWithCString:_remote encoding:NSUTF8StringEncoding];
+                NSLog(@"来电转码：remoteStr ==== %@",remoteStr);
+                
+                if (remoteStr.length != 0) {
+                    NSArray * componebtArr = [remoteStr componentsSeparatedByString:@"\""];
+                    if (componebtArr.count > 1) {
+                        NSString * str1 = componebtArr[1];
+                        NSArray * codeArr = [str1 componentsSeparatedByString:@","];
+                        if (codeArr.count != 0) {
+                            for (int i = 0; i < codeArr.count; i ++) {
+                                NSString * codeStr = codeArr[i];
+                                unichar thechar = [codeStr integerValue];
+                                NSString * cChar = [NSString stringWithFormat:@"%C",thechar];
+                                [mStr appendFormat:cChar];
+                                
+                                NSLog(@"来电： char  ====  %@",cChar);
+                            }
+                            // 设置displayname
+                            displayName = mStr;
+                        }
+                    }
+                }
+                
+                avSession.displayName = displayName;
+                NSLog(@"来电 ： displayName  ====  %@",avSession.displayName);
+
+                // end by zy
             }
+
             [kSessions setObject: avSession forKey:[avSession getIdAsNumber]];
             return avSession;
         }

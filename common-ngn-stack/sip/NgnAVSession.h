@@ -76,6 +76,7 @@ class QoS;
 
 
 // add star
+@property (nonatomic,strong) NSString * displayName;
 @property (nonatomic,assign) BOOL isInComing;  // 是否是来电显示
 // end by zy
 
