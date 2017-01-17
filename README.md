@@ -1,8 +1,8 @@
 # ZYDoubs
 
 ### step1. 准备工作-集成doubango
-如图
-![如图路径](file:///Users/momo/Desktop/star.jpg)
+
+![如图路径](https://github.com/NULLGIRL/ZYDoubs/blob/master/ZYDoubs/ZYDoubs/Resource/Screenshot/step1.jpg?raw=true)
 
 
 集成的工作比较繁琐，在博客里写到了，点击进去跟着做就好了！ 
