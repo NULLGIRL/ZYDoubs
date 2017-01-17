@@ -7,6 +7,7 @@
 //
 
 #import "ZYDailNumViewController.h"
+#import "ZYCallViewController.h"
 
 @interface ZYDailNumViewController ()
 @property (nonatomic,strong) UILabel * dailLabel;
@@ -41,7 +42,7 @@
     for (int i = 0; i < titleArr.count; i ++) {
         ZYButton * btn = [[ZYButton alloc]initWithTitle:titleArr[i] font:MiddleFont];
         btn.block = ^(NSString * reMark){
-            //            NSLog(@"点击了 %@",reMark);
+        
             [self btnClickBtn:reMark];
         };
         [self.view addSubview:btn];
@@ -73,6 +74,8 @@
     
     NSString * text = self.dailLabel.text;
     if ([remark isEqualToString:@"语音"]) {
+        
+        [ZYCallViewController makeAudioCallWithRemoteParty:text];
         
     }
     else if ([remark isEqualToString:@"视频"]){

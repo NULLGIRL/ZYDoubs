@@ -41,6 +41,7 @@
             
             ZYVideoViewController * videoCallController = [[ZYVideoViewController alloc] init];
             videoCallController.videoSession = session;
+        
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [currentVC presentViewController:videoCallController animated:YES completion:nil];
@@ -87,6 +88,7 @@
         audioCallController.audioSession = audioSession;
         
         dispatch_async(dispatch_get_main_queue(), ^{
+
             [currentVC presentViewController:audioCallController animated:YES completion:nil];
             [audioSession release];
         });

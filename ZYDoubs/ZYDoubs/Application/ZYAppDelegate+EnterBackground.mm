@@ -7,6 +7,7 @@
 //
 
 #import "ZYAppDelegate+EnterBackground.h"
+#import "ZYAppDelegate+SipCallback.h"
 
 @implementation ZYAppDelegate (EnterBackground)
 

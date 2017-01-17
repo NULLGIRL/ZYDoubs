@@ -23,8 +23,7 @@
         self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         self.modalPresentationStyle = UIModalPresentationFullScreen;
         [self createDefaultSubviews];
-        
-        
+
         isOnLine = YES;
     }
     return self;
@@ -92,7 +91,6 @@
     
     
     [_bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-    
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
         make.top.equalTo(self.view);
@@ -244,8 +242,8 @@
     
     if(audioSession){
         [audioSession setSpeakerEnabled:YES];
+        self.nameLabel.text = audioSession.displayName;
         [[NgnEngine sharedInstance].soundService setSpeakerEnabled:YES];
-        //        [self updateViewAndState];
     }
    
     isOnLine = YES;

@@ -25,5 +25,6 @@
 
 /** 判断用户是否退出当前用户 */
 @property (assign, nonatomic) BOOL isLogout;
-
+/** 注册次数*/
+@property (nonatomic,assign) NSInteger sipRegCount;
 @end

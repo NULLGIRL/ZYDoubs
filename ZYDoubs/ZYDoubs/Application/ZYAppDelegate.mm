@@ -31,6 +31,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.sipRegCount = 0;
+    
     // 初始化Log输出信息
     [ZYLog setupLog];
     

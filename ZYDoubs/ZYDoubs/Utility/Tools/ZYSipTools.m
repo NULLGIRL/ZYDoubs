@@ -32,11 +32,7 @@
 #if 0
 
     UserManager * user = [UserManagerTool userManager];
-    //    user.user_sip = @"1007";
-    //    user.sip_host_addr = @"120.24.209.114";
-    //    user.user_password = @"123456";
-    //    user.sip_host_port = @"35162";
-    
+
     NSString * kPublicIdentity = [NSString stringWithFormat:@"sip:%@@%@",user.user_sip,user.sip_host_addr];
     // set credentials
     [[NgnEngine sharedInstance].configurationService setStringWithKey:IDENTITY_DISPLAY_NAME andValue:user.worker_name];
