@@ -11,11 +11,18 @@
 typedef void(^ZYButtonBlock)(NSString * reMark);
 @interface ZYButton : UIButton
 
--(instancetype)initWithTitle:(NSString *)title;
+-(instancetype)initWithTitle:(NSString *)title font:(UIFont *)font;
 
--(instancetype)initWithTitle:(NSString *)title withImage:(NSString *)imageName;
+-(instancetype)initWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color selectColor:(UIColor *) sColor;
 
--(instancetype)initWithTitle:(NSString *)title withImage:(NSString *)imageName selectImage:(NSString *)selectImageName;
+-(instancetype)initWithTitle:(NSString *)title font:(UIFont *)font withImage:(NSString *)imageName;
+
+-(instancetype)initWithTitle:(NSString *)title font:(UIFont *)font withImage:(NSString *)imageName selectImage:(NSString *)selectImageName;
+
+/**
+    设置layer
+ */
+- (void) layerCornerRadius:(CGFloat)radius borderWidth:(CGFloat)border borderColor:(UIColor *)color;
 
 @property (nonatomic,copy) ZYButtonBlock block;
 

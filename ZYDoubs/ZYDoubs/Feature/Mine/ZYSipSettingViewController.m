@@ -62,7 +62,7 @@
         }];
     }
     
-    ZYButton * commitBtn = [[ZYButton alloc]initWithTitle:@"确认"];
+    ZYButton * commitBtn = [[ZYButton alloc]initWithTitle:@"确认" font:MiddleFont];
     commitBtn.block = ^(NSString * reMark){
         [self.view endEditing:YES];
         [self sipRegister];

@@ -39,7 +39,7 @@
     
     CGFloat btnWidth = ScreenWidth / 3.0;
     for (int i = 0; i < titleArr.count; i ++) {
-        ZYButton * btn = [[ZYButton alloc]initWithTitle:titleArr[i]];
+        ZYButton * btn = [[ZYButton alloc]initWithTitle:titleArr[i] font:MiddleFont];
         btn.block = ^(NSString * reMark){
             //            NSLog(@"点击了 %@",reMark);
             [self btnClickBtn:reMark];

@@ -11,6 +11,8 @@
 		FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF081E2B269900F9498D /* CNUIHelper.m */; };
 		FA0EDF0C1E2B269900F9498D /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */; };
 		FA0EDF2F1E2B675700F9498D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF2E1E2B675700F9498D /* Reachability.m */; };
+		FA134C371E2DBA37000320D2 /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C361E2DBA37000320D2 /* PSTAlertController.m */; };
+		FA134C4B1E2DBC0C000320D2 /* ZYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C4A1E2DBC0C000320D2 /* ZYLabel.m */; };
 		FA77185B1E24770A00AD8F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718421E24770A00AD8F5F /* main.m */; };
 		FA77185C1E24770A00AD8F5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA77184D1E24770A00AD8F5F /* Info.plist */; };
 		FA77185E1E24770A00AD8F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7718511E24770A00AD8F5F /* LaunchScreen.storyboard */; };
@@ -70,8 +72,8 @@
 		FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77191E1E24B95900AD8F5F /* ZYConst.m */; };
 		FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */; };
 		FADDD8DE1E27781700F0A226 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8DD1E27781700F0A226 /* ZYTextField.m */; };
-		FAEDBB931E2CBCC8003EEF8D /* ZYAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8B1E2CBCC8003EEF8D /* ZYAudioViewController.m */; };
-		FAEDBB941E2CBCC8003EEF8D /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8E1E2CBCC8003EEF8D /* ZYVideoViewController.m */; };
+		FAEDBB931E2CBCC8003EEF8D /* ZYAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8B1E2CBCC8003EEF8D /* ZYAudioViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAEDBB941E2CBCC8003EEF8D /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8E1E2CBCC8003EEF8D /* ZYVideoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FAEDBB951E2CBCC8003EEF8D /* ZYCallViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB901E2CBCC8003EEF8D /* ZYCallViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FAEDBB961E2CBCC8003EEF8D /* ZYDailNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB921E2CBCC8003EEF8D /* ZYDailNumViewController.m */; };
 		FAEDBB991E2CC342003EEF8D /* UIViewController+ZYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB981E2CC342003EEF8D /* UIViewController+ZYUtils.m */; };
@@ -207,6 +209,12 @@
 		FA0EDF2D1E2B675700F9498D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		FA0EDF2E1E2B675700F9498D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FA10F14E1E233CFD00BAFDA5 /* ZYDoubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYDoubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA134C351E2DBA37000320D2 /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
+		FA134C361E2DBA37000320D2 /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
+		FA134C491E2DBC0C000320D2 /* ZYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLabel.h; sourceTree = "<group>"; };
+		FA134C4A1E2DBC0C000320D2 /* ZYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLabel.m; sourceTree = "<group>"; };
+		FA134C4C1E2DBE07000320D2 /* ZYUtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUtilsMacros.h; sourceTree = "<group>"; };
+		FA134C4D1E2DBE60000320D2 /* ZYRouteVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRouteVCMacros.h; sourceTree = "<group>"; };
 		FA77180B1E246EED00AD8F5F /* ios-ngn-stack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ios-ngn-stack.xcodeproj"; path = "../ios-ngn-stack/ios-ngn-stack.xcodeproj"; sourceTree = "<group>"; };
 		FA7718421E24770A00AD8F5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA77184D1E24770A00AD8F5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -430,6 +438,15 @@
 			path = ZYDoubs;
 			sourceTree = "<group>";
 		};
+		FA134C341E2DBA37000320D2 /* PSTAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				FA134C351E2DBA37000320D2 /* PSTAlertController.h */,
+				FA134C361E2DBA37000320D2 /* PSTAlertController.m */,
+			);
+			path = PSTAlertController;
+			sourceTree = "<group>";
+		};
 		FA77180C1E246EED00AD8F5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +495,8 @@
 				FAFD3D821E2624A5001992B9 /* ZYButton.m */,
 				FADDD8DC1E27781700F0A226 /* ZYTextField.h */,
 				FADDD8DD1E27781700F0A226 /* ZYTextField.m */,
+				FA134C491E2DBC0C000320D2 /* ZYLabel.h */,
+				FA134C4A1E2DBC0C000320D2 /* ZYLabel.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -540,6 +559,8 @@
 			isa = PBXGroup;
 			children = (
 				FA7718C71E24867300AD8F5F /* PrefixHeader.pch */,
+				FA134C4D1E2DBE60000320D2 /* ZYRouteVCMacros.h */,
+				FA134C4C1E2DBE07000320D2 /* ZYUtilsMacros.h */,
 				FAFD3D601E25DC74001992B9 /* ZYDoubangoMacros.h */,
 			);
 			path = Pch;
@@ -649,6 +670,7 @@
 		FA7718FE1E24B12900AD8F5F /* Vender(第三方框架) */ = {
 			isa = PBXGroup;
 			children = (
+				FA134C341E2DBA37000320D2 /* PSTAlertController */,
 				FA0EDF061E2B269900F9498D /* CNUIHelper */,
 				FA7718FF1E24B12900AD8F5F /* Routable(路由跳转) */,
 			);
@@ -1018,8 +1040,10 @@
 				FA7718DC1E2488BE00AD8F5F /* ZYTools.m in Sources */,
 				FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */,
 				FADDD8DE1E27781700F0A226 /* ZYTextField.m in Sources */,
+				FA134C4B1E2DBC0C000320D2 /* ZYLabel.m in Sources */,
 				FA7718B91E24825700AD8F5F /* ZYMineViewController.m in Sources */,
 				FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */,
+				FA134C371E2DBA37000320D2 /* PSTAlertController.m in Sources */,
 				FAEDBB961E2CBCC8003EEF8D /* ZYDailNumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1047,6 +1071,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1094,6 +1119,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1131,6 +1157,7 @@
 			baseConfigurationReference = 1F83DB3C08E8FF214A1929A7 /* Pods-ZYDoubs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEVELOPMENT_TEAM = U7Y7PWHHS2;
 				DOUBANGO_HOME = ../../doubango;
 				DOUBANGO_LIBS = $DOUBANGO_HOME/thirdparties/iphone/lib/universal;
@@ -1240,6 +1267,7 @@
 			baseConfigurationReference = CC9E7FECFABA1CFBAA6F5C63 /* Pods-ZYDoubs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEVELOPMENT_TEAM = U7Y7PWHHS2;
 				DOUBANGO_HOME = ../../doubango;
 				DOUBANGO_LIBS = $DOUBANGO_HOME/thirdparties/iphone/lib/universal;
