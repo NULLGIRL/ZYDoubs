@@ -14,6 +14,8 @@
 		FA134C371E2DBA37000320D2 /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C361E2DBA37000320D2 /* PSTAlertController.m */; };
 		FA134C4B1E2DBC0C000320D2 /* ZYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C4A1E2DBC0C000320D2 /* ZYLabel.m */; };
 		FA134C521E2DF462000320D2 /* SystemAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C511E2DF462000320D2 /* SystemAudio.m */; };
+		FA2C16891E308F4400B15339 /* DontDisturbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C16881E308F4400B15339 /* DontDisturbManager.m */; };
+		FA2C169E1E308FDC00B15339 /* MyFMDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C169D1E308FDC00B15339 /* MyFMDataBase.m */; };
 		FA77185B1E24770A00AD8F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718421E24770A00AD8F5F /* main.m */; };
 		FA77185C1E24770A00AD8F5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA77184D1E24770A00AD8F5F /* Info.plist */; };
 		FA77185E1E24770A00AD8F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7718511E24770A00AD8F5F /* LaunchScreen.storyboard */; };
@@ -219,6 +221,11 @@
 		FA134C501E2DF462000320D2 /* SystemAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemAudio.h; sourceTree = "<group>"; };
 		FA134C511E2DF462000320D2 /* SystemAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemAudio.m; sourceTree = "<group>"; };
 		FA134C531E2DF4C2000320D2 /* DefaultsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsMacros.h; sourceTree = "<group>"; };
+		FA2C16871E308F4400B15339 /* DontDisturbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DontDisturbManager.h; sourceTree = "<group>"; };
+		FA2C16881E308F4400B15339 /* DontDisturbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DontDisturbManager.m; sourceTree = "<group>"; };
+		FA2C169C1E308FDC00B15339 /* MyFMDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFMDataBase.h; sourceTree = "<group>"; };
+		FA2C169D1E308FDC00B15339 /* MyFMDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFMDataBase.m; sourceTree = "<group>"; };
+		FA2C169F1E3090F200B15339 /* ZYDataBaseMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDataBaseMacros.h; sourceTree = "<group>"; };
 		FA77180B1E246EED00AD8F5F /* ios-ngn-stack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ios-ngn-stack.xcodeproj"; path = "../ios-ngn-stack/ios-ngn-stack.xcodeproj"; sourceTree = "<group>"; };
 		FA7718421E24770A00AD8F5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA77184D1E24770A00AD8F5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -460,6 +467,24 @@
 			path = "系统震动声音";
 			sourceTree = "<group>";
 		};
+		FA2C16861E308F4400B15339 /* 勿扰模式 */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C16871E308F4400B15339 /* DontDisturbManager.h */,
+				FA2C16881E308F4400B15339 /* DontDisturbManager.m */,
+			);
+			path = "勿扰模式";
+			sourceTree = "<group>";
+		};
+		FA2C169B1E308FCA00B15339 /* 数据库管理 */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C169C1E308FDC00B15339 /* MyFMDataBase.h */,
+				FA2C169D1E308FDC00B15339 /* MyFMDataBase.m */,
+			);
+			path = "数据库管理";
+			sourceTree = "<group>";
+		};
 		FA77180C1E246EED00AD8F5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +601,7 @@
 				FA134C4C1E2DBE07000320D2 /* ZYUtilsMacros.h */,
 				FAFD3D601E25DC74001992B9 /* ZYDoubangoMacros.h */,
 				FA134C531E2DF4C2000320D2 /* DefaultsMacros.h */,
+				FA2C169F1E3090F200B15339 /* ZYDataBaseMacros.h */,
 			);
 			path = Pch;
 			sourceTree = "<group>";
@@ -607,6 +633,8 @@
 		FA7718551E24770A00AD8F5F /* Utility(自定义) */ = {
 			isa = PBXGroup;
 			children = (
+				FA2C169B1E308FCA00B15339 /* 数据库管理 */,
+				FA2C16861E308F4400B15339 /* 勿扰模式 */,
 				FA134C4F1E2DF462000320D2 /* 系统震动声音 */,
 				FA0EDF2C1E2B675700F9498D /* Reachability */,
 				FAFD3D751E26048A001992B9 /* UserManage */,
@@ -1045,7 +1073,9 @@
 				FAFD3D831E2624A5001992B9 /* ZYButton.m in Sources */,
 				FA77185B1E24770A00AD8F5F /* main.m in Sources */,
 				FAEDBB951E2CBCC8003EEF8D /* ZYCallViewController.mm in Sources */,
+				FA2C169E1E308FDC00B15339 /* MyFMDataBase.m in Sources */,
 				FAEDBB941E2CBCC8003EEF8D /* ZYVideoViewController.m in Sources */,
+				FA2C16891E308F4400B15339 /* DontDisturbManager.m in Sources */,
 				FA7718FD1E24A9D600AD8F5F /* ZYAppDelegate+Notification.m in Sources */,
 				FA7718D41E2487B300AD8F5F /* ZYBaseViewController.m in Sources */,
 				FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */,

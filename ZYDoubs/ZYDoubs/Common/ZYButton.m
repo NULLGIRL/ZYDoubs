@@ -10,12 +10,6 @@
 
 @interface ZYButton ()
 
-/**
- 
- 标签
- 默认设置为title
- */
-@property (nonatomic,strong) NSString * reMark;
 
 @end
 

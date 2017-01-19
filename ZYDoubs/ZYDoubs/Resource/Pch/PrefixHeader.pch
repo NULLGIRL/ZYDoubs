@@ -18,9 +18,10 @@
     #import "ZYRouteVCMacros.h"
     #import "ZYDoubangoMacros.h"
     #import "DefaultsMacros.h"
-
+    #import "ZYDataBaseMacros.h"
 
     // 自定义工具类
+    #import "ZYUserManager.h"
     #import "ZYTools.h"
     #import "ZYSipTools.h"
     #import "ZYLog.h"
@@ -30,6 +31,8 @@
     #import "ZYLabel.h"
     #import "UIViewController+ZYUtils.h"
     #import "SystemAudio.h"
+    #import "MyFMDataBase.h"
+    #import "DontDisturbManager.h"
 
     // 第三方工具类
     #import <CocoaLumberjack/DDLog.h>

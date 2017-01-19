@@ -75,6 +75,34 @@
     return result;
 }
 
++(NSString *)subStringFromString:(NSString *)str isFrom:(BOOL)isFrom{
+    if ([self isNullOrEmpty:str]) {
+        return @"";
+    }
+    else{
+        NSInteger length = str.length;
+        if (!isFrom) {
+            //To
+            if (length > 2) {
+                return [str substringToIndex:2];
+            }
+            else{
+                return str;
+            }
+        }
+        else{
+            
+            if (length > 2) {
+                return [str substringFromIndex:length - 2];
+            }
+            else{
+                return str;
+            }
+        }
+        
+        
+    }
+}
 
 
 @end

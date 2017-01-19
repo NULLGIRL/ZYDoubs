@@ -75,10 +75,20 @@
     NSString * text = self.dailLabel.text;
     if ([remark isEqualToString:@"语音"]) {
         
+        if (![[NgnEngine sharedInstance].sipService isRegistered]) {
+            [CNUIHelper toast:@"sip未注册，请先去设置页面注册sip"];
+            return;
+        }
+        
         [ZYCallViewController makeAudioCallWithRemoteParty:text];
         
     }
     else if ([remark isEqualToString:@"视频"]){
+        if (![[NgnEngine sharedInstance].sipService isRegistered]) {
+            [CNUIHelper toast:@"sip未注册，请先去设置页面注册sip"];
+            return;
+        }
+        [ZYCallViewController makeAudioVideoCallWithRemoteParty:text];
         
     }
     else if ([remark isEqualToString:@"<-"]){

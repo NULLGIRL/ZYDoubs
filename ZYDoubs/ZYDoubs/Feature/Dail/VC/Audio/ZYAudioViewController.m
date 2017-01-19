@@ -11,7 +11,7 @@
 
 @interface ZYAudioViewController ()
 
-@property (nonatomic,strong) UILabel * dailLabel;
+@property (nonatomic,strong) ZYLabel * dailLabel;
 
 @end
 
@@ -33,7 +33,8 @@
     
     _bgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
     _bgImageView.userInteractionEnabled = YES;
-    _bgImageView.image = [UIImage imageNamed:@"dailBG"];
+//    _bgImageView.image = [UIImage imageNamed:@"dailBG"];
+    _bgImageView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_bgImageView];
     
 
@@ -56,8 +57,8 @@
     WEAKSELF
     _handsFreeBtn = [[ZYButton alloc]initWithTitle:@"免提" font:MiddleFont color:WHITECOLOR selectColor:REDCOLOR];
     _handsFreeBtn.block = ^(NSString * reMark){
-        
-        [weakSelf handsFreeBtnClick];
+
+        [weakSelf btnClick:@"免提"];
     };
     [_bgImageView addSubview:_handsFreeBtn];
     
@@ -65,8 +66,8 @@
     //静音
     _muteBtn = [[ZYButton alloc]initWithTitle:@"静音" font:MiddleFont color:WHITECOLOR selectColor:REDCOLOR];
     _muteBtn.block = ^(NSString * reMark){
-        
-        [weakSelf muteBtnClick];
+
+        [weakSelf btnClick:@"静音"];
     };
     [_bgImageView addSubview:_muteBtn];
     
@@ -74,8 +75,8 @@
     //挂断
     _buttonHangup = [[ZYButton alloc]initWithTitle:@"挂断" font:MiddleFont color:REDCOLOR selectColor:nil];
     _buttonHangup.block = ^(NSString * reMark){
-        
-        [weakSelf buttonHangupClick];
+
+        [weakSelf btnClick:@"挂断"];
     };
     [_buttonHangup layerCornerRadius:15.0f borderWidth:1.0f borderColor:REDCOLOR];
     [_bgImageView addSubview:_buttonHangup];
@@ -83,8 +84,8 @@
     //接受
     _buttonAccept = [[ZYButton alloc]initWithTitle:@"接受" font:MiddleFont color:GREENCOLOR selectColor:nil];
     _buttonAccept.block = ^(NSString * reMark){
-        
-        [weakSelf buttonAcceptClick];
+
+        [weakSelf btnClick:@"接受"];
     };
     [_buttonAccept layerCornerRadius:15.0f borderWidth:1.0f borderColor:GREENCOLOR];
     [_bgImageView addSubview:_buttonAccept];
@@ -129,7 +130,7 @@
     }];
     
     [_buttonHangup mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_handsFreeBtn).with.offset(20);
+        make.left.equalTo(_handsFreeBtn.mas_right).with.offset(20);
         make.right.equalTo(_muteBtn.mas_left).with.offset(-20);
         make.top.equalTo(_handsFreeBtn);
         make.height.equalTo(@30);
@@ -144,12 +145,28 @@
     
 }
 
+- (void) btnClick:(NSString *)remark{
+    if ([remark isEqualToString:@"免提"]) {
+        [self handsFreeBtnClick];
+    }
+    else if ([remark isEqualToString:@"静音"]) {
+        [self muteBtnClick];
+    }
+    else if ([remark isEqualToString:@"挂断"]) {
+        [self buttonHangupClick];
+    }
+    else if ([remark isEqualToString:@"接受"]) {
+        [self buttonAcceptClick];
+    }
+    
+}
+
 //挂断
 - (void) buttonHangupClick{
     
     //挂断
-    if(audioSession && [audioSession isConnected]) {
-        SYLog(@"videoSession 存在  连接");
+    if(audioSession) {
+        SYLog(@"videoSession 存在");
         [audioSession hangUpCall];
         // releases session
         [NgnAVSession releaseSession:&audioSession];
@@ -160,16 +177,6 @@
                                        userInfo:nil
                                         repeats:NO];
         
-    }
-    else if (audioSession && ![audioSession isConnected]){
-        SYLog(@"videoSession 存在  但未连接");
-        [audioSession hangUpCall];
-        [NgnAVSession releaseSession:&audioSession];
-        [NSTimer scheduledTimerWithTimeInterval:kCallTimerSuicide
-                                         target:self
-                                       selector:@selector(timerSuicideTick:)
-                                       userInfo:nil
-                                        repeats:NO];
     }
     else{
         SYLog(@"videoSession 为空  挂断不起作用");
@@ -297,11 +304,9 @@
 
 
 #pragma mark - 懒加载
--(UILabel *)dailLabel{
+-(ZYLabel *)dailLabel{
     if (!_dailLabel) {
-        _dailLabel = [[UILabel alloc]init];
-        _dailLabel.backgroundColor = [UIColor yellowColor];
-        _dailLabel.text = @"";
+        _dailLabel = [[ZYLabel alloc]initWithText:@"" font:MiddleFont color:WHITECOLOR];
         _dailLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _dailLabel;

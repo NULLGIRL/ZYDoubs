@@ -32,7 +32,7 @@
             OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path],&sound);
             
             if (error != kAudioServicesNoError) {//获取的声音的时候，出现错误
-                sound = nil;
+                sound = NULL;
             }
         }
     }

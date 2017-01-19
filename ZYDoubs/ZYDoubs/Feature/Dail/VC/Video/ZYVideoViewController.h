@@ -11,7 +11,7 @@
 @interface ZYVideoViewController : ZYBaseViewController
 {
     NgnAVSession* videoSession;
-    BOOL sendingVideo;
+    
 }
 
 @property (nonatomic,strong) NgnAVSession* videoSession;

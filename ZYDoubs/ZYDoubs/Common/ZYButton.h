@@ -26,4 +26,14 @@ typedef void(^ZYButtonBlock)(NSString * reMark);
 
 @property (nonatomic,copy) ZYButtonBlock block;
 
+
+
+
+/**
+ 
+ 标签
+ 默认设置为title
+ */
+@property (nonatomic,strong) NSString * reMark;
+
 @end

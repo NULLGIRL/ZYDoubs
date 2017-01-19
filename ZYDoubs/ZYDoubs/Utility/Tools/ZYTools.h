@@ -35,5 +35,9 @@
  */
 + (UIColor *) colorFromHexRGB:(NSString *)inColorString;
 
+/**
+ 截取字符串
+ */
++ (NSString *) subStringFromString:(NSString *)str isFrom:(BOOL)isFrom;
 
 @end
