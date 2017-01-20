@@ -34,7 +34,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"设置";
+//    self.tabBarController.navigationItem.title = @"设置";
+    [self setBlackTitle:@"设置" smallTitle:@"Setting" withVC:self.tabBarController];
     
     NSString * impi = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPI];
     if (![ZYTools isNullOrEmpty:impi]) {

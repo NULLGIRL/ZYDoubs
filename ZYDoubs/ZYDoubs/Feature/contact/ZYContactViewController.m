@@ -22,7 +22,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"联系人";
+//    self.tabBarController.navigationItem.title = @"联系人";
+    [self setBlackTitle:@"联系人" smallTitle:@"Contact" withVC:self.tabBarController];
 }
 
 /*

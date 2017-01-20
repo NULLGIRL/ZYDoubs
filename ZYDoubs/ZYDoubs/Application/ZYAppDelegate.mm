@@ -33,6 +33,9 @@
     
     self.sipRegCount = 0;
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    
     // 初始化Log输出信息
     [ZYLog setupLog];
     

@@ -31,7 +31,7 @@
 
 - (id)initWithRouterParams:(NSDictionary *)params {
     if ((self = [self initWithNibName:nil bundle:nil])) {
-        NSString *string = [params objectForKey:@"id"];
+//        NSString *string = [params objectForKey:@"id"];
 
 //        if ([string isEqualToString:@"me"]) {
 //            [self setSelectedIndex:2];
@@ -84,8 +84,7 @@
         [btn setTitle:btnTitle forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(barButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.tabBar addSubview:btn];
-        
-        [btn setBackgroundColor:[UIColor colorWithRed:0.0 green:180/255.0 blue:199/255.0 alpha:0.8]];
+
         
         if (i == 0) {
             [self barButtonClick:btn];

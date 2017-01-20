@@ -22,9 +22,6 @@
     
     self.navigationBar.translucent = NO;
     
-    //黑底白字
-    self.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    
     self.navigationBar.barTintColor = MainColor;
     
     

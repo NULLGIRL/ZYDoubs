@@ -35,6 +35,8 @@
     #import "DontDisturbManager.h"
 
     // 第三方工具类
+    #import "IQKeyboardManager.h"
+    #import "SVProgressHUD.h"
     #import <CocoaLumberjack/DDLog.h>
     #import <CocoaLumberjack/CocoaLumberjack.h>
     #import "Routable.h"

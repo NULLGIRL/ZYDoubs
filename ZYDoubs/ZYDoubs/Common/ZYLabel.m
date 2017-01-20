@@ -40,6 +40,8 @@
 
 - (void) text:(NSString *)text color:(UIColor *)color font:(UIFont *)font{
     
+    self.textAlignment = NSTextAlignmentCenter;
+    
     if (text) {
         self.text = text;
     }

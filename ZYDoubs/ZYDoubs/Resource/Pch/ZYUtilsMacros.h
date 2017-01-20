@@ -46,7 +46,7 @@
 /**
  *  主色调颜色
  */
-#define MainColor       [ZYTools colorFromHexRGB:@"00b4c7"]
+#define MainColor       [ZYTools colorFromHexRGB:@"f7f7f7"]
 /**
  *  提醒色 图标背景
  */
@@ -58,7 +58,7 @@
 /**
  *  正常文字
  */
-#define mainTextColor   [ZYTools colorFromHexRGB:@"555555"]
+#define mainTextColor   [ZYTools colorFromHexRGB:@"323232"]
 /**
  *  线 描述性非重要文字
  */
@@ -92,6 +92,23 @@
 #define SYLog(...)
 
 #endif
+
+// ************************ 设备系统 *****************************
+/**
+ *  设备系统版本相关
+ */
+#define SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+#define iOSVersion [[[UIDevice currentDevice] systemVersion] doubleValue]
+#define iPhone4s ([UIScreen mainScreen].bounds.size.height == 480 ? YES : NO)
+#define iPhone5s ([UIScreen mainScreen].bounds.size.height == 568 ? YES : NO)
+#define iPhone6s ([UIScreen mainScreen].bounds.size.height == 667 ? YES : NO)
+#define iPhone6plus ([UIScreen mainScreen].bounds.size.height == 736 ? YES : NO)
 
 
 #endif /* ZYUtilsMacros_h */

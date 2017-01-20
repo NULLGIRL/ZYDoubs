@@ -23,7 +23,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"我的消息";
+//    self.tabBarController.navigationItem.title = @"我的消息";
+    [self setBlackTitle:@"我的消息" smallTitle:@"Message" withVC:self.tabBarController];
 }
 
 - (void)didReceiveMemoryWarning {

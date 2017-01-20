@@ -109,7 +109,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"拨号";
+    [self setBlackTitle:@"拨号" smallTitle:@"Call" withVC:self.tabBarController];
 }
 
 - (void)didReceiveMemoryWarning {
