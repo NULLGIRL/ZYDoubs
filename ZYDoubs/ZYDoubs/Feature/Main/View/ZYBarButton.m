@@ -15,10 +15,11 @@
     if (self = [super initWithFrame:frame]) {
         self.imageView.contentMode = UIViewContentModeCenter;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.font = [UIFont systemFontOfSize:12];
-        [self setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [self setTitleColor:[ZYTools colorFromHexRGB:@"#909090"] forState:UIControlStateNormal];
         [self setTitleColor:mainTextColor forState:UIControlStateSelected];
-//        self.backgroundColor = MainColor;
+        self.titleLabel.font = [UIFont systemFontOfSize:10];
+        
+        [self setBackgroundImage:[UIImage imageNamed:@"Tab-bj"] forState:UIControlStateNormal];
     }
     
     return self;

@@ -79,6 +79,7 @@ NSString *const NewFeatureVersionKey = @"NewFeatureVersionKey";
     [lab_Thanks mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.view);
         make.height.equalTo(@40);
+        make.width.equalTo(@(ScreenWidth));
     }];
     
     UIButton * btn_enter = [[UIButton alloc]init];

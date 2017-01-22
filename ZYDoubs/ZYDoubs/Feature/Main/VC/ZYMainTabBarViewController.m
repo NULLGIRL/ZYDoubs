@@ -78,7 +78,6 @@
         NSString * sImageStr = [NSString stringWithFormat:@"%@_s",imageStr];
         [btn setImage:[UIImage imageNamed:imageStr] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:sImageStr] forState:UIControlStateSelected];
-        [btn setBackgroundImage:[UIImage imageNamed:@"Tab_bj"] forState:UIControlStateNormal];
         
         [btn setTitle:btnTitle forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(barButtonClick:) forControlEvents:UIControlEventTouchUpInside];

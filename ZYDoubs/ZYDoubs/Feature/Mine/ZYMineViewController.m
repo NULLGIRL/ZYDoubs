@@ -99,12 +99,14 @@
         [self.sipnumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(_headView);
             make.height.equalTo(@30);
+            make.width.equalTo(@(ScreenWidth));
         }];
         
         [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(_headView);
             make.top.equalTo(self.sipnumLabel.mas_bottom);
             make.height.equalTo(@30);
+            make.width.equalTo(@(ScreenWidth));
         }];
         
     }

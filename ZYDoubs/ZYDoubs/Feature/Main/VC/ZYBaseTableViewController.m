@@ -119,14 +119,14 @@
         make.left.equalTo(titleview);
         make.right.equalTo(titleview);
         make.top.equalTo(titleview);
-        make.width.equalTo(@25);
+        make.height.equalTo(@25);
     }];
     
     [smallTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(titleview);
         make.right.equalTo(titleview);
         make.top.equalTo(titleLabel.mas_bottom);
-        make.width.equalTo(@19);
+        make.height.equalTo(@19);
     }];
     vc.navigationItem.titleView = titleview;
 }

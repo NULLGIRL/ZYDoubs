@@ -180,7 +180,7 @@
     [_viewLocalVideo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view).with.offset(-10);
         make.top.equalTo(self.view).with.offset(20);
-        make.width.equalTo(@64);
+        make.height.equalTo(@64);
         make.width.equalTo(@86);
     }];
     

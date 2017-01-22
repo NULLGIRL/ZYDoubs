@@ -82,6 +82,10 @@
         [self setImage:[UIImage imageNamed:selectImage] forState:UIControlStateSelected];
     }
     
+    if (font) {
+        self.titleLabel.font = font;
+    }
+    
     [self addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
