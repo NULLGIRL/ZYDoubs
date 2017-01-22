@@ -12,5 +12,6 @@
 #define FIRST_VIEWCONTROLLER                @"first/:id"
 #define TABLEBARCONTROLLER                  @"tabBarController/:id"
 #define ZYSIPSETTING_VIEWCONTROLLER          @"sipSettingViewController/:id"
+#define ZYCHAT_VIEWCONTROLLER               @"chatViewController/:id"
 
 #endif /* ZYRouteVCMacros_h */

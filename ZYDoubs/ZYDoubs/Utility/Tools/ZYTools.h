@@ -40,4 +40,9 @@
  */
 + (NSString *) subStringFromString:(NSString *)str isFrom:(BOOL)isFrom;
 
+/**
+ 计算文字尺寸
+ */
++ (CGSize) sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize;
+
 @end

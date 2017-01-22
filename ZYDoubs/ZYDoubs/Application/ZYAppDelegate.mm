@@ -13,6 +13,8 @@
 #import "ZYMainTabBarViewController.h"
 
 #import "ZYSipSettingViewController.h"  // 设置页面
+#import "ZYChatViewController.h"        // 聊天界面
+
 
 #import "ZYAppDelegate+Private.h"
 #import "ZYAppDelegate+SipCallback.h"
@@ -124,6 +126,9 @@
     [[Routable sharedRouter] map:TABLEBARCONTROLLER toController:[ZYMainTabBarViewController class]];
     
     [[Routable sharedRouter] map:ZYSIPSETTING_VIEWCONTROLLER toController:[ZYSipSettingViewController class]];
+    
+    [[Routable sharedRouter] map:ZYCHAT_VIEWCONTROLLER toController:[ZYChatViewController class]];
+    
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

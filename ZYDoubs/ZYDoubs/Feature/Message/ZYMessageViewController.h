@@ -6,8 +6,12 @@
 //  Copyright © 2017年 Momo. All rights reserved.
 //
 
-#import "ZYBaseViewController.h"
+#import "ZYBaseTableViewController.h"
 
-@interface ZYMessageViewController : ZYBaseViewController
-
+@interface ZYMessageViewController : ZYBaseTableViewController
+{
+    NSMutableArray* messages;
+    NgnContact *pickedContact;
+    NgnPhoneNumber *pickedNumber;
+}
 @end
