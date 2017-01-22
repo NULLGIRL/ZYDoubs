@@ -33,7 +33,6 @@
     
     _bgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
     _bgImageView.userInteractionEnabled = YES;
-//    _bgImageView.image = [UIImage imageNamed:@"dailBG"];
     _bgImageView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_bgImageView];
     
@@ -90,14 +89,6 @@
     [_buttonAccept layerCornerRadius:15.0f borderWidth:1.0f borderColor:GREENCOLOR];
     [_bgImageView addSubview:_buttonAccept];
     
-    
-    [_bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view);
-        make.right.equalTo(self.view);
-        make.top.equalTo(self.view);
-        make.bottom.equalTo(self.view);
-    }];
-    
     [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_bgImageView).with.offset(20);
         make.right.equalTo(_bgImageView).with.offset(-20);
@@ -129,6 +120,13 @@
         make.height.equalTo(@30);
     }];
     
+    [_buttonAccept mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_buttonHangup);
+        make.right.equalTo(_buttonHangup);
+        make.bottom.equalTo(_buttonHangup.mas_top).with.offset(-10);
+        make.height.equalTo(_buttonHangup);
+    }];
+    
     [_buttonHangup mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_handsFreeBtn.mas_right).with.offset(20);
         make.right.equalTo(_muteBtn.mas_left).with.offset(-20);
@@ -136,12 +134,7 @@
         make.height.equalTo(@30);
     }];
     
-    [_buttonAccept mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_buttonHangup);
-        make.right.equalTo(_buttonHangup);
-        make.top.equalTo(_buttonHangup.mas_bottom).with.offset(10);
-        make.height.equalTo(_buttonHangup);
-    }];
+    
     
 }
 

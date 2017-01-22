@@ -57,9 +57,8 @@
 
 -(void)createDefaultSubviews{
 
-    _bgImageView = [[UIImageView alloc]init];
+    _bgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
     _bgImageView.userInteractionEnabled = YES;
-//    _bgImageView.image = [UIImage imageNamed:@"dailBG"];
     _bgImageView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_bgImageView];
     
@@ -169,13 +168,6 @@
     self.glViewVideoRemote = [[[iOSGLView alloc] initWithFrame:screenBounds] autorelease];
     [self.view insertSubview:self.glViewVideoRemote atIndex:0];
     
-    
-    [_bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view);
-        make.right.equalTo(self.view);
-        make.top.equalTo(self.view);
-        make.bottom.equalTo(self.view);
-    }];
     
     [_viewLocalVideo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view).with.offset(-10);
