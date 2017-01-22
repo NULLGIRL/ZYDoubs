@@ -153,11 +153,23 @@
 
 -(void)PlusBtnClick{
     NSLog(@"添加会话");
+    if ([self checkNetWork] && [ZYSipTools sipIsRegister]) {
+        
+        if(![ZYTools isNullOrEmpty:@"测试点击"]){
+            NgnHistorySMSEvent* event = [NgnHistoryEvent createSMSEventWithStatus:HistoryEventStatus_Outgoing
+                                                                   andRemoteParty:@"2000001850"
+                                                                       andContent:[@"测试点击" dataUsingEncoding:NSUTF8StringEncoding]];
+            NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri:@"2000001850"];
+            event.status = [session sendTextMessage:@"测试点击" contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
+            [[NgnEngine sharedInstance].historyService addEvent: event];
+            
+        }
+        
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
     
     [[NgnEngine sharedInstance].historyService load];
     
@@ -182,10 +194,16 @@
 //    [self.navigationController pushViewController:myChatDetailVC animated:YES];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return [messages count];
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ZYMessageTableViewCell *cell = [ZYMessageTableViewCell cellWithTableview:tableView];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
