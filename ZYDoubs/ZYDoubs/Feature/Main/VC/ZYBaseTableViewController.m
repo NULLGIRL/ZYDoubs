@@ -13,20 +13,28 @@
 @end
 
 @implementation ZYBaseTableViewController
+//
+//-(void)loadView
+//{   // textField上移 导航栏不上移
+//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.view = scrollView;
+//    
+//}
 
--(void)loadView
-{   // textField上移 导航栏不上移
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.view = scrollView;
-    
+-(instancetype)initWithStyle:(UITableViewStyle)style{
+    if (self = [super initWithStyle:style]) {
+        self.tableView.frame = [UIApplication sharedApplication].keyWindow.screen.bounds;
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
     //点击背景收回键盘
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {

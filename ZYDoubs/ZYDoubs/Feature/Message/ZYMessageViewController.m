@@ -25,6 +25,11 @@
     [super viewWillAppear:animated];
 //    self.tabBarController.navigationItem.title = @"我的消息";
     [self setBlackTitle:@"我的消息" smallTitle:@"Message" withVC:self.tabBarController];
+    [self createRightBarButtonItemWithImage:@"Plus" WithTitle:@"" withMethod:@selector(PlusBtnClick) withVC:self.tabBarController];
+}
+
+-(void)PlusBtnClick{
+    NSLog(@"添加会话");
 }
 
 - (void)didReceiveMemoryWarning {

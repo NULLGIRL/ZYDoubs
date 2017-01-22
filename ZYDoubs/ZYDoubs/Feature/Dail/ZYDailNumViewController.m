@@ -169,6 +169,11 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self setBlackTitle:@"拨号" smallTitle:@"Call" withVC:self.tabBarController];
+    [self createRightBarButtonItemWithImage:@"Menu" WithTitle:@"" withMethod:@selector(MoreBtnClick) withVC:self.tabBarController];
+}
+
+-(void)MoreBtnClick{
+    NSLog(@"菜单列表");
 }
 
 - (void)didReceiveMemoryWarning {

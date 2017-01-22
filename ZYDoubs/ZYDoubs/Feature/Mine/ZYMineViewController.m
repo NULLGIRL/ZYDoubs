@@ -13,11 +13,13 @@
 
 @property (nonatomic,strong) NSArray * cellTitleArr;
 
-@property (nonatomic,strong) UIView * headView;
+@property (nonatomic,strong) UIImageView * headView;
 
-@property (nonatomic,strong) UILabel * sipnumLabel;
+@property (nonatomic,strong) UIImageView * iconImage;
 
-@property (nonatomic,strong) UILabel * statusLabel;
+@property (nonatomic,strong) ZYLabel * sipnumLabel;
+
+@property (nonatomic,strong) ZYLabel * statusLabel;
 
 
 @end
@@ -28,14 +30,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.cellTitleArr = @[@"sip账号",@"消息设置",@"技术支持"];
+    self.cellTitleArr = @[@"信息设置",@"切换账号",@"技术支持",@"意见反馈",@"退出"];
     self.tableView.tableHeaderView = self.headView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 //    self.tabBarController.navigationItem.title = @"设置";
-    [self setBlackTitle:@"设置" smallTitle:@"Setting" withVC:self.tabBarController];
+//    [self setBlackTitle:@"设置" smallTitle:@"Setting" withVC:self.tabBarController];
+//    [self.tabBarController.navigationController setNavigationBarHidden:YES];
+    self.tabBarController.navigationController.navigationBar.hidden = YES;
     
     NSString * impi = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPI];
     if (![ZYTools isNullOrEmpty:impi]) {
@@ -50,9 +54,13 @@
             self.statusLabel.text = @"未注册";
         }
     }
+  
+}
 
-    
-    
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+//    [self.tabBarController.navigationController setNavigationBarHidden:NO];
+    self.tabBarController.navigationController.navigationBar.hidden = NO;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -64,10 +72,17 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.textLabel.text = self.cellTitleArr[indexPath.row];
+    for (UIView * view in cell.contentView.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    ZYLabel * label = [[ZYLabel alloc] initWithText:self.cellTitleArr[indexPath.row] font:LargeFont color:mainTextColor];
+    label.frame = CGRectMake(0, 0, ScreenWidth, 50);
+    [cell.contentView addSubview:label];
+
     
     return cell;
 }
@@ -88,46 +103,65 @@
 
 
 #pragma mark - 懒加载
--(UIView *)headView{
+-(UIImageView *)headView{
     if (!_headView) {
-        _headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 120)];
-        _headView.backgroundColor = BGColor;
+        _headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 272)];
+        _headView.userInteractionEnabled = YES;
+        _headView.image = [UIImage imageNamed:@"setting-bj"];
         
+        [_headView addSubview:self.iconImage];
         [_headView addSubview:self.sipnumLabel];
         [_headView addSubview:self.statusLabel];
         
+        [self.iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(_headView);
+            make.top.equalTo(_headView).with.offset(50);
+            make.height.equalTo(@100);
+            make.width.equalTo(@100);
+        }];
+        
+        
         [self.sipnumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(_headView);
+            make.top.equalTo(self.iconImage.mas_bottom).with.offset(10);
             make.height.equalTo(@30);
             make.width.equalTo(@(ScreenWidth));
         }];
         
         [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(_headView);
-            make.top.equalTo(self.sipnumLabel.mas_bottom);
+            make.top.equalTo(self.sipnumLabel.mas_bottom).with.offset(10);
             make.height.equalTo(@30);
             make.width.equalTo(@(ScreenWidth));
         }];
+        
+        self.iconImage.layer.cornerRadius = 50.0f;
         
     }
     return _headView;
 }
 
--(UILabel *)sipnumLabel{
+-(ZYLabel *)sipnumLabel{
     if (!_sipnumLabel) {
-        _sipnumLabel = [[UILabel alloc]init];
-        _sipnumLabel.text = @"sip账号:";
+        _sipnumLabel = [[ZYLabel alloc]initWithText:@"sip账号:" font:LargeFont color:mainTextColor];
     }
     return _sipnumLabel;
 }
 
--(UILabel *)statusLabel{
+-(ZYLabel *)statusLabel{
     if (!_statusLabel) {
-        _statusLabel = [[UILabel alloc]init];
+        _statusLabel = [[ZYLabel alloc]initWithText:@"注册状态：未登陆" font:MiddleFont color:mainTextColor];
         _statusLabel.textColor = [UIColor redColor];
     }
     
     return _statusLabel;
+}
+
+-(UIImageView *)iconImage{
+    if (!_iconImage) {
+        _iconImage = [[UIImageView alloc]init];
+        _iconImage.clipsToBounds = YES;
+        _iconImage.backgroundColor = [UIColor greenColor];
+    }
+    return _iconImage;
 }
 
 @end

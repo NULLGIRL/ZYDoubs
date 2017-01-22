@@ -24,6 +24,12 @@
     [super viewWillAppear:animated];
 //    self.tabBarController.navigationItem.title = @"联系人";
     [self setBlackTitle:@"联系人" smallTitle:@"Contact" withVC:self.tabBarController];
+    [self createRightBarButtonItemWithImage:@"Plus" WithTitle:@"" withMethod:@selector(PlusBtnClick) withVC:self.tabBarController];
+}
+
+
+-(void)PlusBtnClick{
+    NSLog(@"添加联系人");
 }
 
 /*
