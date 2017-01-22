@@ -36,8 +36,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    self.tabBarController.navigationItem.title = @"设置";
-//    [self setBlackTitle:@"设置" smallTitle:@"Setting" withVC:self.tabBarController];
 //    [self.tabBarController.navigationController setNavigationBarHidden:YES];
     self.tabBarController.navigationController.navigationBar.hidden = YES;
     
@@ -159,7 +157,8 @@
     if (!_iconImage) {
         _iconImage = [[UIImageView alloc]init];
         _iconImage.clipsToBounds = YES;
-        _iconImage.backgroundColor = [UIColor greenColor];
+//        _iconImage.backgroundColor = [UIColor greenColor];
+        _iconImage.image = [UIImage imageNamed:@"MyIcon"];
     }
     return _iconImage;
 }

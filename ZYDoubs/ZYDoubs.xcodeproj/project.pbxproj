@@ -118,6 +118,7 @@
 		FAF3AAC21E34816F00C01FEB /* ZYMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC11E34816F00C01FEB /* ZYMessageTableViewCell.m */; };
 		FAF3AAC51E34824C00C01FEB /* ZYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC41E34824C00C01FEB /* ZYChatViewController.m */; };
 		FAF3AAC81E34870000C01FEB /* BaloonChatCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */; };
+		FAF3AACD1E34929300C01FEB /* MyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AACC1E34929300C01FEB /* MyIcon.png */; };
 		FAFD3D741E25DDB1001992B9 /* ZYSipTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */; };
 		FAFD3D781E26049D001992B9 /* ZYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D771E26049D001992B9 /* ZYUserManager.m */; };
 		FAFD3D801E2622D1001992B9 /* ZYContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */; };
@@ -380,6 +381,7 @@
 		FAF3AAC41E34824C00C01FEB /* ZYChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYChatViewController.m; sourceTree = "<group>"; };
 		FAF3AAC61E34870000C01FEB /* BaloonChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaloonChatCell.h; sourceTree = "<group>"; };
 		FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaloonChatCell.mm; sourceTree = "<group>"; };
+		FAF3AACC1E34929300C01FEB /* MyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyIcon.png; sourceTree = "<group>"; };
 		FAFD3D601E25DC74001992B9 /* ZYDoubangoMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDoubangoMacros.h; sourceTree = "<group>"; };
 		FAFD3D721E25DDB1001992B9 /* ZYSipTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSipTools.h; sourceTree = "<group>"; };
 		FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSipTools.m; sourceTree = "<group>"; };
@@ -673,6 +675,7 @@
 		FA77184A1E24770A00AD8F5F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FAF3AACC1E34929300C01FEB /* MyIcon.png */,
 				FAF3AAB61E34618700C01FEB /* Setting */,
 				FAF3AAB01E345D0B00C01FEB /* message */,
 				FAF3AA931E34439100C01FEB /* dail */,
@@ -1179,6 +1182,7 @@
 				FA77185E1E24770A00AD8F5F /* LaunchScreen.storyboard in Resources */,
 				FAF3AA741E343F9E00C01FEB /* tab_contact_s@2x.png in Resources */,
 				FAF3AAB41E345D0B00C01FEB /* Plus@3x.png in Resources */,
+				FAF3AACD1E34929300C01FEB /* MyIcon.png in Resources */,
 				FAF3AA9D1E34439100C01FEB /* phonecall@3x.png in Resources */,
 				FAF3AA711E343F9E00C01FEB /* tab_call_s@3x.png in Resources */,
 				FAF3AA7A1E343F9E00C01FEB /* tab_Settings@2x.png in Resources */,
