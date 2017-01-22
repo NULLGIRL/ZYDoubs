@@ -20,9 +20,6 @@
 
 @property (nonatomic,strong) NSArray * btnImage;
 
-@property (nonatomic,strong) NSArray * btnSelectImage;
-
-
 @end
 
 @implementation ZYMainTabBarViewController
@@ -68,8 +65,7 @@
 -(void)setTabBar
 {
     NSArray * barButtonTitleArray = @[@"拨号",@"信息",@"联系人",@"设置"];
-    self.btnImage = @[@"home",@"order",@"my",@"my"];
-    self.btnSelectImage = @[@"selectedhome",@"selectedOrder",@"selectedMy",@"my"];
+    self.btnImage = @[@"tab_call",@"tab_message",@"tab_contact",@"tab_Settings"];
     
     float buttonWidth = ScreenWidth / 4;
     
@@ -78,8 +74,11 @@
         btn.frame = CGRectMake(i * buttonWidth, 0, buttonWidth, 49);
         btn.tag = i;
         NSString * btnTitle = barButtonTitleArray[i];
-        [btn setImage:[UIImage imageNamed:self.btnImage[i]] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:self.btnSelectImage[i]] forState:UIControlStateSelected];
+        NSString * imageStr = self.btnImage[i];
+        NSString * sImageStr = [NSString stringWithFormat:@"%@_s",imageStr];
+        [btn setImage:[UIImage imageNamed:imageStr] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:sImageStr] forState:UIControlStateSelected];
+        [btn setBackgroundImage:[UIImage imageNamed:@"Tab_bj"] forState:UIControlStateNormal];
         
         [btn setTitle:btnTitle forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(barButtonClick:) forControlEvents:UIControlEventTouchUpInside];
