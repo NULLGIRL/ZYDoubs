@@ -66,6 +66,10 @@
     return self.cellTitleArr.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * identify = @"ZYMineTableviewCell";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identify];
@@ -78,8 +82,8 @@
         [view removeFromSuperview];
     }
     
-    ZYLabel * label = [[ZYLabel alloc] initWithText:self.cellTitleArr[indexPath.row] font:LargeFont color:mainTextColor];
-    label.frame = CGRectMake(0, 0, ScreenWidth, 50);
+    ZYLabel * label = [[ZYLabel alloc] initWithText:self.cellTitleArr[indexPath.row] font:[UIFont systemFontOfSize:18] color:mainTextColor];
+    label.frame = CGRectMake(0, 0, ScreenWidth, 60);
     [cell.contentView addSubview:label];
 
     if (indexPath.row == self.cellTitleArr.count - 1) {
@@ -143,7 +147,8 @@
 
 -(ZYLabel *)sipnumLabel{
     if (!_sipnumLabel) {
-        _sipnumLabel = [[ZYLabel alloc]initWithText:@"sip账号:" font:LargeFont color:mainTextColor];
+        
+        _sipnumLabel = [[ZYLabel alloc]initWithText:@"sip账号:" font:[UIFont systemFontOfSize:20] color:mainTextColor];
     }
     return _sipnumLabel;
 }
