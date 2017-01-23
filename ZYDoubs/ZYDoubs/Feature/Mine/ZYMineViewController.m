@@ -32,6 +32,7 @@
     
     self.cellTitleArr = @[@"信息设置",@"切换账号",@"技术支持",@"意见反馈",@"退出"];
     self.tableView.tableHeaderView = self.headView;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -81,6 +82,9 @@
     label.frame = CGRectMake(0, 0, ScreenWidth, 50);
     [cell.contentView addSubview:label];
 
+    if (indexPath.row == self.cellTitleArr.count - 1) {
+        label.textColor = REDCOLOR;
+    }
     
     return cell;
 }
