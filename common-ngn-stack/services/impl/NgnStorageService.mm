@@ -95,21 +95,21 @@ static NSString* sDataBasePath = nil;
             NgnNSLog(TAG,@"Failed to open database from: %@", sDataBasePath);
             return NO;
         }
-//        else{
-//            
-//        }
-//        int storedVersion = [NgnStorageService databaseVersion:db];
-//        int sourceCodeVersion = [service databaseVersion];
-//        sqlite3_close(db), db = nil;
-//        if(storedVersion != sourceCodeVersion){
-//            NgnNSLog(TAG,@"database changed v-stored=%i and database v-code=%i", storedVersion, sourceCodeVersion);
-//            // remove the file (database already closed)
-//            [fileManager removeItemAtPath:sDataBasePath error:nil];
-//        }
-//        else {
-//            NgnNSLog(TAG,@"No changes: database v-current=%i", storedVersion);
-//            return NO;
-//        }
+        else{
+            
+        }
+        int storedVersion = [NgnStorageService databaseVersion:db];
+        int sourceCodeVersion = [service databaseVersion];
+        sqlite3_close(db), db = nil;
+        if(storedVersion != sourceCodeVersion){
+            NgnNSLog(TAG,@"database changed v-stored=%i and database v-code=%i", storedVersion, sourceCodeVersion);
+            // remove the file (database already closed)
+            [fileManager removeItemAtPath:sDataBasePath error:nil];
+        }
+        else {
+            NgnNSLog(TAG,@"No changes: database v-current=%i", storedVersion);
+            return NO;
+        }
     }
     
         NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:kDataBaseName];

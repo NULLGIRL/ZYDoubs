@@ -24,7 +24,6 @@
     }
     return self;
 }
-
 -(instancetype)initWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color selectColor:(UIColor *) sColor{
     
     if (self = [super init]) {

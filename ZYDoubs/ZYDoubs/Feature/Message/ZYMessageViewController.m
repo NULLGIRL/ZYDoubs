@@ -161,8 +161,10 @@
                                                                        andContent:[@"测试点击" dataUsingEncoding:NSUTF8StringEncoding]];
             NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri:@"2000001850"];
             event.status = [session sendTextMessage:@"测试点击" contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
-            [[NgnEngine sharedInstance].historyService addEvent: event];
-            
+            BOOL ret = [[NgnEngine sharedInstance].historyService addEvent: event];
+            NSLog(@"%@",ret?@"YES":@"NO");
+            NgnHistoryEventDictionary* dic = [[NgnEngine sharedInstance].historyService events];
+            NSLog(@"%@",dic);
         }
         
     }
