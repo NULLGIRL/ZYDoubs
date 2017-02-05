@@ -163,14 +163,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [self createLeftBarButtonItemWithTitle:@"信息" withVC:self];
     [self setBlackTitle:self.myNewsTitle withVC:self];
     [self createRightBarButtonItemWithImage:nil WithTitle:@"发送" withMethod:@selector(sendMessageBtnClick) withVC:self];
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     [self refreshDataAndReload];
-    
-    self.tableView.backgroundColor = [UIColor yellowColor];
     
     [[NSNotificationCenter defaultCenter]	addObserver:self
                                              selector:@selector(onHistoryEvent:)
