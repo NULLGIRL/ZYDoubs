@@ -214,7 +214,7 @@
         [PMSipTools UpdateUser_SipConfig];
         
         //        [PMSipTools UpdateUser_SipConfig];
-        [[NgnEngine sharedInstance].historyService load];
+//        [[NgnEngine sharedInstance].historyService load];
         [[NgnEngine sharedInstance].sipService registerIdentity];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(480 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

@@ -66,13 +66,14 @@ static NSString* sDataBasePath = nil;
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [[documentPaths objectAtIndex:0] stringByAppendingPathComponent:@"iDoubs"];
 #endif
-    sDataBasePath = [documentsDir stringByAppendingPathComponent:kDataBaseName];
+
+    sDataBasePath = [documentsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.db",@"UserManager"]];
     
     sqlite3 *db = nil;
     NSError* error = nil;
     NgnNSLog(TAG, @"databasePath:%@", sDataBasePath);
     NSFileManager *fileManager = [NSFileManager defaultManager];
- 
+    
 #if TARGET_OS_MAC && !TARGET_OS_IPHONE
     // create the folder if it doesn't exist
     BOOL isDirectory = NO;
@@ -87,7 +88,7 @@ static NSString* sDataBasePath = nil;
         }
     }
 #endif
-
+    
     if([fileManager fileExistsAtPath: sDataBasePath]){
         // query for the database version
         
@@ -95,32 +96,43 @@ static NSString* sDataBasePath = nil;
             NgnNSLog(TAG,@"Failed to open database from: %@", sDataBasePath);
             return NO;
         }
-        else{
-            
-        }
-        int storedVersion = [NgnStorageService databaseVersion:db];
-        int sourceCodeVersion = [service databaseVersion];
-        sqlite3_close(db), db = nil;
-        if(storedVersion != sourceCodeVersion){
-            NgnNSLog(TAG,@"database changed v-stored=%i and database v-code=%i", storedVersion, sourceCodeVersion);
-            // remove the file (database already closed)
-            [fileManager removeItemAtPath:sDataBasePath error:nil];
-        }
-        else {
-            NgnNSLog(TAG,@"No changes: database v-current=%i", storedVersion);
-            return NO;
-        }
+        //        else{
+        //
+        //        }
+        //        int storedVersion = [NgnStorageService databaseVersion:db];
+        //        int sourceCodeVersion = [service databaseVersion];
+        //        sqlite3_close(db), db = nil;
+        //        if(storedVersion != sourceCodeVersion){
+        //            NgnNSLog(TAG,@"database changed v-stored=%i and database v-code=%i", storedVersion, sourceCodeVersion);
+        //            // remove the file (database already closed)
+        //            [fileManager removeItemAtPath:sDataBasePath error:nil];
+        //        }
+        //        else {
+        //            NgnNSLog(TAG,@"No changes: database v-current=%i", storedVersion);
+        //            return NO;
+        //        }
     }
     
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"UserManager"]) {
         NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:kDataBaseName];
         NgnNSLog(TAG, @"creating (copy) new database from:%@", databasePathFromApp);
         
         if(![fileManager copyItemAtPath:databasePathFromApp toPath:sDataBasePath error:&error]){
             NgnNSLog(TAG, @"Failed to copy database to the file system: %@", error);
-           
+            [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"UserManager"];
             return NO;
         }
-
+        else{
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"UserManager"];
+        }
+    }
+    
+    //
+    // if we are here this means that the database has been upgraded/downgraded or this is a new installation
+    //
+    
+    
+    
     return YES;
 }
 
@@ -155,8 +167,8 @@ static NSString* sDataBasePath = nil;
 }
 
 -(BOOL) databaseLoadData{
-
-
+    
+    
     BOOL ok = YES;
     int ret;
     sqlite3_stmt *compiledStatement = nil;
@@ -292,7 +304,7 @@ done:
     }
     return self->database;
     
-
+    
 }
 
 -(BOOL) execSQL: (NSString*)sqlQuery{

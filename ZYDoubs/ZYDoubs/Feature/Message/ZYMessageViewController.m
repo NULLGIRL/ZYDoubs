@@ -173,7 +173,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NgnEngine sharedInstance].historyService load];
+//    [[NgnEngine sharedInstance].historyService load];
     
     if(!self.messages){
         self->messages = [[NSMutableArray alloc] init];
@@ -223,7 +223,7 @@
     
     ZYMessageTableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.entry) {
-               [[NgnEngine sharedInstance].historyService load];
+//               [[NgnEngine sharedInstance].historyService load];
         NSString * strSip = [NSString stringWithFormat:@"%@",cell.entry.remoteParty];
         
         [[Routable sharedRouter] open:ZYCHAT_VIEWCONTROLLER animated:YES extraParams:@{@"strSip":strSip,@"name":@"测试"}];

@@ -133,7 +133,7 @@
         [[NgnEngine sharedInstance].configurationService setBoolWithKey:NETWORK_USE_EARLY_IMS andValue:YES];
         [[NgnEngine sharedInstance].configurationService setBoolWithKey:NETWORK_USE_3G andValue:YES];
         
-        [[NgnEngine sharedInstance].historyService load];
+//        [[NgnEngine sharedInstance].historyService load];
         [[NgnEngine sharedInstance].sipService registerIdentity];
         
         SYLog(@" 配置   %@ \n%@\n %@\n",self.sipnumTextField.text,self.passwordField.text,kPublicIdentity);
