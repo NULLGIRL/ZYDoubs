@@ -8,6 +8,24 @@
 
 #import "ZYBaseTableViewController.h"
 
-@interface ZYContactViewController : ZYBaseTableViewController
+typedef enum ContactsFilterGroup_e
+{
+    FilterGroupAll,
+    FilterGroupOnline,
+    FilterGroupWiPhone
+}
+ContactsFilterGroup_t;
+
+typedef enum ContactsDisplayMode_e
+{
+    Display_None,
+    Display_ChooseNumberForFavorite,
+    Display_Searching
+}
+ContactsDisplayMode_t;
+
+
+
+@interface ZYContactViewController : ZYBaseTableViewController<UIActionSheetDelegate>
 
 @end

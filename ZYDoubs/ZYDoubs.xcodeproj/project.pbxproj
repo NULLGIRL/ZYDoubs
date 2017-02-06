@@ -73,6 +73,8 @@
 		FA7719061E24B27900AD8F5F /* ZYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719051E24B27900AD8F5F /* ZYNewFeatureViewController.m */; };
 		FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719091E24B6AC00AD8F5F /* ZYLog.m */; };
 		FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77191E1E24B95900AD8F5F /* ZYConst.m */; };
+		FAD70C701E4718FD00345D4B /* ContactViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD70C6E1E4718FD00345D4B /* ContactViewCell.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAD70C711E4718FD00345D4B /* ContactViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD70C6F1E4718FD00345D4B /* ContactViewCell.xib */; };
 		FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */; };
 		FADDD8DE1E27781700F0A226 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8DD1E27781700F0A226 /* ZYTextField.m */; };
 		FAEDBB931E2CBCC8003EEF8D /* ZYAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8B1E2CBCC8003EEF8D /* ZYAudioViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -119,9 +121,10 @@
 		FAF3AAC51E34824C00C01FEB /* ZYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC41E34824C00C01FEB /* ZYChatViewController.m */; };
 		FAF3AAC81E34870000C01FEB /* BaloonChatCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */; };
 		FAF3AACD1E34929300C01FEB /* MyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AACC1E34929300C01FEB /* MyIcon.png */; };
+		FAF68C6F1E480E1100FFD574 /* ZYContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF68C6E1E480E1100FFD574 /* ZYContactTableViewCell.m */; };
 		FAFD3D741E25DDB1001992B9 /* ZYSipTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */; };
 		FAFD3D781E26049D001992B9 /* ZYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D771E26049D001992B9 /* ZYUserManager.m */; };
-		FAFD3D801E2622D1001992B9 /* ZYContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */; };
+		FAFD3D801E2622D1001992B9 /* ZYContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FAFD3D831E2624A5001992B9 /* ZYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D821E2624A5001992B9 /* ZYButton.m */; };
 /* End PBXBuildFile section */
 
@@ -325,6 +328,9 @@
 		FA7719091E24B6AC00AD8F5F /* ZYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLog.m; sourceTree = "<group>"; };
 		FA77191D1E24B95900AD8F5F /* ZYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYConst.h; sourceTree = "<group>"; };
 		FA77191E1E24B95900AD8F5F /* ZYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConst.m; sourceTree = "<group>"; };
+		FAD70C6D1E4718FD00345D4B /* ContactViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewCell.h; sourceTree = "<group>"; };
+		FAD70C6E1E4718FD00345D4B /* ContactViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactViewCell.mm; sourceTree = "<group>"; };
+		FAD70C6F1E4718FD00345D4B /* ContactViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewCell.xib; sourceTree = "<group>"; };
 		FADDD8C51E27770400F0A226 /* ZYSipSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSipSettingViewController.h; sourceTree = "<group>"; };
 		FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSipSettingViewController.m; sourceTree = "<group>"; };
 		FADDD8DC1E27781700F0A226 /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
@@ -382,6 +388,8 @@
 		FAF3AAC61E34870000C01FEB /* BaloonChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaloonChatCell.h; sourceTree = "<group>"; };
 		FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaloonChatCell.mm; sourceTree = "<group>"; };
 		FAF3AACC1E34929300C01FEB /* MyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyIcon.png; sourceTree = "<group>"; };
+		FAF68C6D1E480E1100FFD574 /* ZYContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYContactTableViewCell.h; sourceTree = "<group>"; };
+		FAF68C6E1E480E1100FFD574 /* ZYContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYContactTableViewCell.m; sourceTree = "<group>"; };
 		FAFD3D601E25DC74001992B9 /* ZYDoubangoMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDoubangoMacros.h; sourceTree = "<group>"; };
 		FAFD3D721E25DDB1001992B9 /* ZYSipTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSipTools.h; sourceTree = "<group>"; };
 		FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSipTools.m; sourceTree = "<group>"; };
@@ -841,6 +849,25 @@
 			path = Const;
 			sourceTree = "<group>";
 		};
+		FAD70C6B1E4718EB00345D4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAD70C6C1E4718EB00345D4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAD70C6D1E4718FD00345D4B /* ContactViewCell.h */,
+				FAD70C6E1E4718FD00345D4B /* ContactViewCell.mm */,
+				FAD70C6F1E4718FD00345D4B /* ContactViewCell.xib */,
+				FAF68C6D1E480E1100FFD574 /* ZYContactTableViewCell.h */,
+				FAF68C6E1E480E1100FFD574 /* ZYContactTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FAEDBB871E2CBCC8003EEF8D /* Dail(拨号) */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,6 +1004,8 @@
 			children = (
 				FAFD3D7E1E2622D1001992B9 /* ZYContactViewController.h */,
 				FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */,
+				FAD70C6B1E4718EB00345D4B /* Model */,
+				FAD70C6C1E4718EB00345D4B /* View */,
 			);
 			name = "contact(联系人)";
 			path = contact;
@@ -1198,6 +1227,7 @@
 				FAF3AA9C1E34439100C01FEB /* phonecall@2x.png in Resources */,
 				FAF3AA6E1E343F9D00C01FEB /* tab_call@2x.png in Resources */,
 				FAF3AAB91E34618700C01FEB /* setting-bj@2x.png in Resources */,
+				FAD70C711E4718FD00345D4B /* ContactViewCell.xib in Resources */,
 				FAF3AA9E1E34439100C01FEB /* vedio@2x.png in Resources */,
 				FAF3AA751E343F9E00C01FEB /* tab_contact_s@3x.png in Resources */,
 				FAF3AAAE1E345C6000C01FEB /* Menu@2x.png in Resources */,
@@ -1300,9 +1330,11 @@
 				FADDD8DE1E27781700F0A226 /* ZYTextField.m in Sources */,
 				FA134C4B1E2DBC0C000320D2 /* ZYLabel.m in Sources */,
 				FA7718B91E24825700AD8F5F /* ZYMineViewController.m in Sources */,
+				FAF68C6F1E480E1100FFD574 /* ZYContactTableViewCell.m in Sources */,
 				FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */,
 				FA134C371E2DBA37000320D2 /* PSTAlertController.m in Sources */,
 				FAEDBB961E2CBCC8003EEF8D /* ZYDailNumViewController.m in Sources */,
+				FAD70C701E4718FD00345D4B /* ContactViewCell.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
