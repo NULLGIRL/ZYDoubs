@@ -13,5 +13,6 @@
 #define TABLEBARCONTROLLER                  @"tabBarController/:id"
 #define ZYSIPSETTING_VIEWCONTROLLER          @"sipSettingViewController/:id"
 #define ZYCHAT_VIEWCONTROLLER               @"chatViewController/:id"
+#define ZYSupportViewController_VIEWCONTROLLER @"supportViewController/:id"
 
 #endif /* ZYRouteVCMacros_h */

@@ -14,7 +14,7 @@
 
 #import "ZYSipSettingViewController.h"  // 设置页面
 #import "ZYChatViewController.h"        // 聊天界面
-
+#import "ZYSupportViewController.h"     // 技术支持
 
 #import "ZYAppDelegate+Private.h"
 #import "ZYAppDelegate+SipCallback.h"
@@ -129,6 +129,7 @@
     
     [[Routable sharedRouter] map:ZYCHAT_VIEWCONTROLLER toController:[ZYChatViewController class]];
     
+    [[Routable sharedRouter] map:ZYSupportViewController_VIEWCONTROLLER toController:[ZYSupportViewController class]];
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

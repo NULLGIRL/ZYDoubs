@@ -100,6 +100,9 @@
         NSLog(@"设置sip账号");
         [[Routable sharedRouter] open:ZYSIPSETTING_VIEWCONTROLLER];
     }
+    else if (indexPath.row == 2){
+        [[Routable sharedRouter] open:ZYSupportViewController_VIEWCONTROLLER];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
