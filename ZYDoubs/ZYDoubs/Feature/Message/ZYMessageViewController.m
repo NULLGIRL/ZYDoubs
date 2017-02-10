@@ -188,6 +188,7 @@
      addObserver:self selector:@selector(pushChatVC:) name:@"pushChatVC" object:nil];
     
     
+    
     self.tableView.mj_header = [MJRefreshNormalHeader  headerWithRefreshingBlock:^{
         [self refreshDataAndReload];
     }];

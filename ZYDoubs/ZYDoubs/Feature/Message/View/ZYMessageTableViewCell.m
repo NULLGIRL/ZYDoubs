@@ -15,7 +15,7 @@
 @property (nonatomic,strong) UILabel * timeLabel;
 @property (nonatomic,strong) UILabel * desLabel;
 @property (nonatomic,strong) UILabel * statusLabel;
-
+@property (nonatomic,strong) UIImageView * line;
 
 @end
 
@@ -40,7 +40,7 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         //        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self createSubviews];
     }
@@ -51,8 +51,8 @@
 -(void)createSubviews{
     
     self.photoBtn = [[UIButton alloc]init];
-    self.photoBtn.backgroundColor = MainColor;
-    self.photoBtn.layer.cornerRadius = 20;
+    self.photoBtn.backgroundColor = [UIColor cyanColor];
+    self.photoBtn.layer.cornerRadius = 30;
     self.photoBtn.titleLabel.font = LargeFont;
     [self.photoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.contentView addSubview:self.photoBtn];
@@ -64,12 +64,13 @@
     
     self.timeLabel = [[UILabel alloc]init];
     self.timeLabel.textColor = LINE_COLOR;
-    self.timeLabel.font = SmallFont;
+    self.timeLabel.font = LargeFont;
     [self.contentView addSubview:self.timeLabel];
     
     self.desLabel = [[UILabel alloc]init];
-    self.desLabel.textColor = mainTextColor;
-    self.desLabel.font = MiddleFont;
+    self.desLabel.textColor = LINE_COLOR;
+    self.desLabel.font = LargeFont;
+    self.desLabel.numberOfLines = 0;
     [self.contentView addSubview:self.desLabel];
     
     self.statusLabel = [[UILabel alloc]init];
@@ -78,11 +79,15 @@
     [self.contentView addSubview:self.statusLabel];
     
     
+    self.line = [[UIImageView alloc]init];
+    self.line.backgroundColor = LINE_COLOR;
+    [self.contentView addSubview:self.line];
+    
     [self.photoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).with.offset(15);
         make.top.equalTo(self.contentView).with.offset(15);
-        make.width.equalTo(@40);
-        make.height.equalTo(@40);
+        make.width.equalTo(@60);
+        make.height.equalTo(@60);
     }];
     
     
@@ -94,9 +99,9 @@
     }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.titleLabel);
-        make.top.equalTo(self.titleLabel.mas_bottom);
-        make.height.equalTo(@10);
+        make.right.equalTo(self.contentView).with.offset(-10);
+        make.top.equalTo(self.titleLabel);
+        make.height.equalTo(@20);
     }];
     
     [self.desLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -110,6 +115,13 @@
         make.right.equalTo(self.photoBtn).with.offset(7);
         make.top.equalTo(self.photoBtn).with.offset(-7);
         make.height.equalTo(@15);
+    }];
+    
+    [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.timeLabel);
+        make.left.equalTo(self.titleLabel);
+        make.top.equalTo(self.desLabel.mas_bottom);
+        make.height.equalTo(@1);
     }];
     
 }
