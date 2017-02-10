@@ -121,7 +121,7 @@
 
 /** 创建导航栏左边的按钮 （图片+文字）*/
 - (void)createLeftBarButtonItemWithTitle:(NSString *)title withVC:(UIViewController*)vc{
-    ZYButton * leftBtn = [[ZYButton alloc] initWithTitle:title font:LargeFont withImage:@"backArrow"];
+    ZYButton * leftBtn = [[ZYButton alloc] initWithTitle:title font:LargeFont withImage:@"backtrack1"];
     leftBtn.block = ^(NSString * reMark){
         [self backAction];
     };
@@ -135,7 +135,7 @@
 - (void)createLeftBarButtonItemWithImage:(NSString *)imageName WithTitle:(NSString *)title withMethod:(SEL)method withVC:(UIViewController*)vc{
     
     
-    ZYButton * leftBtn = [[ZYButton alloc] initWithTitle:title font:LargeFont withImage:@"backArrow"];
+    ZYButton * leftBtn = [[ZYButton alloc] initWithTitle:title font:LargeFont withImage:@"backtrack1"];
     leftBtn.block = ^(NSString * reMark){
         if (method) {
             [self performSelector:method];

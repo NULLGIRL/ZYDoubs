@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Doubango Telecom. All rights reserved.
 //
 
-#import "BaloonChatCell.h"
+#import "ZYBaloonChatCell.h"
 
-@interface BaloonChatCell()
+@interface ZYBaloonChatCell()
 
 @property (nonatomic,strong) UIButton * iconBtn; // 头像
 @property (retain, nonatomic) UILabel *labelContent; //内容
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation BaloonChatCell
+@implementation ZYBaloonChatCell
 
 +(instancetype)cellWithTableview:(UITableView *)tableview{
     
@@ -28,10 +28,10 @@
 
 -(instancetype)initWithTableview:(UITableView *)tableview{
     
-    static NSString * identify = @"baloonChatCell";
-    BaloonChatCell * cell = [tableview dequeueReusableCellWithIdentifier:identify];
+    static NSString * identify = @"ZYBaloonChatCell";
+    ZYBaloonChatCell * cell = [tableview dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
-        cell = [[BaloonChatCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell = [[ZYBaloonChatCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         self.labelContent.numberOfLines = 0;
     }
     
@@ -42,7 +42,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 //        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.backgroundColor = BGColor;
+        self.backgroundColor = WHITECOLOR;
         
         ZYUserManager * user = [ZYUserManager fileUserManager];
         self.myName = [ZYTools subStringFromString:user.username isFrom:NO];

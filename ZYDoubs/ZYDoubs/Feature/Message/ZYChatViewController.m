@@ -7,7 +7,7 @@
 //
 
 #import "ZYChatViewController.h"
-#import "BaloonChatCell.h"
+#import "ZYBaloonChatCell.h"
 //
 //	History Data
 //
@@ -265,7 +265,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    BaloonChatCell *cell = [BaloonChatCell cellWithTableview:self.tableView];
+    ZYBaloonChatCell *cell = [ZYBaloonChatCell cellWithTableview:self.tableView];
     
     @synchronized(messages){
         [cell setEvent:[messages objectAtIndex: indexPath.row] forTableView:_tableView withOtherName:self.myNewsTitle];
@@ -280,7 +280,7 @@
             NSString* content = event.contentAsString ? event.contentAsString : @"";
             CGSize constraintSize = [ZYTools sizeWithText:content font:MiddleFont maxSize:CGSizeMake(ScreenWidth - 120, 2500)];
             if (constraintSize.height < 30) {
-                return 60;
+                return 80;
             }
             else{
                 return 40 + constraintSize.height;

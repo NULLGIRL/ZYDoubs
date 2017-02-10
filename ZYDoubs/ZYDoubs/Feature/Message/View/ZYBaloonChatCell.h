@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaloonChatCell : UITableViewCell
+@interface ZYBaloonChatCell : UITableViewCell
 {
     UILabel *_labelContent;
     UILabel *_labelDate;

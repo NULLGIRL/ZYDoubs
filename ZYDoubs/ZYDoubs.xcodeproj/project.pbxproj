@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7600C6AD74D4C6650B5D0C22 /* libPods-ZYDoubs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */; };
 		FA0C09441E4DB78700E5E2C3 /* NgnDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = FA0C09421E4DB78700E5E2C3 /* NgnDataBase.db */; };
+		FA0C09581E4DC96A00E5E2C3 /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0C09571E4DC96A00E5E2C3 /* backArrow.png */; };
+		FA0C095B1E4DCA2900E5E2C3 /* backtrack1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0C09591E4DCA2900E5E2C3 /* backtrack1-1.png */; };
+		FA0C095C1E4DCA2900E5E2C3 /* backtrack1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0C095A1E4DCA2900E5E2C3 /* backtrack1.png */; };
 		FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF081E2B269900F9498D /* CNUIHelper.m */; };
 		FA0EDF0C1E2B269900F9498D /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */; };
 		FA0EDF2F1E2B675700F9498D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF2E1E2B675700F9498D /* Reachability.m */; };
@@ -120,7 +123,7 @@
 		FAF3AABE1E347FD300C01FEB /* ZYMessageHistoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AABD1E347FD300C01FEB /* ZYMessageHistoryEntry.m */; };
 		FAF3AAC21E34816F00C01FEB /* ZYMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC11E34816F00C01FEB /* ZYMessageTableViewCell.m */; };
 		FAF3AAC51E34824C00C01FEB /* ZYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC41E34824C00C01FEB /* ZYChatViewController.m */; };
-		FAF3AAC81E34870000C01FEB /* BaloonChatCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */; };
+		FAF3AAC81E34870000C01FEB /* ZYBaloonChatCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC71E34870000C01FEB /* ZYBaloonChatCell.mm */; };
 		FAF3AACD1E34929300C01FEB /* MyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AACC1E34929300C01FEB /* MyIcon.png */; };
 		FAF68C6F1E480E1100FFD574 /* ZYContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF68C6E1E480E1100FFD574 /* ZYContactTableViewCell.m */; };
 		FAF94FCA1E49CBBD0012EF91 /* ZYSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF94FC91E49CBBD0012EF91 /* ZYSupportViewController.m */; };
@@ -250,6 +253,9 @@
 		A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYDoubs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9E7FECFABA1CFBAA6F5C63 /* Pods-ZYDoubs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYDoubs.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs.release.xcconfig"; sourceTree = "<group>"; };
 		FA0C09421E4DB78700E5E2C3 /* NgnDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = NgnDataBase.db; sourceTree = "<group>"; };
+		FA0C09571E4DC96A00E5E2C3 /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
+		FA0C09591E4DCA2900E5E2C3 /* backtrack1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backtrack1-1.png"; sourceTree = "<group>"; };
+		FA0C095A1E4DCA2900E5E2C3 /* backtrack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backtrack1.png; sourceTree = "<group>"; };
 		FA0EDF071E2B269900F9498D /* CNUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNUIHelper.h; sourceTree = "<group>"; };
 		FA0EDF081E2B269900F9498D /* CNUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNUIHelper.m; sourceTree = "<group>"; };
 		FA0EDF091E2B269900F9498D /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
@@ -388,8 +394,8 @@
 		FAF3AAC11E34816F00C01FEB /* ZYMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMessageTableViewCell.m; sourceTree = "<group>"; };
 		FAF3AAC31E34824C00C01FEB /* ZYChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYChatViewController.h; sourceTree = "<group>"; };
 		FAF3AAC41E34824C00C01FEB /* ZYChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYChatViewController.m; sourceTree = "<group>"; };
-		FAF3AAC61E34870000C01FEB /* BaloonChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaloonChatCell.h; sourceTree = "<group>"; };
-		FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaloonChatCell.mm; sourceTree = "<group>"; };
+		FAF3AAC61E34870000C01FEB /* ZYBaloonChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBaloonChatCell.h; sourceTree = "<group>"; };
+		FAF3AAC71E34870000C01FEB /* ZYBaloonChatCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZYBaloonChatCell.mm; sourceTree = "<group>"; };
 		FAF3AACC1E34929300C01FEB /* MyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyIcon.png; sourceTree = "<group>"; };
 		FAF68C6D1E480E1100FFD574 /* ZYContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYContactTableViewCell.h; sourceTree = "<group>"; };
 		FAF68C6E1E480E1100FFD574 /* ZYContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYContactTableViewCell.m; sourceTree = "<group>"; };
@@ -698,6 +704,9 @@
 		FA77184A1E24770A00AD8F5F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C09591E4DCA2900E5E2C3 /* backtrack1-1.png */,
+				FA0C095A1E4DCA2900E5E2C3 /* backtrack1.png */,
+				FA0C09571E4DC96A00E5E2C3 /* backArrow.png */,
 				FAF3AACC1E34929300C01FEB /* MyIcon.png */,
 				FAF3AAB61E34618700C01FEB /* Setting */,
 				FAF3AAB01E345D0B00C01FEB /* message */,
@@ -997,8 +1006,8 @@
 		FAF3AABF1E34814800C01FEB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAF3AAC61E34870000C01FEB /* BaloonChatCell.h */,
-				FAF3AAC71E34870000C01FEB /* BaloonChatCell.mm */,
+				FAF3AAC61E34870000C01FEB /* ZYBaloonChatCell.h */,
+				FAF3AAC71E34870000C01FEB /* ZYBaloonChatCell.mm */,
 				FAF3AAC01E34816F00C01FEB /* ZYMessageTableViewCell.h */,
 				FAF3AAC11E34816F00C01FEB /* ZYMessageTableViewCell.m */,
 			);
@@ -1232,7 +1241,9 @@
 				FAF3AA761E343F9E00C01FEB /* tab_message@2x.png in Resources */,
 				FAF3AAA61E3443C500C01FEB /* Plus2@2x.png in Resources */,
 				FAF3AA9A1E34439100C01FEB /* btn_num@2x.png in Resources */,
+				FA0C095C1E4DCA2900E5E2C3 /* backtrack1.png in Resources */,
 				FA77185E1E24770A00AD8F5F /* LaunchScreen.storyboard in Resources */,
+				FA0C09581E4DC96A00E5E2C3 /* backArrow.png in Resources */,
 				FAF3AA741E343F9E00C01FEB /* tab_contact_s@2x.png in Resources */,
 				FAF3AAB41E345D0B00C01FEB /* Plus@3x.png in Resources */,
 				FAF3AACD1E34929300C01FEB /* MyIcon.png in Resources */,
@@ -1242,6 +1253,7 @@
 				FAF3AA7A1E343F9E00C01FEB /* tab_Settings@2x.png in Resources */,
 				FAF3AA791E343F9E00C01FEB /* tab_message_s@3x.png in Resources */,
 				FAF3AA771E343F9E00C01FEB /* tab_message@3x.png in Resources */,
+				FA0C095B1E4DCA2900E5E2C3 /* backtrack1-1.png in Resources */,
 				FAF3AA701E343F9E00C01FEB /* tab_call_s@2x.png in Resources */,
 				FAF3AAAB1E3443D800C01FEB /* Delete@3x.png in Resources */,
 				FAF3AA7D1E343F9E00C01FEB /* tab_Settings_s@3x.png in Resources */,
@@ -1347,7 +1359,7 @@
 				FA7718D41E2487B300AD8F5F /* ZYBaseViewController.m in Sources */,
 				FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */,
 				FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */,
-				FAF3AAC81E34870000C01FEB /* BaloonChatCell.mm in Sources */,
+				FAF3AAC81E34870000C01FEB /* ZYBaloonChatCell.mm in Sources */,
 				FA134C521E2DF462000320D2 /* SystemAudio.m in Sources */,
 				FA7718D61E2487B300AD8F5F /* ZYMainTabBarViewController.m in Sources */,
 				FA7719021E24B12900AD8F5F /* Routable.m in Sources */,
