@@ -118,6 +118,16 @@
     }
     
     
+    ZYUserManager * mgr = [ZYUserManager manager];
+    mgr.username = @"NULLGIRL";
+    mgr.user_sip = self.sipnumTextField.text;
+    mgr.user_password = self.passwordField.text;
+    mgr.sip_host_addr = self.realmTextField.text;
+    mgr.sip_host_port = self.portTextField.text;
+    mgr.registrationTimeout = @"120";
+    mgr.transport = self.transTextField.text;
+    [ZYUserManager saveUserManager:mgr];
+    
     if ([[NgnEngine sharedInstance] start]) {
         NSString * kPublicIdentity = [NSString stringWithFormat:@"sip:%@@%@",self.sipnumTextField.text,self.realmTextField.text];
         

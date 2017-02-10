@@ -73,8 +73,10 @@
 }
 
 - (void)registSipAccount{
-    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
-    BOOL ret1 = [ZYTools isNullOrEmpty:impu];
+    
+    ZYUserManager * mgr = [ZYUserManager fileUserManager];
+    
+    BOOL ret1 = [ZYTools isNullOrEmpty:mgr.user_sip];
     BOOL ret2 = [ZYSipTools sipUnRegister];
     
     if (!ret1 && ret2) {

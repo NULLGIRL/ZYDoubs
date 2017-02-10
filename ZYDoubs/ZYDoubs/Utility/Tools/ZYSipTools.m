@@ -13,9 +13,8 @@
 +(BOOL)sipIsRegister{
     
 #if 1
-//    UserManager * user = [UserManagerTool userManager];
-    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
-    if (![ZYTools isNullOrEmpty:impu] && [ZYTools connectedToNetwork]) {
+    ZYUserManager * mgr = [ZYUserManager fileUserManager];
+    if (![ZYTools isNullOrEmpty:mgr.user_sip] && [ZYTools connectedToNetwork]) {
         return [[NgnEngine sharedInstance].sipService isRegistered];
     }
     else{
@@ -205,9 +204,8 @@
 /**注册*/
 +(void)sipRegister{
     SYLog(@"sip注册");
-//    UserManager * user = [UserManagerTool userManager];
-    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
-    if (![ZYTools isNullOrEmpty:impu] && [ZYTools connectedToNetwork]) {
+    ZYUserManager * mgr = [ZYUserManager fileUserManager];
+    if (![ZYTools isNullOrEmpty:mgr.user_sip] && [ZYTools connectedToNetwork]) {
         
         NSLog(@"sip注册开始");
         // start the engine
@@ -221,7 +219,7 @@
             NSLog(@" 8分钟进来啦！");
             
             //在这里执行事件
-            if (![ZYTools isNullOrEmpty:impu]) {
+            if (![ZYTools isNullOrEmpty:mgr.user_sip]) {
                 NSLog(@" 8分钟进来啦！ 重新注册sip");
                 
                 //注册之前 先把栈停掉 之后重新注册
