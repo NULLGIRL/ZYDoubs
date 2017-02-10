@@ -57,7 +57,6 @@
 static NSString* sDataBasePath = nil;
 
 +(BOOL) databaseCheckAndCopy:(NgnBaseService<INgnStorageService>*) service{
-
     
 #if TARGET_OS_IPHONE
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -66,8 +65,7 @@ static NSString* sDataBasePath = nil;
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [[documentPaths objectAtIndex:0] stringByAppendingPathComponent:@"iDoubs"];
 #endif
-
-    sDataBasePath = [documentsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.db",@"UserManager"]];
+    sDataBasePath = [documentsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.db",@"MyDataBase"]];
     
     sqlite3 *db = nil;
     NSError* error = nil;
@@ -113,19 +111,22 @@ static NSString* sDataBasePath = nil;
         //        }
     }
     
-    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"UserManager"]) {
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"MyDataBase"]) {
         NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:kDataBaseName];
         NgnNSLog(TAG, @"creating (copy) new database from:%@", databasePathFromApp);
         
         if(![fileManager copyItemAtPath:databasePathFromApp toPath:sDataBasePath error:&error]){
             NgnNSLog(TAG, @"Failed to copy database to the file system: %@", error);
-            [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"UserManager"];
+            [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"MyDataBase"];
             return NO;
         }
         else{
-            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"UserManager"];
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"MyDataBase"];
         }
+    
     }
+    
+
     
     //
     // if we are here this means that the database has been upgraded/downgraded or this is a new installation

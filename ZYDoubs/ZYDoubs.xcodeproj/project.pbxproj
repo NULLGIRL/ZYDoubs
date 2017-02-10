@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7600C6AD74D4C6650B5D0C22 /* libPods-ZYDoubs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */; };
+		FA0C09441E4DB78700E5E2C3 /* NgnDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = FA0C09421E4DB78700E5E2C3 /* NgnDataBase.db */; };
 		FA0EDF0B1E2B269900F9498D /* CNUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF081E2B269900F9498D /* CNUIHelper.m */; };
 		FA0EDF0C1E2B269900F9498D /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */; };
 		FA0EDF2F1E2B675700F9498D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF2E1E2B675700F9498D /* Reachability.m */; };
@@ -248,6 +249,7 @@
 		1F83DB3C08E8FF214A1929A7 /* Pods-ZYDoubs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYDoubs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYDoubs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9E7FECFABA1CFBAA6F5C63 /* Pods-ZYDoubs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYDoubs.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs.release.xcconfig"; sourceTree = "<group>"; };
+		FA0C09421E4DB78700E5E2C3 /* NgnDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = NgnDataBase.db; sourceTree = "<group>"; };
 		FA0EDF071E2B269900F9498D /* CNUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNUIHelper.h; sourceTree = "<group>"; };
 		FA0EDF081E2B269900F9498D /* CNUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNUIHelper.m; sourceTree = "<group>"; };
 		FA0EDF091E2B269900F9498D /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
@@ -489,6 +491,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA0C09411E4DB78700E5E2C3 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C09421E4DB78700E5E2C3 /* NgnDataBase.db */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
 		FA0EDF061E2B269900F9498D /* CNUIHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +685,7 @@
 		FA7718491E24770A00AD8F5F /* Resource(资源) */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C09411E4DB78700E5E2C3 /* storage */,
 				FA77184A1E24770A00AD8F5F /* Image */,
 				FA77184B1E24770A00AD8F5F /* Pch */,
 				FA77184C1E24770A00AD8F5F /* Plist */,
@@ -1226,6 +1237,7 @@
 				FAF3AAB41E345D0B00C01FEB /* Plus@3x.png in Resources */,
 				FAF3AACD1E34929300C01FEB /* MyIcon.png in Resources */,
 				FAF3AA9D1E34439100C01FEB /* phonecall@3x.png in Resources */,
+				FA0C09441E4DB78700E5E2C3 /* NgnDataBase.db in Resources */,
 				FAF3AA711E343F9E00C01FEB /* tab_call_s@3x.png in Resources */,
 				FAF3AA7A1E343F9E00C01FEB /* tab_Settings@2x.png in Resources */,
 				FAF3AA791E343F9E00C01FEB /* tab_message_s@3x.png in Resources */,

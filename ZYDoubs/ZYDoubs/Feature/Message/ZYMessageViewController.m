@@ -186,6 +186,8 @@
      addObserver:self selector:@selector(onMessagingEvent:) name:kNgnMessagingEventArgs_Name object:nil];
     [[NSNotificationCenter defaultCenter]
      addObserver:self selector:@selector(pushChatVC:) name:@"pushChatVC" object:nil];
+    
+    
 
 }
 
