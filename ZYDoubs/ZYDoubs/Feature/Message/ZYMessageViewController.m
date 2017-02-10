@@ -36,13 +36,13 @@
             }
         }
         
-        //        SYLog(@"messages  ====  %@",messages);
+        NSLog(@"messages  ====  %@",messages);
         
         NSArray* sortedEntries = [[entries allValues] sortedArrayUsingSelector:@selector(compareEntryByDate:)];
         [self->messages removeAllObjects];
         [self->messages addObjectsFromArray:sortedEntries];
         
-        
+        [self.tableView.mj_header endRefreshing];
     }
 }
 
@@ -188,6 +188,9 @@
      addObserver:self selector:@selector(pushChatVC:) name:@"pushChatVC" object:nil];
     
     
+    self.tableView.mj_header = [MJRefreshNormalHeader  headerWithRefreshingBlock:^{
+        [self refreshDataAndReload];
+    }];
 
 }
 

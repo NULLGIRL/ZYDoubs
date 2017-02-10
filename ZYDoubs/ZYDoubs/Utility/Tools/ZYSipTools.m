@@ -12,9 +12,10 @@
 
 +(BOOL)sipIsRegister{
     
-#if 0
-    UserManager * user = [UserManagerTool userManager];
-    if (![PMTools isNullOrEmpty:user.user_sip] && [PMTools connectedToNetwork]) {
+#if 1
+//    UserManager * user = [UserManagerTool userManager];
+    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
+    if (![ZYTools isNullOrEmpty:impu] && [ZYTools connectedToNetwork]) {
         return [[NgnEngine sharedInstance].sipService isRegistered];
     }
     else{
@@ -204,16 +205,15 @@
 /**注册*/
 +(void)sipRegister{
     SYLog(@"sip注册");
-#if 0
-    UserManager * user = [UserManagerTool userManager];
-    if (![PMTools isNullOrEmpty:user.user_sip] && [PMTools connectedToNetwork]) {
+//    UserManager * user = [UserManagerTool userManager];
+    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
+    if (![ZYTools isNullOrEmpty:impu] && [ZYTools connectedToNetwork]) {
         
-        SYLog(@"sip注册开始");
+        NSLog(@"sip注册开始");
         // start the engine
         [[NgnEngine sharedInstance] start];
-        [PMSipTools UpdateUser_SipConfig];
+        [ZYSipTools UpdateUser_SipConfig];
         
-        //        [PMSipTools UpdateUser_SipConfig];
 //        [[NgnEngine sharedInstance].historyService load];
         [[NgnEngine sharedInstance].sipService registerIdentity];
         
@@ -221,46 +221,43 @@
             NSLog(@" 8分钟进来啦！");
             
             //在这里执行事件
-            if (![PMTools isNullOrEmpty:userToken]) {
+            if (![ZYTools isNullOrEmpty:impu]) {
                 NSLog(@" 8分钟进来啦！ 重新注册sip");
                 
                 //注册之前 先把栈停掉 之后重新注册
                 
                 UIViewController * currentVC = [UIViewController currentViewController];
                 
-                if (![NSStringFromClass([MyRootViewController class]) isEqualToString:[[AppDelegate sharedInstance].window.rootViewController class]]) {
-                    NSLog(@"根页面不是 MyRootViewController");
-                    return ;
-                }
+//                if (![NSStringFromClass([MyRootViewController class]) isEqualToString:[[AppDelegate sharedInstance].window.rootViewController class]]) {
+//                    NSLog(@"根页面不是 MyRootViewController");
+//                    return ;
+//                }
+//                
+//                
+//                if ([NSStringFromClass([AudioCallViewController class]) isEqualToString:[currentVC class]]) {
+//                    NSLog(@"当前页面是 AudioCallViewController");
+//                    return ;
+//                }
+//                
+//                if ([NSStringFromClass([VideoCallViewController class]) isEqualToString:[currentVC class]]) {
+//                    NSLog(@"当前页面是 VideoCallViewController");
+//                    return ;
+//                }
+//                
+//                if ([NSStringFromClass([LookEntranceVedioViewController class]) isEqualToString:[currentVC class]]) {
+//                    NSLog(@"当前页面是 LookEntranceVedioViewController");
+//                    return ;
+//                }
                 
-                
-                if ([NSStringFromClass([AudioCallViewController class]) isEqualToString:[currentVC class]]) {
-                    NSLog(@"当前页面是 AudioCallViewController");
-                    return ;
-                }
-                
-                if ([NSStringFromClass([VideoCallViewController class]) isEqualToString:[currentVC class]]) {
-                    NSLog(@"当前页面是 VideoCallViewController");
-                    return ;
-                }
-                
-                if ([NSStringFromClass([LookEntranceVedioViewController class]) isEqualToString:[currentVC class]]) {
-                    NSLog(@"当前页面是 LookEntranceVedioViewController");
-                    return ;
-                }
-                
-                if ([PMSipTools sipUnRegister]) {
-                    [PMSipTools sipRegister];
+                if ([ZYSipTools sipUnRegister]) {
+                    [ZYSipTools sipRegister];
                 }
                 
             }
             
         });
     }
-    
-#else
 
-#endif
 }
 
 

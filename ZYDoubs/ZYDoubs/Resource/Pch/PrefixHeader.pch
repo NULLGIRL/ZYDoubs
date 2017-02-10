@@ -43,6 +43,7 @@
     #import "Masonry.h"
     #import <MBProgressHUD.h>
     #import "CNUIHelper.h"
+    #import "MJRefresh.h"
 
 #ifdef DEBUG
 static const DDLogLevel ddLogLevel = LOG_LEVEL_VERBOSE;

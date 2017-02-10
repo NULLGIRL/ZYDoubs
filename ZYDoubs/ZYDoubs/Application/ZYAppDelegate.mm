@@ -43,6 +43,10 @@
     
     // 初始化一些变量
     _isLogout = [[NSUserDefaults standardUserDefaults] boolForKey:ZYUserLogout];
+    
+    // 判断idoubs是注册 没有的话就注册
+    [self registSipAccount];
+    
 
     //开启网络状况的监听
     [self MyNetReachability];
@@ -67,6 +71,19 @@
     
     return YES;
 }
+
+- (void)registSipAccount{
+    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
+    BOOL ret1 = [ZYTools isNullOrEmpty:impu];
+    BOOL ret2 = [ZYSipTools sipUnRegister];
+    
+    if (!ret1 && ret2) {
+        [ZYSipTools sipRegister];
+    }
+    
+    
+}
+
 
 /**
  *  程序进入后台

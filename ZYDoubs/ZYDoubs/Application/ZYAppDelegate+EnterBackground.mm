@@ -106,17 +106,20 @@ static dispatch_block_t sExpirationHandler = nil;
     }
 #endif
     
-    //注册sip
-//    if (![PMTools isNullOrEmpty:userToken]) {
     
-//        NSLog(@"[UserManagerTool userManager].user_sip] === %@",[UserManagerTool userManager].user_sip);
+    NSString * impu = [[NgnEngine sharedInstance].configurationService getStringWithKey:IDENTITY_IMPU];
+    
+    //注册sip
+    if (![ZYTools isNullOrEmpty:impu]) {
+    
+        NSLog(@"impu === %@",impu);
         NSLog(@"didFinishLaunchingWithOptions ");
     
-//        if (![PMSipTools sipIsRegister]) {
+        if (![ZYSipTools sipIsRegister]) {
     
-//            [PMSipTools sipRegister];
+            [ZYSipTools sipRegister];
             [[NgnEngine sharedInstance].soundService setSpeakerEnabled:YES];
-//        }
+        }
     
         multitaskingSupported = [[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)] && [[UIDevice currentDevice] isMultitaskingSupported];
         sBackgroundTask = UIBackgroundTaskInvalid;
@@ -147,7 +150,7 @@ static dispatch_block_t sExpirationHandler = nil;
         MediaSessionMgr::defaultsSetAudioGain(0, 0);
         
         
-//    }
+    }
     
 }
 
