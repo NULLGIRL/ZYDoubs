@@ -18,4 +18,5 @@
 -(instancetype)initWithTableview:(UITableView *)tableview;
 +(instancetype)cellWithTableview:(UITableView *)tableview;
 
+- (void) setImageIcon:(NSString *)imageName;
 @end

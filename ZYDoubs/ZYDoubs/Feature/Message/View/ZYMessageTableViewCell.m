@@ -54,6 +54,7 @@
     self.photoBtn.backgroundColor = [UIColor cyanColor];
     self.photoBtn.layer.cornerRadius = 30;
     self.photoBtn.titleLabel.font = LargeFont;
+    self.photoBtn.clipsToBounds = YES;
     [self.photoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.contentView addSubview:self.photoBtn];
     
@@ -108,7 +109,7 @@
         make.left.equalTo(self.titleLabel);
         make.right.equalTo(self.titleLabel);
         make.top.equalTo(self.timeLabel.mas_bottom).with.offset(2);
-        make.bottom.equalTo(self.contentView);
+//        make.bottom.equalTo(self.contentView);
     }];
     
     [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -120,7 +121,7 @@
     [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.timeLabel);
         make.left.equalTo(self.titleLabel);
-        make.top.equalTo(self.desLabel.mas_bottom);
+        make.top.equalTo(self.contentView.mas_bottom).with.offset(-1);
         make.height.equalTo(@1);
     }];
     
@@ -138,8 +139,8 @@
         
         if (![ZYTools isNullOrEmpty:entry.remoteParty]) {
             self.titleLabel.text = entry.remoteParty;
-            NSString * btnName = [ZYTools subStringFromString:entry.remoteParty isFrom:NO];
-            [self.photoBtn setTitle:btnName forState:UIControlStateNormal];
+//            NSString * btnName = [ZYTools subStringFromString:entry.remoteParty isFrom:NO];
+//            [self.photoBtn setTitle:btnName forState:UIControlStateNormal];
         }
         
         
@@ -154,5 +155,8 @@
     }
 }
 
+- (void) setImageIcon:(NSString *)imageName{
+    [self.photoBtn setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+}
 
 @end
