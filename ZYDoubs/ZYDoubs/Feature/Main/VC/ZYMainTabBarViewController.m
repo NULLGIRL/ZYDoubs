@@ -8,6 +8,8 @@
 
 #import "ZYMainTabBarViewController.h"
 
+#import "UITabBar+ZYBadge.h" 
+
 #import "ZYDailNumViewController.h"  //拨号界面
 #import "ZYContactViewController.h"  //联系人界面
 #import "ZYMessageViewController.h"  //发信息界面

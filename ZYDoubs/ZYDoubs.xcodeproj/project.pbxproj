@@ -20,6 +20,8 @@
 		FA2B5C371E514AFA0066EA07 /* msg_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C331E514AFA0066EA07 /* msg_icon2.png */; };
 		FA2B5C381E514AFA0066EA07 /* msg_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C341E514AFA0066EA07 /* msg_icon3.png */; };
 		FA2B5C391E514AFA0066EA07 /* msg_icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C351E514AFA0066EA07 /* msg_icon4.png */; };
+		FA2B5CE01E51BA2B0066EA07 /* UIButton+ZYBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2B5CDF1E51BA2B0066EA07 /* UIButton+ZYBadge.m */; };
+		FA2B5CF41E51BAC50066EA07 /* UITabBar+ZYBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2B5CF31E51BAC50066EA07 /* UITabBar+ZYBadge.m */; };
 		FA2C16891E308F4400B15339 /* DontDisturbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C16881E308F4400B15339 /* DontDisturbManager.m */; };
 		FA2C169E1E308FDC00B15339 /* MyFMDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C169D1E308FDC00B15339 /* MyFMDataBase.m */; };
 		FA77185B1E24770A00AD8F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718421E24770A00AD8F5F /* main.m */; };
@@ -276,6 +278,10 @@
 		FA2B5C331E514AFA0066EA07 /* msg_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_icon2.png; sourceTree = "<group>"; };
 		FA2B5C341E514AFA0066EA07 /* msg_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_icon3.png; sourceTree = "<group>"; };
 		FA2B5C351E514AFA0066EA07 /* msg_icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_icon4.png; sourceTree = "<group>"; };
+		FA2B5CDE1E51BA2B0066EA07 /* UIButton+ZYBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZYBadge.h"; sourceTree = "<group>"; };
+		FA2B5CDF1E51BA2B0066EA07 /* UIButton+ZYBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZYBadge.m"; sourceTree = "<group>"; };
+		FA2B5CF21E51BAC50066EA07 /* UITabBar+ZYBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+ZYBadge.h"; sourceTree = "<group>"; };
+		FA2B5CF31E51BAC50066EA07 /* UITabBar+ZYBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+ZYBadge.m"; sourceTree = "<group>"; };
 		FA2C16871E308F4400B15339 /* DontDisturbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DontDisturbManager.h; sourceTree = "<group>"; };
 		FA2C16881E308F4400B15339 /* DontDisturbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DontDisturbManager.m; sourceTree = "<group>"; };
 		FA2C169C1E308FDC00B15339 /* MyFMDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFMDataBase.h; sourceTree = "<group>"; };
@@ -784,6 +790,10 @@
 			children = (
 				FAEDBB971E2CC342003EEF8D /* UIViewController+ZYUtils.h */,
 				FAEDBB981E2CC342003EEF8D /* UIViewController+ZYUtils.m */,
+				FA2B5CDE1E51BA2B0066EA07 /* UIButton+ZYBadge.h */,
+				FA2B5CDF1E51BA2B0066EA07 /* UIButton+ZYBadge.m */,
+				FA2B5CF21E51BAC50066EA07 /* UITabBar+ZYBadge.h */,
+				FA2B5CF31E51BAC50066EA07 /* UITabBar+ZYBadge.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1363,6 +1373,7 @@
 				FA7718DF1E24936E00AD8F5F /* ZYAppDelegate.mm in Sources */,
 				FA7718D31E2487B300AD8F5F /* ZYBaseTableViewController.m in Sources */,
 				FA7718D51E2487B300AD8F5F /* ZYMainNavViewController.m in Sources */,
+				FA2B5CF41E51BAC50066EA07 /* UITabBar+ZYBadge.m in Sources */,
 				FAFD3D831E2624A5001992B9 /* ZYButton.m in Sources */,
 				FA77185B1E24770A00AD8F5F /* main.m in Sources */,
 				FAF3AAC51E34824C00C01FEB /* ZYChatViewController.m in Sources */,
@@ -1370,6 +1381,7 @@
 				FA2C169E1E308FDC00B15339 /* MyFMDataBase.m in Sources */,
 				FAEDBB941E2CBCC8003EEF8D /* ZYVideoViewController.m in Sources */,
 				FA2C16891E308F4400B15339 /* DontDisturbManager.m in Sources */,
+				FA2B5CE01E51BA2B0066EA07 /* UIButton+ZYBadge.m in Sources */,
 				FAF3AABE1E347FD300C01FEB /* ZYMessageHistoryEntry.m in Sources */,
 				FA7718FD1E24A9D600AD8F5F /* ZYAppDelegate+Notification.m in Sources */,
 				FA7718D41E2487B300AD8F5F /* ZYBaseViewController.m in Sources */,
