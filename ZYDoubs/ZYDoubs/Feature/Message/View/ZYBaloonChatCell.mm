@@ -28,6 +28,7 @@
 
 -(instancetype)initWithTableview:(UITableView *)tableview{
     
+    tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     static NSString * identify = @"ZYBaloonChatCell";
     ZYBaloonChatCell * cell = [tableview dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
@@ -41,7 +42,7 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-//        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = WHITECOLOR;
         
         ZYUserManager * user = [ZYUserManager fileUserManager];
@@ -98,15 +99,12 @@
             case HistoryEventStatus_Failed:
             case HistoryEventStatus_Missed:
             {
-                self.labelContent.frame = CGRectMake(ScreenWidth - 70 - constraintSize.width,
+                self.labelContent.frame = CGRectMake(ScreenWidth - 15 - constraintSize.width,
                                                      20,
                                                      constraintSize.width,
                                                      constraintSize.height < 40 ? 40:constraintSize.height);
-                
-                
-//                self.labelContent.textAlignment = NSTextAlignmentRight;
-                self.iconBtn.frame =CGRectMake(ScreenWidth - 50, 20, 40, 40);
-                
+                self.labelContent.backgroundColor = [UIColor greenColor];
+                self.iconBtn.hidden = YES;
                 
                 self.bgImageView.frame = CGRectMake(self.labelContent.frame.origin.x - 10, 18, self.labelContent.frame.size.width + 30, constraintSize.height < 40 ?  40 : constraintSize.height + 10);
                 UIImage * image = [UIImage imageNamed:@"chat_me"];
@@ -119,12 +117,17 @@
             case HistoryEventStatus_Incoming:
             default:
             {
+                
+                self.iconBtn.hidden = NO;
                 self.labelContent.frame = CGRectMake(65,
                                                      20,
                                                      constraintSize.width,
                                                      constraintSize.height <40? 40:constraintSize.height);
                 self.labelContent.textAlignment = NSTextAlignmentLeft;
                 self.iconBtn.frame =CGRectMake(10, 20, 40, 40);
+                
+                self.labelContent.backgroundColor = LINE_COLOR;
+
                 
                 UIImage * image = [UIImage imageNamed:@"chat_other"];
                 image = [image stretchableImageWithLeftCapWidth:40 topCapHeight:image.size.height - 10];
