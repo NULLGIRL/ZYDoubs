@@ -160,7 +160,13 @@
 -(ZYTextField *)sipnumTextField{
     if (!_sipnumTextField) {
         _sipnumTextField = [[ZYTextField alloc]initWithPlaceText:@"请输入sip账号（eg:1001）" font:MiddleFont tag:100];
+        
+        
+#ifdef PRO_VERSION
         _sipnumTextField.text = @"2000001848";
+#else
+        _sipnumTextField.text = @"2000001848";
+#endif
     }
     return _sipnumTextField;
 }
@@ -168,7 +174,13 @@
 -(ZYTextField *)passwordField{
     if (!_passwordField) {
         _passwordField = [[ZYTextField alloc]initWithPlaceText:@"请输入密码" font:MiddleFont tag:101];
+        
+
+#ifdef PRO_VERSION
         _passwordField.text = @"c1a7dfb9a0c14b36be1178e0e9420082";
+#else
+        _passwordField.text = @"c1a7dfb9a0c14b36be1178e0e9420082";
+#endif
     }
     return _passwordField;
 }
@@ -176,7 +188,13 @@
 -(ZYTextField *)realmTextField{
     if (!_realmTextField) {
         _realmTextField = [[ZYTextField alloc]initWithPlaceText:@"请输入realm" font:MiddleFont tag:102];
+        
+        
+#ifdef PRO_VERSION
         _realmTextField.text = @"192.168.1.77";
+#else
+        _realmTextField.text = @"192.168.1.77";
+#endif
     }
     return _realmTextField;
 }
