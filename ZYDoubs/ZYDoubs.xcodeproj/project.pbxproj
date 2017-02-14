@@ -81,6 +81,134 @@
 		FA7719061E24B27900AD8F5F /* ZYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719051E24B27900AD8F5F /* ZYNewFeatureViewController.m */; };
 		FA77190A1E24B6AC00AD8F5F /* ZYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719091E24B6AC00AD8F5F /* ZYLog.m */; };
 		FA77191F1E24B95900AD8F5F /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77191E1E24B95900AD8F5F /* ZYConst.m */; };
+		FAAABB621E53049B00A19E3E /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF0A1E2B269900F9498D /* Toast+UIView.m */; };
+		FAAABB631E53049B00A19E3E /* UIViewController+ZYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB981E2CC342003EEF8D /* UIViewController+ZYUtils.m */; };
+		FAAABB641E53049B00A19E3E /* ZYMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC11E34816F00C01FEB /* ZYMessageTableViewCell.m */; };
+		FAAABB651E53049B00A19E3E /* ZYBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718D81E2487CE00AD8F5F /* ZYBarButton.m */; };
+		FAAABB661E53049B00A19E3E /* ZYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D771E26049D001992B9 /* ZYUserManager.m */; };
+		FAAABB671E53049B00A19E3E /* ZYSipTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */; };
+		FAAABB681E53049B00A19E3E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF2E1E2B675700F9498D /* Reachability.m */; };
+		FAAABB691E53049B00A19E3E /* ZYSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF94FC91E49CBBD0012EF91 /* ZYSupportViewController.m */; };
+		FAAABB6A1E53049B00A19E3E /* ZYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718B51E24823D00AD8F5F /* ZYMessageViewController.m */; };
+		FAAABB6B1E53049B00A19E3E /* ZYAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8B1E2CBCC8003EEF8D /* ZYAudioViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAAABB6C1E53049B00A19E3E /* ZYAppDelegate+EnterBackground.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA7718F91E24A9BF00AD8F5F /* ZYAppDelegate+EnterBackground.mm */; };
+		FAAABB6D1E53049B00A19E3E /* ZYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719051E24B27900AD8F5F /* ZYNewFeatureViewController.m */; };
+		FAAABB6E1E53049B00A19E3E /* ZYContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D7F1E2622D1001992B9 /* ZYContactViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAAABB6F1E53049B00A19E3E /* ZYAppDelegate+SipCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA7718E51E24A99400AD8F5F /* ZYAppDelegate+SipCallback.mm */; };
+		FAAABB701E53049B00A19E3E /* ZYAppDelegate+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718E11E24941700AD8F5F /* ZYAppDelegate+Private.m */; };
+		FAAABB711E53049B00A19E3E /* ZYAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA7718DE1E24936E00AD8F5F /* ZYAppDelegate.mm */; };
+		FAAABB721E53049B00A19E3E /* ZYBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718CB1E2487B300AD8F5F /* ZYBaseTableViewController.m */; };
+		FAAABB731E53049B00A19E3E /* ZYMainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718CF1E2487B300AD8F5F /* ZYMainNavViewController.m */; };
+		FAAABB741E53049B00A19E3E /* UITabBar+ZYBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2B5CF31E51BAC50066EA07 /* UITabBar+ZYBadge.m */; };
+		FAAABB751E53049B00A19E3E /* ZYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3D821E2624A5001992B9 /* ZYButton.m */; };
+		FAAABB761E53049B00A19E3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718421E24770A00AD8F5F /* main.m */; };
+		FAAABB771E53049B00A19E3E /* ZYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC41E34824C00C01FEB /* ZYChatViewController.m */; };
+		FAAABB781E53049B00A19E3E /* ZYCallViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB901E2CBCC8003EEF8D /* ZYCallViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAAABB791E53049B00A19E3E /* MyFMDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C169D1E308FDC00B15339 /* MyFMDataBase.m */; };
+		FAAABB7A1E53049B00A19E3E /* ZYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB8E1E2CBCC8003EEF8D /* ZYVideoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAAABB7B1E53049B00A19E3E /* DontDisturbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C16881E308F4400B15339 /* DontDisturbManager.m */; };
+		FAAABB7C1E53049B00A19E3E /* UIButton+ZYBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2B5CDF1E51BA2B0066EA07 /* UIButton+ZYBadge.m */; };
+		FAAABB7D1E53049B00A19E3E /* ZYMessageHistoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AABD1E347FD300C01FEB /* ZYMessageHistoryEntry.m */; };
+		FAAABB7E1E53049B00A19E3E /* ZYAppDelegate+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718FC1E24A9D600AD8F5F /* ZYAppDelegate+Notification.m */; };
+		FAAABB7F1E53049B00A19E3E /* ZYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718CD1E2487B300AD8F5F /* ZYBaseViewController.m */; };
+		FAAABB801E53049B00A19E3E /* CNUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0EDF081E2B269900F9498D /* CNUIHelper.m */; };
+		FAAABB811E53049B00A19E3E /* ZYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719091E24B6AC00AD8F5F /* ZYLog.m */; };
+		FAAABB821E53049B00A19E3E /* ZYBaloonChatCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAF3AAC71E34870000C01FEB /* ZYBaloonChatCell.mm */; };
+		FAAABB831E53049B00A19E3E /* SystemAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C511E2DF462000320D2 /* SystemAudio.m */; };
+		FAAABB841E53049B00A19E3E /* ZYMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718D11E2487B300AD8F5F /* ZYMainTabBarViewController.m */; };
+		FAAABB851E53049B00A19E3E /* Routable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7719011E24B12900AD8F5F /* Routable.m */; };
+		FAAABB861E53049B00A19E3E /* ZYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718DB1E2488BE00AD8F5F /* ZYTools.m */; };
+		FAAABB871E53049B00A19E3E /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77191E1E24B95900AD8F5F /* ZYConst.m */; };
+		FAAABB881E53049B00A19E3E /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8DD1E27781700F0A226 /* ZYTextField.m */; };
+		FAAABB891E53049B00A19E3E /* ZYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C4A1E2DBC0C000320D2 /* ZYLabel.m */; };
+		FAAABB8A1E53049B00A19E3E /* ZYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7718B81E24825700AD8F5F /* ZYMineViewController.m */; };
+		FAAABB8B1E53049B00A19E3E /* ZYContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF68C6E1E480E1100FFD574 /* ZYContactTableViewCell.m */; };
+		FAAABB8C1E53049B00A19E3E /* ZYSipSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */; };
+		FAAABB8D1E53049B00A19E3E /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C361E2DBA37000320D2 /* PSTAlertController.m */; };
+		FAAABB8E1E53049B00A19E3E /* ZYDailNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDBB921E2CBCC8003EEF8D /* ZYDailNumViewController.m */; };
+		FAAABB8F1E53049B00A19E3E /* ContactViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD70C6E1E4718FD00345D4B /* ContactViewCell.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAAABB911E53049B00A19E3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718AC1E247F9500AD8F5F /* Foundation.framework */; };
+		FAAABB921E53049B00A19E3E /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718AA1E247D9300AD8F5F /* libresolv.tbd */; };
+		FAAABB931E53049B00A19E3E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718A81E247D8C00AD8F5F /* libsqlite3.tbd */; };
+		FAAABB941E53049B00A19E3E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77189C1E247D5300AD8F5F /* AddressBook.framework */; };
+		FAAABB951E53049B00A19E3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718A61E247D7800AD8F5F /* SystemConfiguration.framework */; };
+		FAAABB961E53049B00A19E3E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718A41E247D7100AD8F5F /* CoreVideo.framework */; };
+		FAAABB971E53049B00A19E3E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718A21E247D6900AD8F5F /* CoreMedia.framework */; };
+		FAAABB981E53049B00A19E3E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718A01E247D6200AD8F5F /* AVFoundation.framework */; };
+		FAAABB991E53049B00A19E3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77189E1E247D5B00AD8F5F /* CoreGraphics.framework */; };
+		FAAABB9A1E53049B00A19E3E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77189A1E247D4D00AD8F5F /* AudioToolbox.framework */; };
+		FAAABB9B1E53049B00A19E3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718981E247D4600AD8F5F /* CFNetwork.framework */; };
+		FAAABB9C1E53049B00A19E3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718961E247D4000AD8F5F /* Security.framework */; };
+		FAAABB9D1E53049B00A19E3E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718941E247D3900AD8F5F /* OpenGLES.framework */; };
+		FAAABB9E1E53049B00A19E3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718921E247D3100AD8F5F /* QuartzCore.framework */; };
+		FAAABB9F1E53049B00A19E3E /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718861E247D1D00AD8F5F /* libFMDB.a */; };
+		FAAABBA01E53049B00A19E3E /* libIQKeyboardManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718871E247D1D00AD8F5F /* libIQKeyboardManager.a */; };
+		FAAABBA11E53049B00A19E3E /* libMasonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718881E247D1D00AD8F5F /* libMasonry.a */; };
+		FAAABBA21E53049B00A19E3E /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718891E247D1D00AD8F5F /* libMJRefresh.a */; };
+		FAAABBA31E53049B00A19E3E /* libSDAutoLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77188A1E247D1D00AD8F5F /* libSDAutoLayout.a */; };
+		FAAABBA41E53049B00A19E3E /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77188B1E247D1D00AD8F5F /* libSVProgressHUD.a */; };
+		FAAABBA51E53049B00A19E3E /* libios_ngn_stack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718201E246EEE00AD8F5F /* libios_ngn_stack.a */; };
+		FAAABBA61E53049B00A19E3E /* libtinyBFCP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718221E246EEE00AD8F5F /* libtinyBFCP.a */; };
+		FAAABBA71E53049B00A19E3E /* libtinyDAV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77183C1E246EEE00AD8F5F /* libtinyDAV.a */; };
+		FAAABBA81E53049B00A19E3E /* libtinyHTTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718301E246EEE00AD8F5F /* libtinyHTTP.a */; };
+		FAAABBA91E53049B00A19E3E /* libtinyIPSec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77182C1E246EEE00AD8F5F /* libtinyIPSec.a */; };
+		FAAABBAA1E53049B00A19E3E /* libtinyMEDIA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718321E246EEE00AD8F5F /* libtinyMEDIA.a */; };
+		FAAABBAB1E53049B00A19E3E /* libtinyMSRP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77182E1E246EEE00AD8F5F /* libtinyMSRP.a */; };
+		FAAABBAC1E53049B00A19E3E /* libtinyNET.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718261E246EEE00AD8F5F /* libtinyNET.a */; };
+		FAAABBAD1E53049B00A19E3E /* libtinyRTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77182A1E246EEE00AD8F5F /* libtinyRTP.a */; };
+		FAAABBAE1E53049B00A19E3E /* libtinySAK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718241E246EEE00AD8F5F /* libtinySAK.a */; };
+		FAAABBAF1E53049B00A19E3E /* libtinySDP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718281E246EEE00AD8F5F /* libtinySDP.a */; };
+		FAAABBB01E53049B00A19E3E /* libtinySIGCOMP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718341E246EEE00AD8F5F /* libtinySIGCOMP.a */; };
+		FAAABBB11E53049B00A19E3E /* libtinySIP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77183A1E246EEE00AD8F5F /* libtinySIP.a */; };
+		FAAABBB21E53049B00A19E3E /* libtinySMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718361E246EEE00AD8F5F /* libtinySMS.a */; };
+		FAAABBB31E53049B00A19E3E /* libtinyWRAP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77183E1E246EEE00AD8F5F /* libtinyWRAP.a */; };
+		FAAABBB41E53049B00A19E3E /* libtinyXCAP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7718381E246EEE00AD8F5F /* libtinyXCAP.a */; };
+		FAAABBB51E53049B00A19E3E /* libPods-ZYDoubs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC9CDD0DA69A2E9FF96CE2 /* libPods-ZYDoubs.a */; };
+		FAAABBB71E53049B00A19E3E /* Plus2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAA31E3443C500C01FEB /* Plus2@3x.png */; };
+		FAAABBB81E53049B00A19E3E /* tab_message_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA681E343F9D00C01FEB /* tab_message_s@2x.png */; };
+		FAAABBB91E53049B00A19E3E /* tab_Settings_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA6C1E343F9D00C01FEB /* tab_Settings_s@2x.png */; };
+		FAAABBBA1E53049B00A19E3E /* tab_call@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA5F1E343F9D00C01FEB /* tab_call@3x.png */; };
+		FAAABBBB1E53049B00A19E3E /* Tab-bj@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA901E343FD000C01FEB /* Tab-bj@3x.png */; };
+		FAAABBBC1E53049B00A19E3E /* Menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAAD1E345C6000C01FEB /* Menu@3x.png */; };
+		FAAABBBD1E53049B00A19E3E /* Plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAB11E345D0B00C01FEB /* Plus@2x.png */; };
+		FAAABBBE1E53049B00A19E3E /* tab_contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA621E343F9D00C01FEB /* tab_contact@2x.png */; };
+		FAAABBBF1E53049B00A19E3E /* btn_num@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA951E34439100C01FEB /* btn_num@3x.png */; };
+		FAAABBC01E53049B00A19E3E /* vedio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA991E34439100C01FEB /* vedio@3x.png */; };
+		FAAABBC11E53049B00A19E3E /* backtrack1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C301E514AEE0066EA07 /* backtrack1.png */; };
+		FAAABBC21E53049B00A19E3E /* tab_message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA661E343F9D00C01FEB /* tab_message@2x.png */; };
+		FAAABBC31E53049B00A19E3E /* msg_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C321E514AFA0066EA07 /* msg_icon1.png */; };
+		FAAABBC41E53049B00A19E3E /* Plus2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAA21E3443C500C01FEB /* Plus2@2x.png */; };
+		FAAABBC51E53049B00A19E3E /* btn_num@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA941E34439100C01FEB /* btn_num@2x.png */; };
+		FAAABBC61E53049B00A19E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7718511E24770A00AD8F5F /* LaunchScreen.storyboard */; };
+		FAAABBC71E53049B00A19E3E /* tab_contact_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA641E343F9D00C01FEB /* tab_contact_s@2x.png */; };
+		FAAABBC81E53049B00A19E3E /* Plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAB21E345D0B00C01FEB /* Plus@3x.png */; };
+		FAAABBC91E53049B00A19E3E /* msg_icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C351E514AFA0066EA07 /* msg_icon4.png */; };
+		FAAABBCA1E53049B00A19E3E /* MyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AACC1E34929300C01FEB /* MyIcon.png */; };
+		FAAABBCB1E53049B00A19E3E /* phonecall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA971E34439100C01FEB /* phonecall@3x.png */; };
+		FAAABBCC1E53049B00A19E3E /* NgnDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = FA0C09421E4DB78700E5E2C3 /* NgnDataBase.db */; };
+		FAAABBCD1E53049B00A19E3E /* tab_call_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA611E343F9D00C01FEB /* tab_call_s@3x.png */; };
+		FAAABBCE1E53049B00A19E3E /* msg_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C341E514AFA0066EA07 /* msg_icon3.png */; };
+		FAAABBCF1E53049B00A19E3E /* tab_Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA6A1E343F9D00C01FEB /* tab_Settings@2x.png */; };
+		FAAABBD01E53049B00A19E3E /* tab_message_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA691E343F9D00C01FEB /* tab_message_s@3x.png */; };
+		FAAABBD11E53049B00A19E3E /* msg_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C331E514AFA0066EA07 /* msg_icon2.png */; };
+		FAAABBD21E53049B00A19E3E /* tab_message@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA671E343F9D00C01FEB /* tab_message@3x.png */; };
+		FAAABBD31E53049B00A19E3E /* tab_call_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA601E343F9D00C01FEB /* tab_call_s@2x.png */; };
+		FAAABBD41E53049B00A19E3E /* Delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAA91E3443D800C01FEB /* Delete@3x.png */; };
+		FAAABBD51E53049B00A19E3E /* tab_Settings_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA6D1E343F9D00C01FEB /* tab_Settings_s@3x.png */; };
+		FAAABBD61E53049B00A19E3E /* tab_contact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA631E343F9D00C01FEB /* tab_contact@3x.png */; };
+		FAAABBD71E53049B00A19E3E /* Tab-bj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA8F1E343FD000C01FEB /* Tab-bj@2x.png */; };
+		FAAABBD81E53049B00A19E3E /* setting-bj@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAB81E34618700C01FEB /* setting-bj@3x.png */; };
+		FAAABBD91E53049B00A19E3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7718621E247B0D00AD8F5F /* Images.xcassets */; };
+		FAAABBDA1E53049B00A19E3E /* phonecall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA961E34439100C01FEB /* phonecall@2x.png */; };
+		FAAABBDB1E53049B00A19E3E /* tab_call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA5E1E343F9D00C01FEB /* tab_call@2x.png */; };
+		FAAABBDC1E53049B00A19E3E /* setting-bj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAB71E34618700C01FEB /* setting-bj@2x.png */; };
+		FAAABBDD1E53049B00A19E3E /* ContactViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD70C6F1E4718FD00345D4B /* ContactViewCell.xib */; };
+		FAAABBDE1E53049B00A19E3E /* vedio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA981E34439100C01FEB /* vedio@2x.png */; };
+		FAAABBDF1E53049B00A19E3E /* tab_contact_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA651E343F9D00C01FEB /* tab_contact_s@3x.png */; };
+		FAAABBE01E53049B00A19E3E /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAAC1E345C6000C01FEB /* Menu@2x.png */; };
+		FAAABBE11E53049B00A19E3E /* tab_Settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AA6B1E343F9D00C01FEB /* tab_Settings@3x.png */; };
+		FAAABBE21E53049B00A19E3E /* Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3AAA81E3443D800C01FEB /* Delete@2x.png */; };
+		FAAABBE31E53049B00A19E3E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA77184D1E24770A00AD8F5F /* Info.plist */; };
 		FAD70C701E4718FD00345D4B /* ContactViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD70C6E1E4718FD00345D4B /* ContactViewCell.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FAD70C711E4718FD00345D4B /* ContactViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD70C6F1E4718FD00345D4B /* ContactViewCell.xib */; };
 		FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDD8C61E27770400F0A226 /* ZYSipSettingViewController.m */; };
@@ -347,6 +475,8 @@
 		FA7719091E24B6AC00AD8F5F /* ZYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLog.m; sourceTree = "<group>"; };
 		FA77191D1E24B95900AD8F5F /* ZYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYConst.h; sourceTree = "<group>"; };
 		FA77191E1E24B95900AD8F5F /* ZYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConst.m; sourceTree = "<group>"; };
+		FAAABBE91E53049C00A19E3E /* ZYDoubs-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZYDoubs-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAABBEA1E53049C00A19E3E /* ZYDoubs-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ZYDoubs-2-Info.plist"; path = "/Users/momo/Desktop/重构PM/ZYDoubs/ZYDoubs/ZYDoubs-2-Info.plist"; sourceTree = "<absolute>"; };
 		FAD70C6D1E4718FD00345D4B /* ContactViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewCell.h; sourceTree = "<group>"; };
 		FAD70C6E1E4718FD00345D4B /* ContactViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactViewCell.mm; sourceTree = "<group>"; };
 		FAD70C6F1E4718FD00345D4B /* ContactViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewCell.xib; sourceTree = "<group>"; };
@@ -467,6 +597,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAAABB901E53049B00A19E3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAABB911E53049B00A19E3E /* Foundation.framework in Frameworks */,
+				FAAABB921E53049B00A19E3E /* libresolv.tbd in Frameworks */,
+				FAAABB931E53049B00A19E3E /* libsqlite3.tbd in Frameworks */,
+				FAAABB941E53049B00A19E3E /* AddressBook.framework in Frameworks */,
+				FAAABB951E53049B00A19E3E /* SystemConfiguration.framework in Frameworks */,
+				FAAABB961E53049B00A19E3E /* CoreVideo.framework in Frameworks */,
+				FAAABB971E53049B00A19E3E /* CoreMedia.framework in Frameworks */,
+				FAAABB981E53049B00A19E3E /* AVFoundation.framework in Frameworks */,
+				FAAABB991E53049B00A19E3E /* CoreGraphics.framework in Frameworks */,
+				FAAABB9A1E53049B00A19E3E /* AudioToolbox.framework in Frameworks */,
+				FAAABB9B1E53049B00A19E3E /* CFNetwork.framework in Frameworks */,
+				FAAABB9C1E53049B00A19E3E /* Security.framework in Frameworks */,
+				FAAABB9D1E53049B00A19E3E /* OpenGLES.framework in Frameworks */,
+				FAAABB9E1E53049B00A19E3E /* QuartzCore.framework in Frameworks */,
+				FAAABB9F1E53049B00A19E3E /* libFMDB.a in Frameworks */,
+				FAAABBA01E53049B00A19E3E /* libIQKeyboardManager.a in Frameworks */,
+				FAAABBA11E53049B00A19E3E /* libMasonry.a in Frameworks */,
+				FAAABBA21E53049B00A19E3E /* libMJRefresh.a in Frameworks */,
+				FAAABBA31E53049B00A19E3E /* libSDAutoLayout.a in Frameworks */,
+				FAAABBA41E53049B00A19E3E /* libSVProgressHUD.a in Frameworks */,
+				FAAABBA51E53049B00A19E3E /* libios_ngn_stack.a in Frameworks */,
+				FAAABBA61E53049B00A19E3E /* libtinyBFCP.a in Frameworks */,
+				FAAABBA71E53049B00A19E3E /* libtinyDAV.a in Frameworks */,
+				FAAABBA81E53049B00A19E3E /* libtinyHTTP.a in Frameworks */,
+				FAAABBA91E53049B00A19E3E /* libtinyIPSec.a in Frameworks */,
+				FAAABBAA1E53049B00A19E3E /* libtinyMEDIA.a in Frameworks */,
+				FAAABBAB1E53049B00A19E3E /* libtinyMSRP.a in Frameworks */,
+				FAAABBAC1E53049B00A19E3E /* libtinyNET.a in Frameworks */,
+				FAAABBAD1E53049B00A19E3E /* libtinyRTP.a in Frameworks */,
+				FAAABBAE1E53049B00A19E3E /* libtinySAK.a in Frameworks */,
+				FAAABBAF1E53049B00A19E3E /* libtinySDP.a in Frameworks */,
+				FAAABBB01E53049B00A19E3E /* libtinySIGCOMP.a in Frameworks */,
+				FAAABBB11E53049B00A19E3E /* libtinySIP.a in Frameworks */,
+				FAAABBB21E53049B00A19E3E /* libtinySMS.a in Frameworks */,
+				FAAABBB31E53049B00A19E3E /* libtinyWRAP.a in Frameworks */,
+				FAAABBB41E53049B00A19E3E /* libtinyXCAP.a in Frameworks */,
+				FAAABBB51E53049B00A19E3E /* libPods-ZYDoubs.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -543,6 +717,7 @@
 				FA10F14F1E233CFD00BAFDA5 /* Products */,
 				B5A71097736442ED89CB0E91 /* Pods */,
 				3A32978FD5C31DEFD478DA15 /* Frameworks */,
+				FAAABBEA1E53049C00A19E3E /* ZYDoubs-2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -550,6 +725,7 @@
 			isa = PBXGroup;
 			children = (
 				FA10F14E1E233CFD00BAFDA5 /* ZYDoubs.app */,
+				FAAABBE91E53049C00A19E3E /* ZYDoubs-2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1091,6 +1267,26 @@
 			productReference = FA10F14E1E233CFD00BAFDA5 /* ZYDoubs.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FAAABB5F1E53049B00A19E3E /* ZYDoubs-2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAABBE61E53049B00A19E3E /* Build configuration list for PBXNativeTarget "ZYDoubs-2" */;
+			buildPhases = (
+				FAAABB601E53049B00A19E3E /* [CP] Check Pods Manifest.lock */,
+				FAAABB611E53049B00A19E3E /* Sources */,
+				FAAABB901E53049B00A19E3E /* Frameworks */,
+				FAAABBB61E53049B00A19E3E /* Resources */,
+				FAAABBE41E53049B00A19E3E /* [CP] Embed Pods Frameworks */,
+				FAAABBE51E53049B00A19E3E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ZYDoubs-2";
+			productName = ZYDoubs;
+			productReference = FAAABBE91E53049C00A19E3E /* ZYDoubs-2.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1105,6 +1301,9 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = U7Y7PWHHS2;
 						ProvisioningStyle = Automatic;
+					};
+					FAAABB5F1E53049B00A19E3E = {
+						DevelopmentTeam = U7Y7PWHHS2;
 					};
 				};
 			};
@@ -1128,6 +1327,7 @@
 			projectRoot = "";
 			targets = (
 				FA10F14D1E233CFD00BAFDA5 /* ZYDoubs */,
+				FAAABB5F1E53049B00A19E3E /* ZYDoubs-2 */,
 			);
 		};
 /* End PBXProject section */
@@ -1300,6 +1500,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAAABBB61E53049B00A19E3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAABBB71E53049B00A19E3E /* Plus2@3x.png in Resources */,
+				FAAABBB81E53049B00A19E3E /* tab_message_s@2x.png in Resources */,
+				FAAABBB91E53049B00A19E3E /* tab_Settings_s@2x.png in Resources */,
+				FAAABBBA1E53049B00A19E3E /* tab_call@3x.png in Resources */,
+				FAAABBBB1E53049B00A19E3E /* Tab-bj@3x.png in Resources */,
+				FAAABBBC1E53049B00A19E3E /* Menu@3x.png in Resources */,
+				FAAABBBD1E53049B00A19E3E /* Plus@2x.png in Resources */,
+				FAAABBBE1E53049B00A19E3E /* tab_contact@2x.png in Resources */,
+				FAAABBBF1E53049B00A19E3E /* btn_num@3x.png in Resources */,
+				FAAABBC01E53049B00A19E3E /* vedio@3x.png in Resources */,
+				FAAABBC11E53049B00A19E3E /* backtrack1.png in Resources */,
+				FAAABBC21E53049B00A19E3E /* tab_message@2x.png in Resources */,
+				FAAABBC31E53049B00A19E3E /* msg_icon1.png in Resources */,
+				FAAABBC41E53049B00A19E3E /* Plus2@2x.png in Resources */,
+				FAAABBC51E53049B00A19E3E /* btn_num@2x.png in Resources */,
+				FAAABBC61E53049B00A19E3E /* LaunchScreen.storyboard in Resources */,
+				FAAABBC71E53049B00A19E3E /* tab_contact_s@2x.png in Resources */,
+				FAAABBC81E53049B00A19E3E /* Plus@3x.png in Resources */,
+				FAAABBC91E53049B00A19E3E /* msg_icon4.png in Resources */,
+				FAAABBCA1E53049B00A19E3E /* MyIcon.png in Resources */,
+				FAAABBCB1E53049B00A19E3E /* phonecall@3x.png in Resources */,
+				FAAABBCC1E53049B00A19E3E /* NgnDataBase.db in Resources */,
+				FAAABBCD1E53049B00A19E3E /* tab_call_s@3x.png in Resources */,
+				FAAABBCE1E53049B00A19E3E /* msg_icon3.png in Resources */,
+				FAAABBCF1E53049B00A19E3E /* tab_Settings@2x.png in Resources */,
+				FAAABBD01E53049B00A19E3E /* tab_message_s@3x.png in Resources */,
+				FAAABBD11E53049B00A19E3E /* msg_icon2.png in Resources */,
+				FAAABBD21E53049B00A19E3E /* tab_message@3x.png in Resources */,
+				FAAABBD31E53049B00A19E3E /* tab_call_s@2x.png in Resources */,
+				FAAABBD41E53049B00A19E3E /* Delete@3x.png in Resources */,
+				FAAABBD51E53049B00A19E3E /* tab_Settings_s@3x.png in Resources */,
+				FAAABBD61E53049B00A19E3E /* tab_contact@3x.png in Resources */,
+				FAAABBD71E53049B00A19E3E /* Tab-bj@2x.png in Resources */,
+				FAAABBD81E53049B00A19E3E /* setting-bj@3x.png in Resources */,
+				FAAABBD91E53049B00A19E3E /* Images.xcassets in Resources */,
+				FAAABBDA1E53049B00A19E3E /* phonecall@2x.png in Resources */,
+				FAAABBDB1E53049B00A19E3E /* tab_call@2x.png in Resources */,
+				FAAABBDC1E53049B00A19E3E /* setting-bj@2x.png in Resources */,
+				FAAABBDD1E53049B00A19E3E /* ContactViewCell.xib in Resources */,
+				FAAABBDE1E53049B00A19E3E /* vedio@2x.png in Resources */,
+				FAAABBDF1E53049B00A19E3E /* tab_contact_s@3x.png in Resources */,
+				FAAABBE01E53049B00A19E3E /* Menu@2x.png in Resources */,
+				FAAABBE11E53049B00A19E3E /* tab_Settings@3x.png in Resources */,
+				FAAABBE21E53049B00A19E3E /* Delete@2x.png in Resources */,
+				FAAABBE31E53049B00A19E3E /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1346,6 +1598,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAAABB601E53049B00A19E3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FAAABBE41E53049B00A19E3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAAABBE51E53049B00A19E3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYDoubs/Pods-ZYDoubs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1404,6 +1701,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAAABB611E53049B00A19E3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAABB621E53049B00A19E3E /* Toast+UIView.m in Sources */,
+				FAAABB631E53049B00A19E3E /* UIViewController+ZYUtils.m in Sources */,
+				FAAABB641E53049B00A19E3E /* ZYMessageTableViewCell.m in Sources */,
+				FAAABB651E53049B00A19E3E /* ZYBarButton.m in Sources */,
+				FAAABB661E53049B00A19E3E /* ZYUserManager.m in Sources */,
+				FAAABB671E53049B00A19E3E /* ZYSipTools.m in Sources */,
+				FAAABB681E53049B00A19E3E /* Reachability.m in Sources */,
+				FAAABB691E53049B00A19E3E /* ZYSupportViewController.m in Sources */,
+				FAAABB6A1E53049B00A19E3E /* ZYMessageViewController.m in Sources */,
+				FAAABB6B1E53049B00A19E3E /* ZYAudioViewController.m in Sources */,
+				FAAABB6C1E53049B00A19E3E /* ZYAppDelegate+EnterBackground.mm in Sources */,
+				FAAABB6D1E53049B00A19E3E /* ZYNewFeatureViewController.m in Sources */,
+				FAAABB6E1E53049B00A19E3E /* ZYContactViewController.m in Sources */,
+				FAAABB6F1E53049B00A19E3E /* ZYAppDelegate+SipCallback.mm in Sources */,
+				FAAABB701E53049B00A19E3E /* ZYAppDelegate+Private.m in Sources */,
+				FAAABB711E53049B00A19E3E /* ZYAppDelegate.mm in Sources */,
+				FAAABB721E53049B00A19E3E /* ZYBaseTableViewController.m in Sources */,
+				FAAABB731E53049B00A19E3E /* ZYMainNavViewController.m in Sources */,
+				FAAABB741E53049B00A19E3E /* UITabBar+ZYBadge.m in Sources */,
+				FAAABB751E53049B00A19E3E /* ZYButton.m in Sources */,
+				FAAABB761E53049B00A19E3E /* main.m in Sources */,
+				FAAABB771E53049B00A19E3E /* ZYChatViewController.m in Sources */,
+				FAAABB781E53049B00A19E3E /* ZYCallViewController.mm in Sources */,
+				FAAABB791E53049B00A19E3E /* MyFMDataBase.m in Sources */,
+				FAAABB7A1E53049B00A19E3E /* ZYVideoViewController.m in Sources */,
+				FAAABB7B1E53049B00A19E3E /* DontDisturbManager.m in Sources */,
+				FAAABB7C1E53049B00A19E3E /* UIButton+ZYBadge.m in Sources */,
+				FAAABB7D1E53049B00A19E3E /* ZYMessageHistoryEntry.m in Sources */,
+				FAAABB7E1E53049B00A19E3E /* ZYAppDelegate+Notification.m in Sources */,
+				FAAABB7F1E53049B00A19E3E /* ZYBaseViewController.m in Sources */,
+				FAAABB801E53049B00A19E3E /* CNUIHelper.m in Sources */,
+				FAAABB811E53049B00A19E3E /* ZYLog.m in Sources */,
+				FAAABB821E53049B00A19E3E /* ZYBaloonChatCell.mm in Sources */,
+				FAAABB831E53049B00A19E3E /* SystemAudio.m in Sources */,
+				FAAABB841E53049B00A19E3E /* ZYMainTabBarViewController.m in Sources */,
+				FAAABB851E53049B00A19E3E /* Routable.m in Sources */,
+				FAAABB861E53049B00A19E3E /* ZYTools.m in Sources */,
+				FAAABB871E53049B00A19E3E /* ZYConst.m in Sources */,
+				FAAABB881E53049B00A19E3E /* ZYTextField.m in Sources */,
+				FAAABB891E53049B00A19E3E /* ZYLabel.m in Sources */,
+				FAAABB8A1E53049B00A19E3E /* ZYMineViewController.m in Sources */,
+				FAAABB8B1E53049B00A19E3E /* ZYContactTableViewCell.m in Sources */,
+				FAAABB8C1E53049B00A19E3E /* ZYSipSettingViewController.m in Sources */,
+				FAAABB8D1E53049B00A19E3E /* PSTAlertController.m in Sources */,
+				FAAABB8E1E53049B00A19E3E /* ZYDailNumViewController.m in Sources */,
+				FAAABB8F1E53049B00A19E3E /* ContactViewCell.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1449,10 +1799,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = PRO_VERSION;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1495,6 +1842,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = PRO_VERSION;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1728,6 +2076,226 @@
 			};
 			name = Release;
 		};
+		FAAABBE71E53049B00A19E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F83DB3C08E8FF214A1929A7 /* Pods-ZYDoubs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DEVELOPMENT_TEAM = U7Y7PWHHS2;
+				DOUBANGO_HOME = ../../doubango;
+				DOUBANGO_LIBS = $DOUBANGO_HOME/thirdparties/iphone/lib/universal;
+				ENABLE_BITCODE = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREFIX_HEADER = ZYDoubs/Resource/Pch/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDAutoLayout\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"$NGN_STACK_HOME/ios-ngn-stack",
+					"$NGN_STACK_HOME/common-ngn-stack",
+					$DOUBANGO_HOME/tinyHTTP/include,
+					$DOUBANGO_HOME/tinySMS/include,
+					$DOUBANGO_HOME/bindings/_common,
+					"../ios-ngn-stack",
+					"../common-ngn-stack",
+					$DOUBANGO_HOME/tinySDP/include,
+					$DOUBANGO_HOME/tinyDAV/include,
+					$DOUBANGO_HOME/thirdparties/common/include,
+					$DOUBANGO_HOME/tinySAK/src,
+					$DOUBANGO_HOME/tinyNET/src,
+					$DOUBANGO_HOME/tinyMEDIA/include,
+					$DOUBANGO/HOME/tinyMSRP/include,
+					$DOUBANGO_HOME/tinySIP/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ZYDoubs-2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FMDB\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManager\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/MJRefresh\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Masonry\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SDAutoLayout\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SVProgressHUD\"",
+					$DOUBANGO_LIBS,
+				);
+				NGN_STACK_HOME = $DOUBANGO_HOME/thirdparties/iphone/lib/universal;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDAutoLayout\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"FMDB\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDAutoLayout\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lssl",
+					"-lsrtp",
+					"-lyuv",
+					"-lcrypto",
+					"-lvpx",
+					"-lx264",
+					"-lopenh264",
+					"-lswscale",
+					"-lavutil",
+					"-lavcodec",
+					"-lopus",
+					"-lgsm",
+					"-lg729b",
+					"-lspeex",
+					"-lspeexdsp",
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZYDoubs.ZYDoubs2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FAAABBE81E53049B00A19E3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC9E7FECFABA1CFBAA6F5C63 /* Pods-ZYDoubs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DEVELOPMENT_TEAM = U7Y7PWHHS2;
+				DOUBANGO_HOME = ../../doubango;
+				DOUBANGO_LIBS = $DOUBANGO_HOME/thirdparties/iphone/lib/universal;
+				ENABLE_BITCODE = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREFIX_HEADER = ZYDoubs/Resource/Pch/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDAutoLayout\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"$NGN_STACK_HOME/ios-ngn-stack",
+					"$NGN_STACK_HOME/common-ngn-stack",
+					$DOUBANGO_HOME/tinyHTTP/include,
+					$DOUBANGO_HOME/tinySMS/include,
+					$DOUBANGO_HOME/bindings/_common,
+					"../ios-ngn-stack",
+					"../common-ngn-stack",
+					$DOUBANGO_HOME/tinySDP/include,
+					$DOUBANGO_HOME/tinyDAV/include,
+					$DOUBANGO_HOME/thirdparties/common/include,
+					$DOUBANGO_HOME/tinySAK/src,
+					$DOUBANGO_HOME/tinyNET/src,
+					$DOUBANGO_HOME/tinyMEDIA/include,
+					$DOUBANGO/HOME/tinyMSRP/include,
+					$DOUBANGO_HOME/tinySIP/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ZYDoubs-2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FMDB\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManager\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/MJRefresh\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Masonry\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SDAutoLayout\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SVProgressHUD\"",
+					$DOUBANGO_LIBS,
+				);
+				NGN_STACK_HOME = $DOUBANGO_HOME/thirdparties/iphone/lib/universal;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDAutoLayout\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"FMDB\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDAutoLayout\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lssl",
+					"-lsrtp",
+					"-lyuv",
+					"-lcrypto",
+					"-lvpx",
+					"-lx264",
+					"-lopenh264",
+					"-lswscale",
+					"-lavutil",
+					"-lavcodec",
+					"-lopus",
+					"-lgsm",
+					"-lg729b",
+					"-lspeex",
+					"-lspeexdsp",
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZYDoubs.ZYDoubs2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1745,6 +2313,15 @@
 			buildConfigurations = (
 				FA10F1661E233CFD00BAFDA5 /* Debug */,
 				FA10F1671E233CFD00BAFDA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAABBE61E53049B00A19E3E /* Build configuration list for PBXNativeTarget "ZYDoubs-2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAABBE71E53049B00A19E3E /* Debug */,
+				FAAABBE81E53049B00A19E3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

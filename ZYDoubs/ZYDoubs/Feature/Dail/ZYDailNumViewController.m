@@ -22,6 +22,11 @@
     
     [self createSubviews];
     
+#ifdef PRO_VERSION
+    NSLog(@"这是PRO版本");
+#else
+    NSLog(@"这是NORMAL版本");
+#endif
 }
 
 -(void)createSubviews{
