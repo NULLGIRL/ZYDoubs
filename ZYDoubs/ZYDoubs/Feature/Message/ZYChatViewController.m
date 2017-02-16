@@ -213,28 +213,18 @@
     
     if ([self checkNetWork] && [self cheakSip]) {
         
-//        if(![ZYTools isNullOrEmpty:text]){
-//            NgnHistorySMSEvent* event = [NgnHistoryEvent createSMSEventWithStatus:HistoryEventStatus_Outgoing
-//                                                                   andRemoteParty: self.remoteParty
-//                                                                       andContent:[text dataUsingEncoding:NSUTF8StringEncoding]];
-//            NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri: self.remotePartyUri];
-//            event.status = [session sendTextMessage:text contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
-//            [[NgnEngine sharedInstance].historyService addEvent: event];
-//            
-//        }
-        
-        NSString * text = @"嗨 有兴趣出来hi tea吗，我和Lucy都在，在天河那里的星巴克，等你噢！";
-        if(![ZYTools isNullOrEmpty:text]){
+        [ZYAlertViewController showOneTextFieldWithTitle:@"发送信息" withMsg:@"请输入发送文字" withPlaceholder:@"在此输入聊天内容" withVC:self Block:^(NSString *textFieldStr) {
             NgnHistorySMSEvent* event = [NgnHistoryEvent createSMSEventWithStatus:HistoryEventStatus_Outgoing
-                                                                   andRemoteParty:@"2000001850"
-                                                                       andContent:[text dataUsingEncoding:NSUTF8StringEncoding]];
-            NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri:@"2000001850"];
-            event.status = [session sendTextMessage:text contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
+                                                                   andRemoteParty:self.remotePartyUri
+                                                                       andContent:[textFieldStr dataUsingEncoding:NSUTF8StringEncoding]];
+            NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri:self.remotePartyUri];
+            event.status = [session sendTextMessage:textFieldStr contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
             BOOL ret = [[NgnEngine sharedInstance].historyService addEvent: event];
             NSLog(@"%@",ret?@"YES":@"NO");
             NgnHistoryEventDictionary* dic = [[NgnEngine sharedInstance].historyService events];
             NSLog(@"%@",dic);
-        }
+            
+        }];
         
     }
 }
