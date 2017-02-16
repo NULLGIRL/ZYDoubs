@@ -15,6 +15,8 @@
 		FA134C371E2DBA37000320D2 /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C361E2DBA37000320D2 /* PSTAlertController.m */; };
 		FA134C4B1E2DBC0C000320D2 /* ZYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C4A1E2DBC0C000320D2 /* ZYLabel.m */; };
 		FA134C521E2DF462000320D2 /* SystemAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FA134C511E2DF462000320D2 /* SystemAudio.m */; };
+		FA14B9F91E55A6AE004BD4B2 /* ZYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14B9F81E55A6AE004BD4B2 /* ZYAlertViewController.m */; };
+		FA14B9FA1E55A6AE004BD4B2 /* ZYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14B9F81E55A6AE004BD4B2 /* ZYAlertViewController.m */; };
 		FA2B5C311E514AEE0066EA07 /* backtrack1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C301E514AEE0066EA07 /* backtrack1.png */; };
 		FA2B5C361E514AFA0066EA07 /* msg_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C321E514AFA0066EA07 /* msg_icon1.png */; };
 		FA2B5C371E514AFA0066EA07 /* msg_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2B5C331E514AFA0066EA07 /* msg_icon2.png */; };
@@ -401,6 +403,8 @@
 		FA134C501E2DF462000320D2 /* SystemAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemAudio.h; sourceTree = "<group>"; };
 		FA134C511E2DF462000320D2 /* SystemAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemAudio.m; sourceTree = "<group>"; };
 		FA134C531E2DF4C2000320D2 /* DefaultsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsMacros.h; sourceTree = "<group>"; };
+		FA14B9F71E55A6AE004BD4B2 /* ZYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAlertViewController.h; sourceTree = "<group>"; };
+		FA14B9F81E55A6AE004BD4B2 /* ZYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAlertViewController.m; sourceTree = "<group>"; };
 		FA2B5C301E514AEE0066EA07 /* backtrack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backtrack1.png; sourceTree = "<group>"; };
 		FA2B5C321E514AFA0066EA07 /* msg_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_icon1.png; sourceTree = "<group>"; };
 		FA2B5C331E514AFA0066EA07 /* msg_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_icon2.png; sourceTree = "<group>"; };
@@ -983,6 +987,8 @@
 				FA7719091E24B6AC00AD8F5F /* ZYLog.m */,
 				FAFD3D721E25DDB1001992B9 /* ZYSipTools.h */,
 				FAFD3D731E25DDB1001992B9 /* ZYSipTools.m */,
+				FA14B9F71E55A6AE004BD4B2 /* ZYAlertViewController.h */,
+				FA14B9F81E55A6AE004BD4B2 /* ZYAlertViewController.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1693,6 +1699,7 @@
 				FADDD8DE1E27781700F0A226 /* ZYTextField.m in Sources */,
 				FA134C4B1E2DBC0C000320D2 /* ZYLabel.m in Sources */,
 				FA7718B91E24825700AD8F5F /* ZYMineViewController.m in Sources */,
+				FA14B9F91E55A6AE004BD4B2 /* ZYAlertViewController.m in Sources */,
 				FAF68C6F1E480E1100FFD574 /* ZYContactTableViewCell.m in Sources */,
 				FADDD8C71E27770400F0A226 /* ZYSipSettingViewController.m in Sources */,
 				FA134C371E2DBA37000320D2 /* PSTAlertController.m in Sources */,
@@ -1746,6 +1753,7 @@
 				FAAABB881E53049B00A19E3E /* ZYTextField.m in Sources */,
 				FAAABB891E53049B00A19E3E /* ZYLabel.m in Sources */,
 				FAAABB8A1E53049B00A19E3E /* ZYMineViewController.m in Sources */,
+				FA14B9FA1E55A6AE004BD4B2 /* ZYAlertViewController.m in Sources */,
 				FAAABB8B1E53049B00A19E3E /* ZYContactTableViewCell.m in Sources */,
 				FAAABB8C1E53049B00A19E3E /* ZYSipSettingViewController.m in Sources */,
 				FAAABB8D1E53049B00A19E3E /* PSTAlertController.m in Sources */,

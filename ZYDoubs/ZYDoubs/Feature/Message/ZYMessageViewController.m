@@ -153,6 +153,10 @@
 
 -(void)PlusBtnClick{
     NSLog(@"添加会话");
+    
+    
+    
+    
     if ([self checkNetWork] && [ZYSipTools sipIsRegister]) {
         
         NSString * text = @"嗨 有兴趣出来hi tea吗，我和Lucy都在，在天河那里的星巴克，等你噢！";
