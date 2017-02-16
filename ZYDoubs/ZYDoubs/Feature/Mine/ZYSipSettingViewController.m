@@ -165,7 +165,7 @@
 #ifdef PRO_VERSION
         _sipnumTextField.text = @"2000001848";
 #else
-        _sipnumTextField.text = @"2000001848";
+        _sipnumTextField.text = @"2000005536";
 #endif
     }
     return _sipnumTextField;
@@ -179,7 +179,7 @@
 #ifdef PRO_VERSION
         _passwordField.text = @"c1a7dfb9a0c14b36be1178e0e9420082";
 #else
-        _passwordField.text = @"c1a7dfb9a0c14b36be1178e0e9420082";
+        _passwordField.text = @"123456";
 #endif
     }
     return _passwordField;
