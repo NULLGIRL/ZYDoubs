@@ -28,7 +28,7 @@
 /**
  一个文本框
  */
-+ (void) showOneTextFieldWithTitle:(NSString *)title withMsg:(NSString *)msg withPlaceholder:(NSString *)place withVC:(UIViewController *)vc Block:(void(^)(NSString * text))block{
++ (void) showOneTextFieldWithTitle:(NSString *)title withMsg:(NSString *)msg withPlaceholder:(NSString *)place withVC:(UIViewController *)vc Block:(void(^)(NSString * impi))block{
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {

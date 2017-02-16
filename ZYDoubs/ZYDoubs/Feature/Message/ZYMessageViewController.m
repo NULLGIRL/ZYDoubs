@@ -155,24 +155,28 @@
     NSLog(@"添加会话");
     
     
-    
-    
-    if ([self checkNetWork] && [ZYSipTools sipIsRegister]) {
+    [ZYAlertViewController showOneTextFieldWithTitle:@"提示" withMsg:@"例如：2000001850" withPlaceholder:@"请输入对方的sip账号" withVC:self Block:^(NSString *impi) {
         
-        NSString * text = @"嗨 有兴趣出来hi tea吗，我和Lucy都在，在天河那里的星巴克，等你噢！";
-        if(![ZYTools isNullOrEmpty:text]){
-            NgnHistorySMSEvent* event = [NgnHistoryEvent createSMSEventWithStatus:HistoryEventStatus_Outgoing
-                                                                   andRemoteParty:@"2000001850"
-                                                                       andContent:[text dataUsingEncoding:NSUTF8StringEncoding]];
-            NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri:@"2000001850"];
-            event.status = [session sendTextMessage:text contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
-            BOOL ret = [[NgnEngine sharedInstance].historyService addEvent: event];
-            NSLog(@"%@",ret?@"YES":@"NO");
-            NgnHistoryEventDictionary* dic = [[NgnEngine sharedInstance].historyService events];
-            NSLog(@"%@",dic);
+        if ([self checkNetWork] && [ZYSipTools sipIsRegister]) {
+            
+            NSString * text = @"嗨 有兴趣出来hi tea吗，我和Lucy都在，在天河那里的星巴克，等你噢！";
+            if(![ZYTools isNullOrEmpty:text]){
+                NgnHistorySMSEvent* event = [NgnHistoryEvent createSMSEventWithStatus:HistoryEventStatus_Outgoing
+                                                                       andRemoteParty:impi
+                                                                           andContent:[text dataUsingEncoding:NSUTF8StringEncoding]];
+                NgnMessagingSession* session = [NgnMessagingSession createOutgoingSessionWithStack:[[NgnEngine sharedInstance].sipService getSipStack] andToUri:impi];
+                event.status = [session sendTextMessage:text contentType: kContentTypePlainText] ? HistoryEventStatus_Outgoing : HistoryEventStatus_Failed;
+                BOOL ret = [[NgnEngine sharedInstance].historyService addEvent: event];
+                NSLog(@"%@",ret?@"YES":@"NO");
+                NgnHistoryEventDictionary* dic = [[NgnEngine sharedInstance].historyService events];
+                NSLog(@"%@",dic);
+            }
+            
         }
+
         
-    }
+    }];
+    
 }
 
 - (void)viewDidLoad {
